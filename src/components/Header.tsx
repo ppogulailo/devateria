@@ -24,6 +24,11 @@ export const Header: React.FC = () => {
         { label: "Fintech", href: "/solutions/fintech" },
     ];
 
+    const aboutUs = [
+        { label: "About Us", href: "/about-us" },
+        { label: "Contact Us", href: "/contact-us" },
+    ];
+
     return (
         <header className="w-full border-b border-[--color-muted]/20 bg-[--color-bg] text-[--color-text] backdrop-blur-lg">
             <div className="mx-auto max-w-7xl px-6">
@@ -52,19 +57,8 @@ export const Header: React.FC = () => {
                             Technologies
                         </a>
 
-                        <a
-                            href="/seo-services"
-                            className="transition-colors hover:text-[--color-primary]"
-                        >
-                            About Us
-                        </a>
+                        <Dropdown name=" About Us" items={aboutUs} />
 
-                        <a
-                            href="/blog"
-                            className="transition-colors hover:text-[--color-primary]"
-                        >
-                            Blog
-                        </a>
                     </nav>
 
                     {/* Contact Button */}
