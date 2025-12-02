@@ -3,16 +3,10 @@
 @import "tailwindcss/theme" layer(theme);
 
 @theme {
-  --color-bg: #0f172a;
-  --color-primary: #2563eb;
-  --color-secondary: #1e40af;
+  --color-bg: #064e3b;             /* 🌿 Main green background */
+  --color-primary: #059669;        /* Bright green */
+  --color-secondary: #047857;      /* Darker accent green */
   --color-text: #e6eef8;
   --color-muted: #94a3b8;
-  --color-bg-alt: #020617; /* darker page background for sections */
-}
-
-/* Optional: base page styles using those colors */
-html,
-body {
-  /* ...existing code... */
+  --color-bg-alt: #022c22;         /* Darker green section background */
 }

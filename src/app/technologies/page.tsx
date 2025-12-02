@@ -1,4 +1,12 @@
+import Dropdown from "../../components/blocks/Dropdown";
+
 export default function TechnologiesPage() {
+  const items = [
+    { label: "Option 1", href: "#" },
+    { label: "Option 2", href: "#" },
+    { label: "Option 3" },
+  ]
+  const name_1="Select Option";
   return (
     <main className="bg-[--color-bg] text-[--color-text]">
       <section className="banner_about py-16 md:py-24">
@@ -13,7 +21,12 @@ export default function TechnologiesPage() {
                 <div className="description_banner text-sm text-[--color-muted]">
                   Create your project with well-chosen tech stacks
                 </div>
-                <div className="button_banner">
+                <div className="button_banner flex items-center gap-4">
+                  <Dropdown
+                    name={name_1}
+                    items={items}
+                  />
+
                   <a
                     href="#id_footer_form"
                     className="blue_btn banner-btn inline-flex items-center rounded-full bg-[--color-primary] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[--color-secondary]"

@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/Button";
 import { ServicesSection } from "@/components/ServicesSection";
+import Form from "next/form";
+import ContactForm from "@/components/Form";
 
 export default function Home() {
     return (
@@ -1447,150 +1449,9 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <form className="mt-10 space-y-6" aria-label="Contact form">
-                        <div className="wrapper content_center flex flex-col gap-4 md:flex-row">
-                            <div className="col5 md:w-1/2">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                    placeholder="Name*"
-                                    className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text] outline-none focus:border-[--color-primary] focus:ring-2 focus:ring-[--color-primary]/40"
-                                />
-                            </div>
-                            <div className="col5 md:w-1/2">
-                                <input
-                                    type="email"
-                                    name="email"
-                                    required
-                                    placeholder="Email*"
-                                    className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text] outline-none focus:border-[--color-primary] focus:ring-2 focus:ring-[--color-primary]/40"
-                                />
-                            </div>
-                        </div>
+                    <ContactForm
 
-                        <div className="wrapper content_center flex flex-col gap-4 md:flex-row">
-                            <div className="col5 md:w-1/2">
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    required
-                                    placeholder="Phone*"
-                                    className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text] outline-none focus:border-[--color-primary] focus:ring-2 focus:ring-[--color-primary]/40"
-                                />
-                            </div>
-                            <div className="col5 md:w-1/2">
-                                <input
-                                    type="text"
-                                    name="website"
-                                    placeholder="Website"
-                                    className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text] outline-none focus:border-[--color-primary] focus:ring-2 focus:ring-[--color-primary]/40"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="wrapper content_center">
-                            <div className="col10 w-full">
-                                <select
-                                    name="service"
-                                    className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text] outline-none focus:border-[--color-primary] focus:ring-2 focus:ring-[--color-primary]/40"
-                                    defaultValue="Select Some Options"
-                                >
-                                    <option value="Select Some Options">Select Some Options</option>
-                                    <option value="Search Engine Optimization (SEO)">
-                                        Search Engine Optimization (SEO)
-                                    </option>
-                                    <option value="Custom Software Development">
-                                        Custom Software Development
-                                    </option>
-                                    <option value="Web Development">Web Development</option>
-                                    <option value="Paid Advertising (Google Ads, Facebook, etc)">
-                                        Paid Advertising (Google Ads, Facebook, etc)
-                                    </option>
-                                    <option value="Social Media Marketing (SMM)">
-                                        Social Media Marketing (SMM)
-                                    </option>
-                                    <option value="App Store Optimization (ASO)">
-                                        App Store Optimization (ASO)
-                                    </option>
-                                    <option value="Web Design">Web Design</option>
-                                    <option value="Content Writing">Content Writing</option>
-                                    <option value="Video Production Services">
-                                        Video Production Services
-                                    </option>
-                                    <option value="Other Services">Other Services</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div className="wrapper content_center">
-                            <div className="col10 w-full">
-                                <textarea
-                                    name="project"
-                                    rows={4}
-                                    placeholder="Tell more about your project"
-                                    className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text] outline-none focus:border-[--color-primary] focus:ring-2 focus:ring-[--color-primary]/40"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="wrapper content_center form-acceptance">
-                            <div className="col10 w-full text-left text-xs text-[--color-muted]">
-                                <label className="flex items-start gap-2">
-                                    <input
-                                        type="checkbox"
-                                        name="accept_terms"
-                                        className="mt-1 h-4 w-4 rounded border-[--color-muted]/40 bg-[--color-bg-alt]"
-                                    />
-                                    <span>
-                                        I have read and accepted the{" "}
-                                        <a
-                                            href="https://develux.com/terms-and-conditions/"
-                                            className="text-[--color-primary] underline"
-                                        >
-                                            Terms &amp; Conditions
-                                        </a>{" "}
-                                        and{" "}
-                                        <a
-                                            href="https://develux.com/privacy-policy/"
-                                            className="text-[--color-primary] underline"
-                                        >
-                                            Privacy Policy
-                                        </a>{" "}
-                                        and Cookie Policy. Develux may also contact me regarding
-                                        this form submission and related matters in the future.
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div className="wrapper content_center form-acceptance">
-                            <div className="col10 w-full text-left text-xs text-[--color-muted]">
-                                <label className="flex items-start gap-2">
-                                    <input
-                                        type="checkbox"
-                                        name="accept_news"
-                                        className="mt-1 h-4 w-4 rounded border-[--color-muted]/40 bg-[--color-bg-alt]"
-                                    />
-                                    <span>
-                                        I would be glad to receive relevant information and news
-                                        about Develux and its services from time to time
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div className="wrapper content_center">
-                            <div className="col10 w-full">
-                                <button
-                                    type="submit"
-                                    className="btn_form inline-flex w-full justify-center rounded-full bg-[--color-text] px-6 py-3 text-sm font-semibold text-[--color-bg] transition hover:bg-white md:w-auto"
-                                >
-                                    Submit
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    />
                 </div>
             </section>
         </main>
