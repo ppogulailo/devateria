@@ -12,7 +12,7 @@ export default function BreadcrumbsWrapper() {
         <div className="mx-auto w-full max-w-6xl px-4 py-3">
             <nav
                 aria-label="Breadcrumb"
-                className="rounded-md px-3 py-2 shadow-sm bg-[var(--color-bg-alt,#ffffff)] border border-[var(--color-border,#e5e7eb)]"
+                className="rounded-md px-3 py-2"
             >
                 <div className="max-w-full text-sm text-[var(--color-muted,#6b7280)] flex items-center gap-2">
                     <Breadcrumbs />

@@ -1,4 +1,4 @@
-import Dropdown from "../../components/blocks/Dropdown";
+import Dropdown from "../../components/Dropdown";
 
 export default function TechnologiesPage() {
   const items = [
