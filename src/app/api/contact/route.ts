@@ -13,6 +13,33 @@ export async function POST(req: Request) {
     try {
         const data = await req.json();
 
+        // ------------------------------------------
+        // 1. Validate reCAPTCHA token
+        // ------------------------------------------
+        const token = data.token;
+        if (!token) {
+            return NextResponse.json({ error: "Missing captcha token" }, { status: 400 });
+        }
+
+        const captchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+        });
+
+        const captchaJson = await captchaRes.json();
+
+        if (!captchaJson.success || captchaJson.score < 0.5) {
+            console.warn("RECAPTCHA FAILED", captchaJson);
+            return NextResponse.json(
+                { error: "reCAPTCHA failed" },
+                { status: 400 }
+            );
+        }
+
+        // ------------------------------------------
+        // 2. Prepare email body
+        // ------------------------------------------
         const bodyText = `
             Name: ${data.name}
             Email: ${data.email}
@@ -26,6 +53,9 @@ export async function POST(req: Request) {
             News opt-in: ${data.accept_news ? "Yes" : "No"}
         `;
 
+        // ------------------------------------------
+        // 3. Send email via AWS SES
+        // ------------------------------------------
         const cmd = new SendEmailCommand({
             Destination: { ToAddresses: [process.env.SES_TO_EMAIL!] },
             Message: {
@@ -37,9 +67,13 @@ export async function POST(req: Request) {
 
         await client.send(cmd);
 
+        // ------------------------------------------
+        // 4. Success
+        // ------------------------------------------
         return NextResponse.json({ ok: true });
+
     } catch (error) {
-        console.error("SES ERROR", error);
+        console.error("SES CONTACT API ERROR", error);
         return NextResponse.json({ ok: false }, { status: 500 });
     }
 }

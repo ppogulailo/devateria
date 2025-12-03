@@ -1,141 +1,132 @@
 "use client";
 
 import { useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function ContactForm() {
-    const [loading, setLoading] = useState(false);
-    const [status, setStatus] = useState<string | null>(null);
+    const { executeRecaptcha } = useGoogleReCaptcha();
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        website: "",
+        service: "",
+        project: "",
+        accept_terms: false,
+        accept_news: false,
+    });
+
+    const handleChange = (e: any) => {
+        const { name, value, type, checked } = e.target;
+        setForm((prev) => ({
+            ...prev,
+            [name]: type === "checkbox" ? checked : value,
+        }));
+    };
+
+    async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
-        setLoading(true);
-        setStatus(null);
 
-        const form = new FormData(e.currentTarget);
-        const payload = Object.fromEntries(form);
+        if (!executeRecaptcha) return;
+
+        // Generate reCAPTCHA token
+        const token = await executeRecaptcha("contact_form");
 
         const res = await fetch("/api/contact", {
             method: "POST",
-            body: JSON.stringify(payload),
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                ...form,
+                token,
+            }),
         });
 
-        const data = await res.json();
-        setStatus(data.ok ? "Your request was sent successfully." : "Failed to send.");
-        setLoading(false);
+        console.log(await res.json());
     }
 
     return (
-        <form onSubmit={handleSubmit} className="mt-10 space-y-6" aria-label="Contact form">
-            {/* Name & Email */}
-            <div className="wrapper content_center flex flex-col gap-4 md:flex-row">
-                <div className="col5 md:w-1/2">
-                    <input
-                        type="text"
-                        name="name"
-                        required
-                        placeholder="Name*"
-                        className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text]"
-                    />
-                </div>
-                <div className="col5 md:w-1/2">
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                        placeholder="Email*"
-                        className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text]"
-                    />
-                </div>
-            </div>
+        <form onSubmit={handleSubmit} className="space-y-4">
 
-            {/* Phone & Website */}
-            <div className="wrapper content_center flex flex-col gap-4 md:flex-row">
-                <div className="col5 md:w-1/2">
-                    <input
-                        type="tel"
-                        name="phone"
-                        required
-                        placeholder="Phone*"
-                        className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text]"
-                    />
-                </div>
-                <div className="col5 md:w-1/2">
-                    <input
-                        type="text"
-                        name="website"
-                        placeholder="Website"
-                        className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text]"
-                    />
-                </div>
-            </div>
+            <input
+                name="name"
+                type="text"
+                placeholder="Name"
+                className="border px-3 py-2 rounded"
+                value={form.name}
+                onChange={handleChange}
+            />
 
-            {/* Service */}
-            <div className="wrapper content_center">
-                <div className="col10 w-full">
-                    <select
-                        name="service"
-                        className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text]"
-                    >
-                        <option value="Select Some Options">Select Some Options</option>
-                        <option value="Custom Software Development">Custom Software Development</option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="SEO">Search Engine Optimization (SEO)</option>
-                        <option value="SMM">Social Media Marketing (SMM)</option>
-                        <option value="Other Services">Other Services</option>
-                    </select>
-                </div>
-            </div>
+            <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                className="border px-3 py-2 rounded"
+                value={form.email}
+                onChange={handleChange}
+            />
 
-            {/* Project Description */}
-            <div className="wrapper content_center">
-                <div className="col10 w-full">
-                    <textarea
-                        name="project"
-                        rows={4}
-                        placeholder="Tell more about your project"
-                        className="w-full rounded-xl border border-[--color-muted]/30 bg-[--color-bg-alt] px-4 py-3 text-sm text-[--color-text]"
-                    />
-                </div>
-            </div>
+            <input
+                name="phone"
+                type="text"
+                placeholder="Phone"
+                className="border px-3 py-2 rounded"
+                value={form.phone}
+                onChange={handleChange}
+            />
 
-            {/* Terms */}
-            <div className="wrapper content_center form-acceptance">
-                <div className="col10 w-full text-left text-xs text-[--color-muted]">
-                    <label className="flex items-start gap-2">
-                        <input type="checkbox" name="accept_terms" className="mt-1 h-4 w-4" />
-                        <span>
-                            I have read and accepted the Terms &amp; Conditions, Privacy and Cookie Policies.
-                        </span>
-                    </label>
-                </div>
-            </div>
+            <input
+                name="website"
+                type="text"
+                placeholder="Website"
+                className="border px-3 py-2 rounded"
+                value={form.website}
+                onChange={handleChange}
+            />
 
-            {/* Newsletter */}
-            <div className="wrapper content_center form-acceptance">
-                <div className="col10 w-full text-left text-xs text-[--color-muted]">
-                    <label className="flex items-start gap-2">
-                        <input type="checkbox" name="accept_news" className="mt-1 h-4 w-4" />
-                        <span>Send me relevant news from time to time</span>
-                    </label>
-                </div>
-            </div>
+            <input
+                name="service"
+                type="text"
+                placeholder="Service"
+                className="border px-3 py-2 rounded"
+                value={form.service}
+                onChange={handleChange}
+            />
 
-            {/* Submit */}
-            <div className="wrapper content_center">
-                <div className="col10 w-full">
-                    <button
-                        type="submit"
-                        disabled={loading}
-                        className="inline-flex w-full justify-center rounded-full bg-[--color-text] px-6 py-3 text-sm font-semibold text-[--color-bg] hover:bg-white md:w-auto"
-                    >
-                        {loading ? "Sending..." : "Submit"}
-                    </button>
+            <textarea
+                name="project"
+                placeholder="Describe your project..."
+                className="border px-3 py-2 rounded"
+                value={form.project}
+                onChange={handleChange}
+            />
 
-                    {status && (
-                        <p className="mt-3 text-sm text-center text-[--color-muted]">{status}</p>
-                    )}
-                </div>
-            </div>
+            <label className="flex gap-2 items-center">
+                <input
+                    type="checkbox"
+                    name="accept_terms"
+                    checked={form.accept_terms}
+                    onChange={handleChange}
+                />
+                Accept Terms
+            </label>
+
+            <label className="flex gap-2 items-center">
+                <input
+                    type="checkbox"
+                    name="accept_news"
+                    checked={form.accept_news}
+                    onChange={handleChange}
+                />
+                Receive News & Updates
+            </label>
+
+            <button
+                type="submit"
+                className="bg-blue-600 text-white px-4 py-2 rounded"
+            >
+                Send
+            </button>
         </form>
     );
 }

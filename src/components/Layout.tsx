@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import { Header } from "./Header";
 import {Footer} from "@/components/Footer";
 import BreadcrumbsWrapper from "@/components/BreadcrumbsWrapper";
+import {ContactSection} from "@/components/ContactSection";
 
 type LayoutProps = {
     children: ReactNode;
@@ -16,10 +17,11 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <BreadcrumbsWrapper/>
             </header>
             <main className="flex-1">
-                <div className="mx-auto w-full max-w-6xl px-4 py-8">
+                <div className="mx-auto w-full max-w-6xl px-4">
                     {children}
                 </div>
             </main>
+            <ContactSection/>
            <Footer/>
         </div>
     );

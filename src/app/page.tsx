@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Header } from "@/components/Header";
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import { ServicesSection } from "@/components/ServicesSection";
 import Form from "next/form";
 import ContactForm from "@/components/Form";
+import {ContactSection} from "@/components/ContactSection";
+import FullWidthSection from "@/components/FullWidthSection";
 
 export default function Home() {
     return (
@@ -1448,10 +1450,6 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-
-                    <ContactForm
-
-                    />
                 </div>
             </section>
         </main>

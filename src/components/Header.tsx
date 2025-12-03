@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import Dropdown from "@/components/blocks/Dropdown";
 
 export const Header: React.FC = () => {

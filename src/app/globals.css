@@ -2,11 +2,43 @@
 @import "tailwindcss/utilities";
 @import "tailwindcss/theme" layer(theme);
 
-@theme {
-  --color-bg: #064e3b;             /* 🌿 Main green background */
-  --color-primary: #059669;        /* Bright green */
-  --color-secondary: #047857;      /* Darker accent green */
-  --color-text: #e6eef8;
-  --color-muted: #94a3b8;
-  --color-bg-alt: #022c22;         /* Darker green section background */
+:root {
+  /* Page background and surfaces */
+  --color-bg: #f6fbfb;          /* very light, soft mint/teal background */
+  --color-bg-alt: #ffffff;      /* cards / sections (slightly off-white) */
+
+  /* Brand accents */
+  --color-primary: #0ea5a4;     /* teal / pleasant primary */
+  --color-secondary: #059669;   /* deeper green accent */
+
+  /* Text colors */
+  --color-text: #0f1724;        /* dark slate for main text */
+  --onblack-color-text: #0f1724;        /* dark slate for main text */
+  --color-text-muted: rgba(15,23,36,0.6); /* for breadcrumbs, small text */
+  --color-muted: #6b7280;       /* utility muted color */
+  --color-form-text: #B3B3B3;        /* dark slate for main text */
+  --color-header-text:#F5F5F5;
+
+  /* small helpers */
+  --color-surface: #ffffff;
+  --color-border: rgba(15,23,36,0.06);
+
+  /* lighter form inputs */
+  --color-bg-alt: #222222;
+  --color-input-border: #e6eef0; /* soft light border */
+  --color-input-focus: #0ea5a4;  /* use primary as focus */
+}
+
+/* Fallback body styling to ensure consistent base look */
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Optional utility to tint section backgrounds (used by components) */
+.section-bg {
+  background-color: var(--color-bg-alt);
 }
