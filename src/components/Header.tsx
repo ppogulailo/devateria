@@ -64,8 +64,8 @@ export const Header: React.FC = () => {
                     {/* Contact Button */}
                     <div className="hidden md:inline-flex">
                         <Button
-                            href="/contact-us"
-                            variant="outline"
+                            // href="/contact-us"
+                            // variant="outline"
                             className="rounded-full px-6 py-2 text-sm font-semibold transition hover:bg-[--color-primary] hover:text-white"
                         >
                             Let’s Talk

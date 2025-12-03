@@ -45,8 +45,8 @@ export default function Home() {
                                 </div>
                                 <Button
                                     className="w-full sm:w-auto"
-                                    variant="primary"
-                                    href="https://develux.com/?s="
+                                    // variant="primary"
+                                    // href="https://develux.com/?s="
                                 >
                                     Find a service
                                 </Button>
