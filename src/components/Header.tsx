@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import Dropdown from "@/components/Dropdown";
+import DropdownMega from "@/components/DropdownMega";
 
 export const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -13,16 +14,50 @@ export const Header: React.FC = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    const servicesItems = [
-        { label: "Web Development", href: "/service/web-development" },
-        { label: "Mobile Development", href: "/service/mobile-development" },
-        { label: "R&D Center", href: "/service/r-d-center" },
-        { label: "Offshore Development", href: "/service/offshore-development" },
-        { label: "Talent Mapping", href: "/service/talant-mapping-service" },
-        { label: "Dedicated Teams", href: "/service/dedicated-team" },
-        { label: "IT Recruiting", href: "/service/it-recruting-services" },
-        { label: "Cloud Development", href: "/service/cloud-development" },
-    ];
+    const servicesMegaMenu = {
+        level1: [
+            { label: "CUSTOM SOFTWARE DEVELOPMENT" },
+            { label: "CUSTOM MOBILE DEVELOPMENT" },
+            { label: "PROJECT MANAGEMENT" },
+            { label: "OUTSTAFF" },
+            { label: "PROMOTION" }
+        ],
+
+        level2: {
+            "CUSTOM SOFTWARE DEVELOPMENT": [
+                { label: "Enterprise apps" },
+                { label: "SAAS platforms" },
+                { label: "API integrations" }
+            ],
+
+            "CUSTOM MOBILE DEVELOPMENT": [
+                { label: "Cross-platform" },
+                { label: "iOS" },
+                { label: "Android" }
+            ],
+
+            "PROJECT MANAGEMENT": [
+                { label: "Agile" },
+                { label: "Scrum" },
+                { label: "Team Leadership" }
+            ]
+        },
+
+        level3: {
+            "CUSTOM SOFTWARE DEVELOPMENT": {
+                "Enterprise apps": ["CRM Tools", "ERP Systems", "HR Platforms"],
+                "SAAS platforms": ["Billing Engines", "Analytics Dashboards"],
+                "API integrations": ["Payment API", "OAuth", "Messaging API"]
+            },
+
+            "CUSTOM MOBILE DEVELOPMENT": {
+                "Cross-platform": ["React Native", "Flutter"],
+                "iOS": ["Swift", "SwiftUI"],
+                "Android": ["Kotlin", "Jetpack Compose"]
+            }
+        }
+    };
+
 
     const solutionsItems = [
         { label: "E-commerce Solutions", href: "/solutions/ecommerce-development" },
@@ -49,7 +84,7 @@ export const Header: React.FC = () => {
                         />
                     </a>
                     <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
-                        <Dropdown name="Services" items={servicesItems} cla />
+                        <DropdownMega name="Services" data={servicesMegaMenu} />
                         <Dropdown name="Solutions" items={solutionsItems} />
                         <a
                             href="/technologies"

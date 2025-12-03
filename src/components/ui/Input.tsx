@@ -1,11 +1,12 @@
 import React from "react";
+import clsx from "clsx";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string;
     required?: boolean;
 }
 
-export const Input: React.FC<InputProps> = ({ label, required, ...props }) => {
+export const Input: React.FC<InputProps> = ({ label, required, className, ...props }) => {
     return (
         <div className="flex flex-col gap-1 w-full">
             {label && (
@@ -17,15 +18,10 @@ export const Input: React.FC<InputProps> = ({ label, required, ...props }) => {
 
             <input
                 {...props}
-                className="
-          w-full bg-transparent
-          border-b border-[var(--color-form-text)]
-          !text-[--color-form-text] placeholder-[var(--color-form-text)]
-          px-0 py-2
-          focus:outline-none
-          focus:border-[--color-input-focus]
-          transition-colors duration-200
-        "
+                className={clsx(
+                    "w-full bg-transparent border-b border-[var(--color-form-text)] !text-[--color-form-text] placeholder-[var(--color-form-text)] px-0 py-2 focus:outline-none focus:border-[--color-input-focus] transition-colors duration-200",
+                    className // ← merge safely, client & server remain identical
+                )}
             />
         </div>
     );
