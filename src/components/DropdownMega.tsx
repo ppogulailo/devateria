@@ -2,15 +2,18 @@
 
 import { useState, useRef } from "react";
 import { ChevronDownIcon, ChevronRightIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 /* ---------------------- TYPES ---------------------- */
 
 export interface Level1Item {
     label: string;
+    href:string
 }
 
 export interface Level2Item {
     label: string;
+    href:string
 }
 
 export interface MegaMenuData {
@@ -98,7 +101,7 @@ export default function DropdownMega({
                                         transition hover:bg-white/10 font-semibold
                                     "
                                 >
-                                    {item.label}
+                                    <a href={item.label}>{item.label}</a>
                                     <ChevronRightIcon />
                                 </div>
                             ))}
@@ -107,20 +110,28 @@ export default function DropdownMega({
                         {/* -------- LEVEL 2 -------- */}
                         <div className="flex flex-col gap-4">
                             {hoverItem &&
-                                data.level2[hoverItem]?.map((sub) => (
-                                    <div
-                                        key={sub.label}
-                                        onMouseEnter={() => setHoverSubItem(sub.label)}
-                                        className="
-                                            flex justify-between items-center
-                                            py-3 px-4 rounded-md cursor-pointer
-                                            transition hover:bg-white/10 font-semibold
-                                        "
-                                    >
-                                        {sub.label}
-                                        <ChevronRightIcon />
-                                    </div>
-                                ))}
+                                data.level2[hoverItem]?.map((sub) => {
+                                    const hasLevel3 =
+                                        data.level3?.[hoverItem]?.[sub.label] &&
+                                        data.level3[hoverItem][sub.label].length > 0;
+
+                                    return (
+                                        <div
+                                            key={sub.label}
+                                            onMouseEnter={() => setHoverSubItem(sub.label)}
+                                            className="
+                        flex justify-between items-center
+                        py-3 px-4 rounded-md cursor-pointer
+                        transition hover:bg-white/10 font-semibold
+                    "
+                                        >
+                                          <a href={sub.href}>  {sub.label}</a>
+
+                                            {/* Show icon only if level3 exists */}
+                                            {hasLevel3 && <ChevronRightIcon />}
+                                        </div>
+                                    );
+                                })}
                         </div>
 
                         {/* -------- LEVEL 3 -------- */}

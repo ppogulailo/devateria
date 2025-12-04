@@ -16,47 +16,61 @@ export const Header: React.FC = () => {
 
     const servicesMegaMenu = {
         level1: [
-            { label: "CUSTOM SOFTWARE DEVELOPMENT" },
-            { label: "CUSTOM MOBILE DEVELOPMENT" },
-            { label: "PROJECT MANAGEMENT" },
-            { label: "OUTSTAFF" },
-            { label: "PROMOTION" }
+            { label: "WEB DEVELOPMENT", href: '/service/web-development' },
+            { label: "CLOUD DEVELOPMENT", href: "/service/cloud-development" },
+            { label: "MOBILE DEVELOPMENT", href: "/service/mobile-development" },
+            { label: "OUTSTAFF", href:'/service/outstaff' },
+            { label: "SOFTWARE TESTING", href: '/service/software-testing' },
+            { label: "DESIGN", href:'/service/design' },
         ],
 
         level2: {
-            "CUSTOM SOFTWARE DEVELOPMENT": [
-                { label: "Enterprise apps" },
-                { label: "SAAS platforms" },
-                { label: "API integrations" }
+            "WEB DEVELOPMENT": [
+                // { label: "Web Application Development", href: "/service/web-application-development" },
+                { label: "SAAS Application Development", href: "/service/web-development/saas-application-development" },
+                { label: "Front End Web Development", href: "/service/web-development/frontend-web-development" },
+                { label: "Backend Web Development", href: "/service/web-development/backend-web-development" }
             ],
 
-            "CUSTOM MOBILE DEVELOPMENT": [
-                { label: "Cross-platform" },
-                { label: "iOS" },
-                { label: "Android" }
+            "CLOUD DEVELOPMENT": [
+                // { label: "Cloud Application Development", href: "/service/cloud-application-development" },
+                { label: "Google Cloud Development", href: "/service/cloud-development/cloud-application-development" },
+                { label: "Amazon Web Services (AWS)", href: "/service/cloud-development/aws" }
             ],
 
-            "PROJECT MANAGEMENT": [
-                { label: "Agile" },
-                { label: "Scrum" },
-                { label: "Team Leadership" }
-            ]
+            "MOBILE DEVELOPMENT": [
+                { label: "Mobile Development Overview", href: "/service/mobile-development" },
+                { label: "Android App Development", href: "/service/mobile-development/android-app-development" },
+                { label: "iOS App Development", href: "/service/mobile-development/ios-app-development" },
+                { label: "Native App Development", href: "/service/mobile-development/native-app-development" }
+            ],
+
+            "OUTSTAFF": [
+                { label: "Dedicated Teams", href: "/service/outstaff/dedicated-teams" },
+                { label: "Outstaff", href: "/service/outstaff" },
+                { label: "Offshore Development", href: "/service/outstaff/offshore-development" }
+            ],
+
+            "SOFTWARE TESTING": [
+                { label: "Software Testing Services", href: "/service/software-testing" },
+                { label: "Mobile App Testing", href: "/service/software-testing/mobile-app-testing" },
+                { label: "Manual Testing Services", href: "/service/software-testing/manual-testing" },
+                { label: "Automation Testing Services", href: "/service/software-testing/automation-testing" }
+            ],
+
+            "DESIGN": [
+                { label: "UI/UX Design", href: "/service/design/ui-ux" }
+            ],
         },
-
         level3: {
             "CUSTOM SOFTWARE DEVELOPMENT": {
                 "Enterprise apps": ["CRM Tools", "ERP Systems", "HR Platforms"],
                 "SAAS platforms": ["Billing Engines", "Analytics Dashboards"],
                 "API integrations": ["Payment API", "OAuth", "Messaging API"]
             },
-
-            "CUSTOM MOBILE DEVELOPMENT": {
-                "Cross-platform": ["React Native", "Flutter"],
-                "iOS": ["Swift", "SwiftUI"],
-                "Android": ["Kotlin", "Jetpack Compose"]
-            }
         }
     };
+
 
 
     const solutionsItems = [
