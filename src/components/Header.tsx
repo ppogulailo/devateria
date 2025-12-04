@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import Dropdown from "@/components/Dropdown";
@@ -86,20 +86,20 @@ export const Header: React.FC = () => {
                     <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
                         <DropdownMega name="Services" data={servicesMegaMenu} />
                         <Dropdown name="Solutions" items={solutionsItems} />
-                        <a
-                            href="/technologies"
-                            className="cursor-pointer hover:text-[--color-primary]"
-                        >
+                        <Link href="/technologies" className="hover:text-[var(--color-primary)]">
                             Technologies
-                        </a>
+                        </Link>
                         <Dropdown name="About Us" items={aboutUs} />
                     </nav>
 
                     <div className="hidden md:inline-flex">
-                        <Button className="rounded-full px-6 py-2 text-sm font-semibold hover:bg-[--color-primary]">
-                            Let’s Talk
-                        </Button>
+                        <Link href="/contact-us">
+                            <Button className="rounded-full px-6 py-2 text-sm font-semibold hover:bg-[--color-primary]">
+                                Let’s Talk
+                            </Button>
+                        </Link>
                     </div>
+
                 </div>
             </div>
 

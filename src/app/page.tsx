@@ -6,6 +6,8 @@ import Form from "next/form";
 import ContactForm from "@/components/Form";
 import {ContactSection} from "@/components/ContactSection";
 import FullWidthSection from "@/components/FullWidthSection";
+import Link from "next/link";
+import React from "react";
 
 export default function Home() {
     return (
@@ -545,17 +547,15 @@ export default function Home() {
                                 </div>
 
                                 <div className="text text-center text-lg font-semibold text-[--color-text] md:text-left md:text-xl">
-                                    Benefit from Develux expertise for your business
+                                    Benefit from Deveteria expertise for your business
                                 </div>
 
-                                <div className="button">
-                                    <a
-                                        href="#id_footer_form"
-                                        title="Let’s Start"
-                                        className="inline-flex items-center rounded-full bg-[--color-text] px-6 py-3 text-sm font-semibold text-[--color-bg] transition hover:bg-white"
-                                    >
-                                        Let’s Start
-                                    </a>
+                                <div className="hidden md:inline-flex">
+                                    <Link href="/contact-us">
+                                        <Button className="rounded-full px-6 py-2 text-sm font-semibold hover:bg-[--color-primary]">
+                                            Let’s Start
+                                        </Button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -1437,21 +1437,21 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Footer contact form (copied + JSX-ified) */}
-            <section className="footer_form bg-[--color-bg] py-16 md:py-24" id="id_footer_form">
-                <div className="container mx-auto max-w-4xl px-4">
-                    <div className="wrapper text-center">
-                        <div className="col12">
-                            <div className="title_footer text-2xl font-semibold text-[--color-text]">
-                                Contact us to get an individual solution.
-                            </div>
-                            <div className="subtitle mt-2 text-sm text-[--color-muted]">
-                                Our experts are here to answer all your questions.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/*/!* Footer contact form (copied + JSX-ified) *!/*/}
+            {/*<section className="footer_form bg-[--color-bg] py-16 md:py-24" id="id_footer_form">*/}
+            {/*    <div className="container mx-auto max-w-4xl px-4">*/}
+            {/*        <div className="wrapper text-center">*/}
+            {/*            <div className="col12">*/}
+            {/*                <div className="title_footer text-2xl font-semibold text-[--color-text]">*/}
+            {/*                    Contact us to get an individual solution.*/}
+            {/*                </div>*/}
+            {/*                <div className="subtitle mt-2 text-sm text-[--color-muted]">*/}
+            {/*                    Our experts are here to answer all your questions.*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
         </main>
     );
 }

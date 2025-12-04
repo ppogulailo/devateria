@@ -9,8 +9,8 @@
 
 :root {
   /* Page background and surfaces */
-  --color-bg: #f6fbfb;          /* very light, soft mint/teal background */
-  --color-bg-alt: #ffffff;      /* cards / sections (slightly off-white) */
+  --color-bg: #F6F7F8;       /* very light, soft mint/teal background */
+  /*--color-bg-alt: #ffffff;      !* cards / sections (slightly off-white) *!*/
 
   /* Brand accents */
   --color-primary: #0ea5a4;     /* teal / pleasant primary */
@@ -29,10 +29,11 @@
   --color-surface: #ffffff;
   --color-border: rgba(15,23,36,0.06);
 
-  /* lighter form inputs */
-  --color-bg-alt: #222222;
   --color-input-border: #e6eef0; /* soft light border */
   --color-input-focus: #0ea5a4;  /* use primary as focus */
+
+  /* lighter form inputs */
+  --color-bg-alt: #222222;
 }
 
 /* Fallback body styling to ensure consistent base look */
