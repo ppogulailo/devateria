@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "@/components/Footer";
 import BreadcrumbsWrapper from "@/components/BreadcrumbsWrapper";
 import { ContactSection } from "@/components/ContactSection";
+import {AboutUsSection} from "@/components/sections/AboutUsSection";
 
 type LayoutProps = {
     children: ReactNode;
@@ -14,10 +15,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="min-h-screen bg-[--color-bg] text-[--color-text] flex flex-col">
             <Header />
             <BreadcrumbsWrapper />
+            {/*<AboutUsSection/>*/}
             <main className="flex-1">
-                <div className="mx-auto w-full max-w-6xl px-4">
                     {children}
-                </div>
             </main>
 
             <ContactSection />

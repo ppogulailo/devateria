@@ -13,8 +13,8 @@
   /*--color-bg-alt: #ffffff;      !* cards / sections (slightly off-white) *!*/
 
   /* Brand accents */
-  --color-primary: #0ea5a4;     /* teal / pleasant primary */
-  --color-secondary: #059669;   /* deeper green accent */
+  --color-primary: #2e536f;     /* teal / pleasant primary */
+  --color-secondary: #5072A7;   /* deeper green accent */
 
   /* Text colors */
   --color-text: #0f1724;        /* dark slate for main text */
@@ -33,12 +33,13 @@
   --color-input-focus: #0ea5a4;  /* use primary as focus */
 
   /* lighter form inputs */
-  --color-bg-alt: #222222;
+  --color-bg-alt: #2e536f;
+  /*--color-bg-alt: #222222;*/
 }
 
 /* Fallback body styling to ensure consistent base look */
 html, body {
-  background-color: var(--color-bg);
+  /*background-color: var(--color-bg);*/
   color: var(--color-text);
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -49,6 +50,10 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/*h2{*/
+/*  color: ;*/
+/*}*/
 
 /* Optional utility to tint section backgrounds (used by components) */
 .section-bg {

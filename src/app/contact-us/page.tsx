@@ -4,10 +4,6 @@ import React from "react";
 
 export default function ContactPage() {
     return (
-        <div></div>
-        // <main className="mx-auto max-w-6xl px-4 py-8">
-        //     {/*<h1 className="text-2xl font-bold mt-4">Contact Us</h1>*/}
-        //     {/* page content */}
-        // </main>
+       <div></div>
     );
 }

@@ -100,15 +100,15 @@ export const Header: React.FC = () => {
                     <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
                         <DropdownMega name="Services" data={servicesMegaMenu} />
                         <Dropdown name="Solutions" items={solutionsItems} />
-                        <Link href="/technologies" className="hover:text-[var(--color-primary)]">
+                        <Link href="/icons/technologies" className="hover:text-[var(--color-primary)]">
                             Technologies
                         </Link>
                         <Dropdown name="About Us" items={aboutUs} />
                     </nav>
 
-                    <div className="hidden md:inline-flex">
+                    <div className="hidden md:inline-flex ">
                         <Link href="/contact-us">
-                            <Button className="rounded-full px-6 py-2 text-sm font-semibold hover:bg-[--color-primary]">
+                            <Button className="hover:bg-[var(--color-primary)] rounded-full px-6 py-2 text-sm font-semibold">
                                 Let’s Talk
                             </Button>
                         </Link>
