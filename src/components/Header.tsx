@@ -75,9 +75,9 @@ export const Header: React.FC = () => {
 
     const solutionsItems = [
         { label: "E-commerce Solutions", href: "/solutions/ecommerce-development" },
-        { label: "Retail Technology", href: "/solutions/retail-technology" },
-        { label: "Healthcare Technology", href: "/solutions/healthcare-technology" },
-        { label: "Educational Technology", href: "/solutions/educational-technology" },
+        // { label: "Retail Technology", href: "/solutions/retail-technology" },
+        // { label: "Healthcare Technology", href: "/solutions/healthcare-technology" },
+        // { label: "Educational Technology", href: "/solutions/educational-technology" },
         { label: "Fintech", href: "/solutions/fintech" },
     ];
 
