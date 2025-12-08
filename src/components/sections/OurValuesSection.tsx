@@ -4,7 +4,7 @@ export const OurValuesSection = () => {
     <div className="container mx-auto max-w-6xl px-4">
         <div className="wrapper">
             <div className="col12">
-                <div className="name_section text-2xl font-semibold text-[--color-text]">
+                <div className="text-4xl font-semibold text-[var(--color-primary)] uppercase ">
                     Our Values
                 </div>
 
@@ -30,7 +30,7 @@ export const OurValuesSection = () => {
                             {/*    />*/}
                             {/*</svg>*/}
                         </div>
-                        <div className="name text-base font-semibold text-[--color-text]">
+                        <div className="name text-xl text-[var(--color-primary)] font-bold">
                             Professionalism
                         </div>
                         <div className="text text-sm leading-relaxed text-[--color-muted]">
@@ -61,7 +61,7 @@ export const OurValuesSection = () => {
                             {/*    />*/}
                             {/*</svg>*/}
                         </div>
-                        <div className="name text-base font-semibold text-[--color-text]">
+                        <div className="name text-xl text-[var(--color-primary)] font-bold">
                             Continuous Development
                         </div>
                         <div className="text text-sm leading-relaxed text-[--color-muted]">
@@ -96,7 +96,7 @@ export const OurValuesSection = () => {
                             {/*    />*/}
                             {/*</svg>*/}
                         </div>
-                        <div className="name text-base font-semibold text-[--color-text]">
+                        <div className="name text-xl text-[var(--color-primary)] font-bold">
                             Personal Solution
                         </div>
                         <div className="text text-sm leading-relaxed text-[--color-muted]">
@@ -127,7 +127,7 @@ export const OurValuesSection = () => {
                             {/*    />*/}
                             {/*</svg>*/}
                         </div>
-                        <div className="name text-base font-semibold text-[--color-text]">
+                        <div className="name text-xl text-[var(--color-primary)] font-bold">
                             Open-Book Model
                         </div>
                         <div className="text text-sm leading-relaxed text-[--color-muted]">

@@ -40,7 +40,7 @@ export const WhatWeDoSection = () => {
             WHAT WE DO
           </span>
 
-                    <h2 className="relative text-3xl md:text-4xl font-extrabold uppercase tracking-wide">
+                    <h2 className="relative text-5xl text-[var(--color-primary)] font-extrabold uppercase tracking-wide">
                         What We Do
                     </h2>
                 </div>

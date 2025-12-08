@@ -14,7 +14,7 @@ export const AboutUsSection = () => {
                     {/* LEFT SIDE – TEXT */}
                     <div className="order-2 md:order-1">
                         <div className="space-y-6">
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[var(--color-primary)]">
                                 Deveteria
                             </h1>
 

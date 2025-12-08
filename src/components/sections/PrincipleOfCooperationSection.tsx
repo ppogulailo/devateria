@@ -1,6 +1,6 @@
 export const PrincipleOfCooperationSection = () => {
     return (
-    <section className="principles bg-[var(--color-bg-alt)] text-[var(--color-header-text)] py-16 md:py-24">
+    <section className="principles bg-[var(--color-bg-alt)] text-[var(--color-header-text)] py-16 md:py-24 tex">
         <div className="container mx-auto max-w-6xl px-4">
         <div className="principles__title text-5xl font-semibold text-[--color-text]">
             Principles of Cooperation

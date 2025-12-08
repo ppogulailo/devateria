@@ -28,7 +28,7 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, subMap }) =
                         <li key={idx}>
                             <button
                                 onClick={() => setOpenItem(isOpen ? null : idx)}
-                                className="w-full flex items-center justify-between text-lg font-bold uppercase hover:text-[var(--color-primary)] transition py-1"
+                                className="cursor-pointer w-full flex items-center justify-between text-lg font-bold uppercase transition py-1"
                             >
                                 {item.label}
 
@@ -43,7 +43,7 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items, subMap }) =
                                         <ul className="space-y-2">
                                             {children.map((c, i) => (
                                                 <li key={i}>
-                                                    <a href={c.href} className="hover:text-[var(--color-primary)]">
+                                                    <a href={c.href} className="hover:text-[var(--color-form-text)]">
                                                         {c.label}
                                                     </a>
                                                 </li>
@@ -187,7 +187,7 @@ export const Footer: React.FC = () => {
                             "Technology",
                             "Contact Us",
                         ].map((t) => (
-                            <a key={t} href="#" className="block hover:text-[var(--color-primary)]">
+                            <a key={t} href="#" className="block">
                                 {t}
                             </a>
                         ))}

@@ -6,7 +6,7 @@ type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement> & {
 };
 
 export const Select: React.FC<SelectProps> = ({ options = [], wrapperClassName = "", className = "", children, ...props }) => {
-  const base = "w-full bg-transparent border-b border-[var(--color-input-border)] text-[var(--color-form-text)] placeholder-[var(--color-muted)] focus:outline-none";
+  const base = "w-full bg-transparent border-b text-[var(--color-form-text)] placeholder-[var(--color-muted)] focus:outline-none";
   const combined = [base, className].filter(Boolean).join(" ");
 
   return (

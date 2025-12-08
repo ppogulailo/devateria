@@ -52,11 +52,11 @@ export const ContactSection = () => {
 
     // ⭐ Dynamic classes based on the page
     const bgClass = isContactPage
-        ? "bg-[var(--color-bg)] text-black"
+        ? " text-black"
         : "bg-[var(--color-bg-alt)] text-[var(--color-header-text)]";
 
     const textClass = isContactPage ? "text-black" : "text-[var(--color-header-text)]";
-    const inputText = isContactPage ? "text-black placeholder-black" : "";
+    const inputText = isContactPage ? "text-black placeholder-black" : "border-[var(--color-form-text)]";
 
     return (
         <section id="contact" className={`p-20 ${bgClass}`}>

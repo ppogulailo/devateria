@@ -87,7 +87,8 @@ export const Header: React.FC = () => {
     ];
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-[--color-bg]/90 backdrop-blur-xl uppercase relative">
+        <header className="sticky top-0 z-50 w-full backdrop-blur-xl uppercase relative">
+
         <div className="mx-auto max-w-7xl px-6">
                 <div className="flex h-20 items-center justify-between">
                     <a href="/" className="flex items-center gap-2">
@@ -100,7 +101,7 @@ export const Header: React.FC = () => {
                     <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
                         <DropdownMega name="Services" data={servicesMegaMenu} />
                         <Dropdown name="Solutions" items={solutionsItems} />
-                        <Link href="/icons/technologies" className="hover:text-[var(--color-primary)]">
+                        <Link href="/technologies" className="hover:text-[var(--color-primary)]">
                             Technologies
                         </Link>
                         <Dropdown name="About Us" items={aboutUs} />
@@ -108,7 +109,7 @@ export const Header: React.FC = () => {
 
                     <div className="hidden md:inline-flex ">
                         <Link href="/contact-us">
-                            <Button className="hover:bg-[var(--color-primary)] rounded-full px-6 py-2 text-sm font-semibold">
+                            <Button className="hover:bg-[var(--color-primary)] rounded-full px-6 py-2 text-sm font-semibold hover:bg-gray-100">
                                 Let’s Talk
                             </Button>
                         </Link>

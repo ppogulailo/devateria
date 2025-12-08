@@ -1,4 +1,8 @@
 import Dropdown from "../../components/Dropdown";
+import {TechAccordion} from "@/components/TechAccordion";
+import {Button} from "@/components/ui/Button";
+import {ActionSection} from "@/components/Action/ActionSection";
+import {ActionToCooperateWithUsSection} from "@/components/sections/ActionToCooporateWithUsSection";
 
 export default function TechnologiesPage() {
   const items = [
@@ -8,384 +12,285 @@ export default function TechnologiesPage() {
   ]
   const name_1="Select Option";
   return (
-    <main className="bg-[--color-bg] text-[--color-text]">
-      <section className="banner_about py-16 md:py-24">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="wrapper grid gap-10 md:grid-cols-2 md:items-center">
-            <div className="col6">
-              <div className="content_banner space-y-6">
-                <h1 className="name_banner text-3xl font-semibold leading-tight md:text-4xl">
-                  Technology <br />
-                  expertise
-                </h1>
-                <div className="description_banner text-sm text-[--color-muted]">
-                  Create your project with well-chosen tech stacks
-                </div>
-                <div className="button_banner flex items-center gap-4">
-                  <Dropdown
-                    name={name_1}
-                    items={items}
-                  />
+    <div>
+        <div className="bg-[--color-bg] text-[--color-text] mx-auto w-full max-w-6xl px-4">
+            <section className="relative bg-[--color-bg-alt] py-20 md:py-28 overflow-hidden">
+                <div className="container mx-auto max-w-7xl px-6 grid gap-12 md:grid-cols-2 md:items-center">
 
-                  <a
-                    href="#id_footer_form"
-                    className="blue_btn banner-btn inline-flex items-center rounded-full bg-[--color-primary] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[--color-secondary]"
-                    title="Let’s Cooperate"
-                  >
-                    Let’s Cooperate
-                  </a>
-                </div>
-              </div>
-            </div>
+                    {/* LEFT SIDE — TEXT */}
+                    <div className="space-y-6">
+                        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-[var(--color-primary)]">
+                            Technology <br /> expertise
+                        </h1>
 
-            <div className="col6">
-              <div className="image_banner flex justify-center md:justify-end">
-                <img
-                  width={630}
-                  height={470}
-                  src="https://develux.com/wp-content/uploads/2023/05/image-04.webp"
-                  alt="Technology expertise illustration"
-                  className="h-auto w-full max-w-xl rounded-3xl object-cover"
-                  // priority
-                />
-              </div>
-            </div>
-          </div>
+                        <p className="text-lg text-[--color-muted]">
+                            Create your project with well-chosen tech stacks
+                        </p>
+
+                        <Button
+                            className="inline-flex items-center rounded-xl bg-[var(--color-primary)] text-white px-8 py-4  text-base font-semibold transition hover:bg-[var(--color-secondary)]"
+                        >
+                            Let’s Cooperate
+                        </Button>
+                    </div>
+
+                    {/* RIGHT SIDE — IMAGE WITH DECORATION */}
+                    <div className="relative flex justify-center md:justify-end">
+                        {/* DECORATIVE SHAPES BEHIND IMAGE */}
+                        <div className="absolute bottom-6 left-6 w-40 h-40 rotate-12 bg-white opacity-80 rounded-lg"></div>
+                        <div className="absolute top-10 right-10 w-32 h-40 -rotate-12 bg-[--color-primary] opacity-60 rounded-lg"></div>
+
+                        {/* MAIN IMAGE */}
+                        <img
+                            src="/icons/technologies/page/TechExpertise.jpg"
+                            alt="Technology expertise illustration"
+                            width={700}
+                            height={500}
+                            className="relative z-10 w-full max-w-lg rounded-3xl shadow-xl object-cover"
+                        />
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="our_technologies bg-[--color-bg-alt] py-20 md:py-28">
+                <div className="container mx-auto max-w-6xl px-4">
+
+                    {/* Title + Subtitle */}
+                    <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-[var(--color-primary)]">
+                            Our Technologies
+                        </h2>
+                        <p className="text-[--color-muted] text-sm md:text-base leading-relaxed">
+                            Our team constantly masters new and relevant tech stacks and
+                            individually selects them for each project to provide customers with
+                            the most suitable solution in terms of productivity, efficiency,
+                            business goals and budget.
+                        </p>
+                    </div>
+
+                    {/* Main Layout */}
+                    <div className="grid gap-12 lg:grid-cols-2">
+
+                        {/* LEFT SIDE — Tech Groups (Accordion) */}
+                        <div className="space-y-6">
+
+                            <TechAccordion
+                                title="Frontend"
+                                logos={[
+                                    { src: "/icons/technologies/web_development/frontend/javascript.svg", alt: "JavaScript" },
+                                    { src: "/icons/technologies/web_development/frontend/angular.svg", alt: "Angular" },
+                                    { src: "/icons/technologies/web_development/frontend/Vue.js.svg", alt: "Vue" },
+                                    { src: "/icons/technologies/web_development/frontend/CSS3.svg", alt: "CSS" },
+                                    { src: "/icons/technologies/web_development/frontend/HTML5.svg", alt: "HTML" },
+                                    { src: "/icons/technologies/web_development/frontend/React.svg", alt: "React" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="Backend"
+                                logos={[
+                                    { src: "/icons/technologies/web_development/backend/Go.svg", alt: ".NET" },
+                                    { src: "/icons/technologies/web_development/backend/Java.png", alt: "Django" },
+                                    { src: "/icons/technologies/web_development/backend/Node.js.png", alt: "Node.js" },
+                                    { src: "/icons/technologies/web_development/backend/Nest.js.png", alt: "Java" },
+                                    { src: "/icons/technologies/web_development/backend/Laravel.png", alt: "Java" },
+                                    { src: "/icons/technologies/web_development/backend/Python.png", alt: "Python" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="Mobile"
+                                logos={[
+                                    { src: "/icons/technologies/software_development/mobile/Android.svg", alt: "Android" },
+                                    { src: "/icons/technologies/software_development/mobile/Swift.svg", alt: "Swift" },
+                                    { src: "/icons/technologies/software_development/mobile/Kotlin.svg", alt: "Kotlin" },
+                                    { src: "/icons/technologies/software_development/mobile/Apple.svg", alt: "Flutter" },
+                                    { src: "/icons/technologies/software_development/mobile/Android Studio.svg", alt: "React Native" },
+                                    { src: "/icons/technologies/software_development/mobile/Ionic.svg", alt: "React Native" },
+                                    { src: "/icons/technologies/software_development/mobile/Objective-C.svg", alt: "React Native" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="Data"
+                                logos={[
+                                    { src: "/icons/technologies/software_development/Data/Apache Kafka.svg", alt: "MongoDB" },
+                                    { src: "/icons/technologies/software_development/Data/aws-dynamodb-svgrepo-com.svg", alt: "PostgreSQL" },
+                                    { src: "/icons/technologies/software_development/Data/Azure SQL Database.svg", alt: "SQL" },
+                                    { src: "/icons/technologies/software_development/Data/Elastic Search.svg", alt: "Kafka" },
+                                    { src: "/icons/technologies/software_development/Data/Firebase.svg", alt: "Firebase" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="DevOps"
+                                logos={[
+                                    { src: "/icons/technologies/software_development/DevOps/Docker.svg", alt: "Docker" },
+                                    { src: "/icons/technologies/software_development/DevOps/HashiCorp Terraform.svg", alt: "Kubernetes" },
+                                    { src: "/icons/technologies/software_development/DevOps/Kubernetes.svg", alt: "Terraform" },
+                                    // { src: "/icons/technologies/software_development/DevOps/png-clipart-continuous-integration-devops-continuous-delivery-software-testing-ci-cd-le-bio-au-risque-de-se-perdre-text-logo.png", alt: "CI/CD Tools", width: 100 },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="Infrastructure"
+                                logos={[
+                                    { src: "/icons/technologies/software_development/Infrastructure/AWS.svg", alt: "AWS" },
+                                    { src: "/icons/technologies/software_development/Infrastructure/Azure.svg", alt: "Azure" },
+                                    { src: "/icons/technologies/software_development/Infrastructure/Google Cloud.svg", alt: "GCP" },
+                                    { src: "/icons/technologies/software_development/Infrastructure/Digital Ocean.svg", alt: "DigitalOcean" },
+                                ]}
+                            />
+
+                        </div>
+
+                        {/* RIGHT SIDE — Text + Image */}
+                        <div className="space-y-8">
+
+                            <div className="space-y-3">
+                                <h2 className="text-3xl font-semibold text-[var(--color-primary)]">
+                                    Software Development
+                                </h2>
+
+                                <p className="text-[--color-muted] text-sm leading-relaxed">
+                                    In order to help clients achieve their business aims, our
+                                    specialists choose tech stacks depending on project requirements
+                                    such as scalability, real-time data processing needs, or the
+                                    level of interactivity. Niche, launch speed, plans for the
+                                    development of additional functionality and possibilities of
+                                    budget distribution are also important aspects of tech stack
+                                    choice.
+                                </p>
+                            </div>
+
+                            <img
+                                src="https://develux.com/wp-content/uploads/2023/05/image-04-2.webp"
+                                alt="Software development"
+                                className="rounded-3xl w-full object-cover"
+                                width={630}
+                                height={600}
+                            />
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section className="our_technologies bg-[--color-bg-alt] pb-20 ">
+                <div className="container mx-auto max-w-6xl px-4">
+
+                    <div className="grid gap-12 lg:grid-cols-2">
+
+                        {/* LEFT SIDE — Text + Image */}
+                        <div className="space-y-8">
+                            <div className="space-y-3">
+                                <h2 className="text-3xl font-semibold text-[var(--color-primary)]">
+                                    Web Development
+                                </h2>
+
+                                <p className="text-sm leading-relaxed text-[--color-muted]">
+                                    When choosing tech stacks for web development, we consider the
+                                    required level of interaction with the user interface, the
+                                    ability to handle a certain amount of traffic, the degree of
+                                    security, and the time and cost of development. A deep
+                                    understanding of these factors helps our team choose a
+                                    technology package that best meets the client&apos;s needs.
+                                </p>
+                            </div>
+
+                            <img
+                                src="https://develux.com/wp-content/uploads/2023/05/image-04-3.webp"
+                                alt="Web Development"
+                                className="rounded-3xl w-full object-cover"
+                                width={630}
+                                height={600}
+                            />
+                        </div>
+
+                        {/* RIGHT SIDE — Accordions */}
+                        <div className="space-y-6">
+
+                            <TechAccordion
+                                title="PHP Frameworks"
+                                logos={[
+                                    { src: "/icons/technologies/web_development/backend/Symfony.png", alt: "Symfony" },
+                                    { src: "/icons/technologies/web_development/backend/Laravel.png", alt: "Laravel" },
+                                    // { src: "/icons/php/laravel.svg", alt: "Laravel" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="CMS"
+                                logos={[
+                                    { src: "/icons/technologies/web_development/cms/WordPress.svg", alt: "WordPress" },
+                                    // { src: "/icons/technologies/web_development/cms/opencart.svg", alt: "OpenCart" },
+                                    { src: "/icons/technologies/web_development/cms/Drupal.svg", alt: "Drupal" },
+                                    { src: "/icons/technologies/web_development/cms/Webflow.svg", alt: "Webflow" },
+                                    { src: "/icons/technologies/web_development/cms/WooCommerce.svg", alt: "WooCommerce" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="JavaScript Frameworks"
+                                logos={[
+                                    { src: "/icons/technologies/web_development/frontend/React.svg", alt: "React" },
+                                    { src: "/icons/technologies/web_development/frontend/angular.svg", alt: "angular" },
+                                    { src: "/icons/technologies/web_development/frontend/Vue.js.svg", alt: "Vue" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="HTML5, CSS3"
+                                logos={[
+                                    { src: "/icons/technologies/web_development/frontend/css_frameworks/tailwind.svg", alt: "tailwind" },
+                                    { src: "/icons/technologies/web_development/frontend/css_frameworks/material_ui.svg", alt: "material_ui" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="Databases"
+                                logos={[
+                                    { src: "/icons/technologies/web_development/databases/SQLite.svg", alt: "SQLite" },
+                                    // { src: "/icons/technologies/web_development/databases/realm.svg", alt: "Realm" },
+                                    // { src: "/icons/technologies/web_development/databases/coredata.svg", alt: "Core Data" },
+                                    { src: "/icons/technologies/web_development/databases/MongoDB.svg", alt: "MongoDB" },
+                                    { src: "/icons/technologies/web_development/databases/PostgresSQL.svg", alt: "PostgreSQL" },
+                                    { src: "/icons/technologies/web_development/databases/MySQL.svg", alt: "SQL" },
+                                ]}
+                            />
+
+                            <TechAccordion
+                                title="Caching systems"
+                                logos={[
+                                    // { src: "/icons/technologies/web_development/caching/memcached.svg", alt: "Memcached" },
+                                    { src: "/icons/technologies/web_development/caching/Redis.svg", alt: "Redis" },
+                                ]}
+                            />
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-
-      {/* Our Technologies / Software Development */}
-      <section className="our_technologies bg-[--color-bg-alt] py-16 md:py-24">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="wrapper grid gap-12 lg:grid-cols-2">
-            {/* Left: tech groups */}
-            <div className="col6">
-              <div className="tech_wrapper grid gap-8">
-                {/* Frontend */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    Frontend
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeJavascript.svg" alt="JavaScript" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeAngular.svg" alt="Angular" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeVue.js.svg" alt="Vue.js" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeCSS.svg" alt="CSS3" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeHTML.svg" alt="HTML5" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeReact.js.svg" alt="React" />
-                  </div>
-                </div>
-
-                {/* Backend */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    Backend
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/NET.svg" alt=".NET" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/django.svg" alt="Django" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypePHP.svg" alt="PHP" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeGolang.svg" alt="Go" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeNode.js.svg" alt="Node.js" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeJava-1.svg" alt="Java" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/python.svg" alt="Python" />
-                  </div>
-                </div>
-
-                {/* Mobile */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    Mobile
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/Statedefault-TypeAndroid-StuDio-dagger-Hilt.svg" alt="Android Studio dagger-Hilt" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/Ionic.svg" alt="Ionic" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeObjective-C.svg" alt="Objective-C" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeSwift.svg" alt="Swift" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeKotlin.svg" alt="Kotlin" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeFlutter.svg" alt="Flutter" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeReact-Native.svg" alt="React Native" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeiOS.svg" alt="iOS" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeAndroid.svg" alt="Android" />
-                  </div>
-                </div>
-
-                {/* Data */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    Data
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/firebase.svg" alt="Firebase" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeElastic-Search.svg" alt="Elastic-Search" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeDynamo-DB.svg" alt="Dynamo-DB" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeGoogle-Cloud-SQL.svg" alt="Google Cloud SQL" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeAzure-SQL.svg" alt="Azure SQL" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeMongo-DB.svg" alt="MongoDB" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypePostgreSQL.svg" alt="PostgreSQL" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeKafka.svg" alt="Kafka" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeSQL.svg" alt="SQL" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeMySQL.svg" alt="MySQL" />
-                  </div>
-                </div>
-
-                {/* DevOps */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    DevOps
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/CD-tools-1.svg" alt="CI/CD tools" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeTerraform.svg" alt="Terraform" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeKubernetes.svg" alt="Kubernetes" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeDocker.svg" alt="Docker" />
-                  </div>
-                </div>
-
-                {/* Infrastructure */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    Infrastructure
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeDigital-Ocean.svg" alt="Digital Ocean" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeAzure.svg" alt="Azure" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeGCP.svg" alt="GCP" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeAWS.svg" alt="AWS" />
-                  </div>
-                </div>
-
-                {/* Fullstack Development */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    Fullstack Development
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/Statedefault-Typenetangular.svg" alt=".NET + Angular" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/statehover.svg" alt="PHP + Vue.js" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/icons-1.svg" alt="Golang + React" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: text + image */}
-            <div className="col6">
-              <div className="block_text space-y-8">
-                <div className="text space-y-3">
-                  <div className="title text-xl font-semibold text-[--color-text]">
-                    Software Development
-                  </div>
-                  <div className="desc text-sm leading-relaxed text-[--color-muted]">
-                    In order to help clients achieve their business aims, our specialists
-                    choose tech stacks depending on project requirements such as scalability,
-                    real-time data processing needs, or the level of interactivity. Niche,
-                    launch speed, plans for the development of additional functionality and
-                    possibilities of budget distribution are also important aspects of tech
-                    stack choice.
-                  </div>
-                </div>
-                <div className="image">
-                  <img
-                    width={630}
-                    height={600}
-                    src="https://develux.com/wp-content/uploads/2023/05/image-04-2.webp"
-                    alt="Software development illustration"
-                    className="h-auto w-full rounded-3xl object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Action block blue (Ready to develop a project?) */}
-      <section className="action_block_blue bg-[--color-bg] py-16 md:py-20">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="wrapper">
-            <div className="col12">
-              <div className="flex_action flex flex-col items-center gap-6 rounded-3xl border border-[--color-muted]/20 bg-[--color-bg-alt] px-6 py-10 md:flex-row md:justify-between md:px-10">
-                <div className="icon flex-shrink-0">
-                  {/* inline SVG copied as-is */}
-                  <svg
-                    width="188"
-                    height="94"
-                    viewBox="0 0 188 94"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <ellipse cx="140.875" cy="47" rx="47.1253" ry="47" fill="#222222" />
-                    <path
-                      d="M93.7507 47C93.7507 72.68 72.877 93.5 47.1253 93.5C21.3736 93.5 0.5 72.68 0.5 47C0.5 21.32 21.3736 0.5 47.1253 0.5C72.877 0.5 93.7507 21.32 93.7507 47Z"
-                      stroke="white"
-                    />
-                    <mask
-                      id="mask0_384_5810"
-                      style={{ maskType: "alpha" }}
-                      maskUnits="userSpaceOnUse"
-                      x="46"
-                      y="0"
-                      width="95"
-                      height="94"
-                    >
-                      <ellipse cx="93.7497" cy="46.75" rx="46.8747" ry="46.75" fill="black" />
-                    </mask>
-                    <g mask="url(#mask0_384_5810)">
-                      <path d="M31.9609 1.0625H151.278V2.125H31.9609V1.0625Z" fill="white" />
-                      <path d="M31.9609 6.375H151.278V7.4375H31.9609V6.375Z" fill="white" />
-                      <path d="M31.9609 11.6875H151.278V12.75H31.9609V11.6875Z" fill="white" />
-                      <path d="M31.9609 17H151.278V18.0625H31.9609V17Z" fill="white" />
-                      <path d="M31.9609 22.3125H151.278V23.375H31.9609V22.3125Z" fill="white" />
-                      <path d="M31.9609 27.625H151.278V28.6875H31.9609V27.625Z" fill="white" />
-                      <path d="M31.9609 32.9375H151.278V34H31.9609V32.9375Z" fill="white" />
-                      <path d="M31.9609 38.25H151.278V39.3125H31.9609V38.25Z" fill="white" />
-                      <path d="M31.9609 43.5625H151.278V44.625H31.9609V43.5625Z" fill="white" />
-                      <path d="M31.9609 48.875H151.278V49.9375H31.9609V48.875Z" fill="white" />
-                      <path d="M31.9609 54.1875H151.278V55.25H31.9609V54.1875Z" fill="white" />
-                      <path d="M31.9609 59.5H151.278V60.5625H31.9609V59.5Z" fill="white" />
-                      <path d="M31.9609 64.8125H151.278V65.875H31.9609V64.8125Z" fill="white" />
-                      <path d="M31.9609 70.125H151.278V71.1875H31.9609V70.125Z" fill="white" />
-                      <path d="M31.9609 75.4375H151.278V76.5H31.9609V75.4375Z" fill="white" />
-                      <path d="M31.9609 80.75H151.278V81.8125H31.9609V80.75Z" fill="white" />
-                      <path d="M31.9609 86.0625H151.278V87.125H31.9609V86.0625Z" fill="white" />
-                      <path d="M31.9609 91.375H151.278V92.4375H31.9609V91.375Z" fill="white" />
-                    </g>
-                  </svg>
-                </div>
-                <div className="text text-center text-lg font-semibold text-[--color-text] md:text-left md:text-xl">
-                  Ready to develop a project?
-                </div>
-                <div className="button">
-                  <a
-                    href="#id_footer_form"
-                    title="Let’s Start"
-                    className="black_btn inline-flex items-center rounded-full bg-[--color-text] px-6 py-3 text-sm font-semibold text-[--color-bg] transition hover:bg-white"
-                  >
-                    Let’s Start
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Technologies / Web Development */}
-      <section className="our_technologies bg-[--color-bg-alt] py-16 md:py-24">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="wrapper revers grid gap-12 lg:grid-cols-2">
-            {/* Left: tech groups (PHP Frameworks, CMS, JS Frameworks, etc.) */}
-            <div className="col6">
-              <div className="tech_wrapper grid gap-8">
-                {/* PHP Frameworks */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    PHP Frameworks
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeSymfony.svg" alt="Symfony" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeLaravel.svg" alt="Laravel" />
-                  </div>
-                </div>
-
-                {/* CMS */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    CMS
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/wordpress-2.svg" alt="WordPress" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeOpenCart.svg" alt="OpenCart" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeDrupal.svg" alt="Drupal" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeWebflow.svg" alt="Webflow" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeWooCommerce.svg" alt="WooCommerce" />
-                  </div>
-                </div>
-
-                {/* JavaScript Frameworks */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    JavaScript Frameworks
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeAngular.svg" alt="Angular" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeVue.js.svg" alt="Vue.js" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeReact.js.svg" alt="React" />
-                  </div>
-                </div>
-
-                {/* HTML5, CSS3 */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    HTML5, CSS3
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeBootstrap.svg" alt="Bootstrap" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeFoundation.svg" alt="Foundation" />
-                  </div>
-                </div>
-
-                {/* Databases */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    Databases
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/SQlite.svg" alt="SQLite.NET" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/REALM.svg" alt="Realm Mobile Database" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/Core.svg" alt="Core Data" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/REALM.svg" alt="Realm" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/05/SQlite.svg" alt="SQLite" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeMongo-DB.svg" alt="Mongo-DB" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypePostgreSQL.svg" alt="PostgreSQL" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeSQL.svg" alt="SQL" />
-                  </div>
-                </div>
-
-                {/* Caching systems */}
-                <div className="item">
-                  <div className="head_name mb-4 text-sm font-semibold text-[--color-text]">
-                    Caching systems
-                  </div>
-                  <div className="caption_logos flex flex-wrap gap-3">
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeMemcached.svg" alt="Memcached" />
-                    <TechLogo src="https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeRedis.svg" alt="Redis" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Web Development text + image */}
-            <div className="col6">
-              <div className="block_text space-y-8">
-                <div className="text space-y-3">
-                  <div className="title text-xl font-semibold text-[--color-text]">
-                    Web Development
-                  </div>
-                  <div className="desc text-sm leading-relaxed text-[--color-muted]">
-                    When choosing tech stacks for web development, we consider the required
-                    level of interaction with the user interface, the ability to handle a
-                    certain amount of traffic, the degree of security, and the time and cost
-                    of development. A deep understanding of these factors helps our team
-                    choose a technology package that best meets the client&apos;s needs.
-                  </div>
-                </div>
-                <div className="image">
-                  <img
-                    width={630}
-                    height={600}
-                    src="https://develux.com/wp-content/uploads/2023/05/image-04-3.webp"
-                    alt="Web development illustration"
-                    className="h-auto w-full rounded-3xl object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        <ActionSection
+            title="Ready to develop a project?"
+            btnLabel="Let’s Start"
+            btnHref="/contact-us"
+            bgColor="bg-[--color-primary]"
+            textColor="text-white"
+            // className="mt-20"
+            icon={
+                <svg width="140" height="80" viewBox="0 0 200 100" fill="none">
+                    <circle cx="60" cy="50" r="36" stroke="white" strokeWidth="3" />
+                    <circle cx="95" cy="50" r="36" stroke="white" strokeWidth="3" opacity="0.4" />
+                    <circle cx="130" cy="50" r="36" fill="black" />
+                </svg>
+            }
+        />
+    </div>
   );
 }
 

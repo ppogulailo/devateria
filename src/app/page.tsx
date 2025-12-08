@@ -13,7 +13,7 @@ import {OurTechStackSection} from "@/components/sections/OurTechStack/OurTechSta
 import {AboutCompanySection} from "@/components/sections/AboutCompanySection";
 import {OurValuesSection} from "@/components/sections/OurValuesSection";
 import {PrincipleOfCooperationSection} from "@/components/sections/PrincipleOfCooperationSection";
-import {ActionToCooporateWithUsSection} from "@/components/sections/ActionToCooporateWithUsSection";
+import {ActionToCooperateWithUsSection} from "@/components/sections/ActionToCooporateWithUsSection";
 import {WhatWeDoSection} from "@/components/sections/WhatWeDoSection";
 import {AboutUsSection} from "@/components/sections/AboutUsSection";
 import {IndustriesSection} from "@/components/sections/IndustriesSection";
@@ -33,7 +33,7 @@ export default function Home() {
                 {/* Principles of Cooperation (copied + JSX-ified) */}
                 <PrincipleOfCooperationSection/>
                 {/* Action block blue (copied + JSX-ified) */}
-                <ActionToCooporateWithUsSection/>
+                <ActionToCooperateWithUsSection/>
                 {/*<IndustryExperienceSection/>*/}
                 <OurTechStackSection/>
 

@@ -19,7 +19,7 @@ export const Input: React.FC<InputProps> = ({ label, required, className, ...pro
             <input
                 {...props}
                 className={clsx(
-                    "w-full bg-transparent border-b border-[var(--color-form-text)] !text-[--color-form-text] placeholder-[var(--color-form-text)] px-0 py-2 focus:outline-none focus:border-[--color-input-focus] transition-colors duration-200",
+                    "w-full bg-transparent border-b !text-[--color-form-text] placeholder-[var(--color-form-text)] px-0 py-2 focus:outline-none focus:border-[--color-input-focus] transition-colors duration-200",
                     className // ← merge safely, client & server remain identical
                 )}
             />
