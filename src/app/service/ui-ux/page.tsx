@@ -10,47 +10,31 @@ import { WhyChooseUs } from "@/components/sections/WhyShouldYouChooseUS";
 import { PageSection } from "@/components/ui/PageSection";
 import { ActionSection } from "@/components/Action/ActionSection";
 import {uiuxContent} from "@/data";
+import {HeroSection} from "@/components/sections/HeroSection";
+import {SectionTitle} from "@/components/ui/SectionTitle";
 
 export default function UIUXPage() {
+    const uiUxHeroData = {
+        title: "UI / UX Design <br/> Services",
+        subtitle: "We design intuitive and elegant experiences that make your product smooth and enjoyable to use.",
+        ctaLabel: "Start a Project",
+        ctaHref: "/contact-us",
+        image: "/icons/pages/ui-ux/ui-ux.avif",
+        imageAlt: "UI/UX Design illustration",
+    };
   return (
       <div className="bg-[--color-bg] text-[--color-text]">
 
         {/* ================= HERO ================= */}
         <section className="mx-auto w-full max-w-6xl px-4 py-20 md:py-28">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-primary)] leading-tight">
-                UI / UX Design <br /> Services
-              </h1>
-
-              <p className="text-lg text-[--color-muted]">
-                We design intuitive and elegant experiences that make your product smooth and enjoyable to use.
-              </p>
-
-              <a href="/contact-us">
-                <Button className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-xl hover:bg-[var(--color-secondary)] transition">
-                  Start a Project
-                </Button>
-              </a>
-            </div>
-
-            <div className="flex justify-center md:justify-end">
-              <img
-                  src="/icons/pages/ui-ux/ui-ux.avif"
-                  alt="UI UX design"
-                  className="rounded-3xl w-full max-w-lg object-cover shadow-xl"
-              />
-            </div>
-
-          </div>
+            <HeroSection {...uiUxHeroData} />
         </section>
 
         {/* ================= INTRO ================= */}
         <section className="py-20 mx-auto w-full max-w-4xl text-center px-4">
-          <h2 className="text-4xl font-extrabold text-[var(--color-primary)] mb-6">
+          <SectionTitle>
             Crafting Digital Experiences Your Users Will Love
-          </h2>
+          </SectionTitle>
 
           <p className="text-lg text-[--color-muted] leading-relaxed">
             We build interfaces that look beautiful, feel intuitive, and function flawlessly — boosting usability and business results.
@@ -59,9 +43,9 @@ export default function UIUXPage() {
 
         {/* ================= BENEFITS ================= */}
         <section className="py-20 mx-auto w-full max-w-6xl px-4">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-16 text-[var(--color-primary)]">
+          <SectionTitle>
             What Our UI/UX Design Helps You Achieve
-          </h2>
+          </SectionTitle>
 
           <div className="grid md:grid-cols-3 gap-10">
             {uiuxContent.benefits.map((b, i) => (
@@ -75,10 +59,9 @@ export default function UIUXPage() {
 
         {/* ================= PROCESS ================= */}
         <BgSection>
-          <section className="py-20 mx-auto w-full max-w-6xl px-4">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16">
+            <SectionTitle className='mb-10'>
               Our Design Process
-            </h2>
+            </SectionTitle>
 
             <div className="grid md:grid-cols-4 gap-10">
               {uiuxContent.process.map((step) => (
@@ -91,7 +74,6 @@ export default function UIUXPage() {
                   </Card>
               ))}
             </div>
-          </section>
         </BgSection>
 
         {/* ================= CTA ================= */}
@@ -105,14 +87,69 @@ export default function UIUXPage() {
 
         {/* ================= WHY CHOOSE US ================= */}
         <PageSection>
-          <WhyChooseUs />
+            <section id="why-choose-us" className="py-20 bg-[--color-bg] text-[--color-text]">
+                <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+
+                    {/* LEFT — TEXT BLOCK */}
+                    <div className="order-2 lg:order-1 space-y-6">
+                        {/* Title */}
+                        <SectionTitle align='left'>
+                            Why Choose Us?
+                            <span className="absolute left-1/2 -translate-x-1/2 top-full text-5xl md:text-7xl opacity-5 font-bold">
+              Why Choose Us?
+            </span>
+                        </SectionTitle>
+
+                        {/* Subtitle */}
+                        <h4 className="text-xl font-semibold">
+                            It’s simple and efficient to work with Deveteria. In big part because:
+                        </h4>
+
+                        {/* Bullet Points */}
+                        <ul className="space-y-4 text-[--color-muted] leading-relaxed">
+                            <li className="flex gap-3">
+                                <span className="text-[var(--color-primary)] mt-1">•</span>
+                                <p>
+                                    <b className="text-black">We cooperate based on a clear agreement</b> — every project is reinforced and
+                                    protected by transparent terms established at the beginning of our partnership.
+                                </p>
+                            </li>
+
+                            <li className="flex gap-3">
+                                <span className="text-[var(--color-primary)] mt-1">•</span>
+                                <p>
+                                    <b className="text-black">We deliver everything on time</b> — no need to micromanage or worry about
+                                    deadlines. Your dedicated team ensures timely and reliable execution.
+                                </p>
+                            </li>
+
+                            <li className="flex gap-3">
+                                <span className="text-[var(--color-primary)] mt-1">•</span>
+                                <p>
+                                    <b className="text-black">We stay in touch 24/7</b> — your personal Team Lead keeps communication
+                                    transparent, clears up any questions, and relays details between you and the team efficiently.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* RIGHT — IMAGE */}
+                    <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+                        <img
+                            src="https://crystalogic.net/wp-content/themes/crystal-master/assets/img/Why-choose-us.svg"
+                            alt="Why Choose Us Illustration"
+                            className="max-w-full w-[420px] object-contain"
+                        />
+                    </div>
+                </div>
+            </section>
         </PageSection>
 
         {/* ================= PRINCIPLES ================= */}
         <BgSection>
           <div className="grid md:grid-cols-2 gap-16 items-center mx-auto w-full max-w-6xl px-4 py-20">
             <div>
-              <h2 className="text-5xl mb-5">UI/UX as the Foundation of Modern Products</h2>
+              <SectionTitle align='left'>UI/UX as the Foundation of Modern Products</SectionTitle>
               <p className="leading-relaxed text-black/70 mb-5">
                 We design clear, intuitive, and accessible interfaces that support your users and your business.
               </p>

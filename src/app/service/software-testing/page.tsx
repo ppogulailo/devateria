@@ -1,57 +1,29 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
 import { ActionSection } from "@/components/Action/ActionSection";
 import { Card } from "@/components/ui/card/Card";
 import { BgSection } from "@/components/ui/PrimaryBackground";
 import { PageSection } from "@/components/ui/PageSection";
 import { FAQ } from "@/components/FAQ";
+import {HeroSection} from "@/components/sections/HeroSection";
 import {softwareTestingPageData} from "@/data";
+import {SectionTitle} from "@/components/ui/SectionTitle";
 export default function SoftwareTestingPage() {
+   const {hero, priorities, reasons, services, faq} = softwareTestingPageData
     return (
         <div className="[&_p]:text-black/70]">
 
             <PageSection>
-
-                {/* ================= HERO ================= */}
-                <section className="py-20 md:py-28">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-
-                        <div className="space-y-6">
-                            <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-primary)] leading-tight">
-                                Software Testing <br /> & Quality Assurance
-                            </h1>
-
-                            <p className="text-lg">
-                                Testing is challenging — but with the right team, you achieve reliability, stability, and confidence.
-                            </p>
-
-                            <a href="/contact-us">
-                                <Button className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-xl hover:bg-[var(--color-secondary)] transition">
-                                    Let’s Improve Your Quality
-                                </Button>
-                            </a>
-                        </div>
-
-                        <div className="flex justify-center md:justify-end">
-                            <img
-                                src="/icons/pages/software-testing/Software%20Testing.webp"
-                                alt="Software Testing"
-                                className="rounded-3xl w-full max-w-lg object-cover shadow-xl"
-                            />
-                        </div>
-
-                    </div>
-                </section>
+                <HeroSection {...hero} />
 
                 {/* ================= PRIORITIES ================= */}
                 <section className="py-20">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-[var(--color-primary)]">
+                    <SectionTitle>
                         Our Testing Priorities
-                    </h2>
+                    </SectionTitle>
 
                     <div className="grid md:grid-cols-3 gap-10">
-                        {softwareTestingPageData.priorities.map((p, i) => (
+                        {priorities.map((p, i) => (
                             <Card key={i}>
                                 <h3 className="text-xl font-semibold mb-4">{p.title}</h3>
                                 <p className="text-sm leading-relaxed text-[--color-muted]">{p.text}</p>
@@ -62,12 +34,12 @@ export default function SoftwareTestingPage() {
 
                 {/* ================= SERVICES ================= */}
                 <section className="py-20">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-[var(--color-primary)]">
+                    <SectionTitle>
                         Quality Assurance Services We Provide
-                    </h2>
+                    </SectionTitle>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        {softwareTestingPageData.services.map((s, i) => (
+                        {services.map((s, i) => (
                             <Card key={i}>
                                 <h3 className="text-xl font-semibold mb-4">{s.title}</h3>
                                 <p className="text-sm leading-relaxed text-[--color-muted]">{s.text}</p>
@@ -89,9 +61,9 @@ export default function SoftwareTestingPage() {
                     />
 
                     <div className="space-y-6">
-                        <h2 className="text-5xl font-extrabold text-[var(--color-primary)]">
+                        <SectionTitle align='left'>
                             Deveteria as Your Testing Partner
-                        </h2>
+                        </SectionTitle>
 
                         <p className="leading-relaxed text-[--color-muted]">
                             Our QA engineers follow proven methodologies and use advanced tools to guarantee stability and reliability.
@@ -108,12 +80,12 @@ export default function SoftwareTestingPage() {
             {/* ================= WHY CHOOSE ================= */}
             <PageSection>
                 <section className="py-20">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-14 text-[var(--color-primary)]">
+                    <SectionTitle className='mb-10'>
                         Why Choose Deveteria for QA?
-                    </h2>
+                    </SectionTitle>
 
                     <div className="grid md:grid-cols-3 gap-10">
-                        {softwareTestingPageData.reasons.map((r, i) => (
+                        {reasons.map((r, i) => (
                             <Card key={i}>
                                 <h3 className="text-xl font-semibold mb-4">{r.title}</h3>
                                 <p className="text-sm leading-relaxed text-[--color-muted]">{r.text}</p>
@@ -133,7 +105,7 @@ export default function SoftwareTestingPage() {
             />
 
             {/* ================= FAQ ================= */}
-            <FAQ title="Frequently Asked Questions" items={softwareTestingPageData.faq} />
+            <FAQ title="Frequently Asked Questions" items={faq} />
 
         </div>
     );

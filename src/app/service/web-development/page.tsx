@@ -3,44 +3,17 @@ import { FAQ } from "@/components/FAQ";
 import { Card } from "@/components/ui/card/Card";
 import { BgSection } from "@/components/ui/PrimaryBackground";
 import { CardBackground } from "@/components/ui/card/CardBackground";
-import { webDevelopmentPageData } from "@/data/pages/services/web-development";
+import { webDevelopmentPageData } from "@/data/pages/services/web-development.data";
 import { WebDevelopmentTechnologies } from "@/components/sections/WebDevelopmentTechnologies";
+import {HeroSection} from "@/components/sections/HeroSection";
 
 export default function DedicatedTeamsPage() {
-    const { steps, faqItems, serviceItems, benefitItems } = webDevelopmentPageData;
+    const { steps, faqItems, serviceItems, benefitItems, hero } = webDevelopmentPageData;
 
     return (
         <main className="py-12">
             {/* HERO */}
-            <section className="w-full bg-[--color-bg-alt] py-20 md:py-28 overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-                    <div className="space-y-8">
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-[--onblack-color-text] leading-tight">
-                            Empower your Web <br />
-                            Development with <br />
-                            Deveteria's expertise
-                        </h1>
-
-                        <a
-                            href="#contact-us"
-                            className="inline-block bg-[var(--color-primary)] hover:bg-[var(--color-secondary)] text-white text-lg font-semibold px-10 py-4 rounded-xl transition"
-                        >
-                            Let’s Cooperate
-                        </a>
-                    </div>
-
-                    <div className="relative flex justify-center md:justify-end">
-                        <div className="absolute -top-10 right-10 w-56 h-40 bg-[var(--color-primary)] rounded-xl opacity-80"></div>
-                        <div className="absolute bottom-0 right-0 w-72 h-56 bg-white rounded-xl opacity-80"></div>
-
-                        <img
-                            src="/icons/pages/web-development/design.avif"
-                            alt="Web Development Illustration"
-                            className="relative z-10 w-full max-w-md md:max-w-lg drop-shadow-xl"
-                        />
-                    </div>
-                </div>
-            </section>
+            <HeroSection {...hero} />
 
             {/* SERVICES */}
             <section className="py-20">

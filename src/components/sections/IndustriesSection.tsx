@@ -1,68 +1,71 @@
-"use client";
-import { useState } from "react";
-
-const TABS = [
-    { id: "fintech", title: "Fintech", img: "/icons/industries/1/Fintech.svg" },
-    { id: "healthcare", title: "Healthcare", img: "/icons/industries/1/Healthcare.svg" },
-    { id: "entertainment", title: "Entertainment", img: "/icons/industries/1/Entertainment.svg" },
-    { id: "manufacture", title: "Manufacture", img: "/icons/industries/1/Manufacture.svg" },
-    { id: "ecommerce", title: "eCommerce.svg", img: "/icons/industries/1/eCommerce.svg" },
-];
+'use client';
+import {useState} from "react";
+import { BgSection } from "../ui/PrimaryBackground";
+import {CardBackground} from "@/components/ui/card/CardBackground";
 
 export const IndustriesSection = () => {
+    const INDUSTRY_TABS = [
+        { id: "fintech", title: "Fintech", img: "/icons/industries/1/Fintech.svg", content: FintechContent },
+        { id: "healthcare", title: "Healthcare", img: "/icons/industries/1/Healthcare.svg", content: HealthcareContent },
+        { id: "entertainment", title: "Entertainment", img: "/icons/industries/1/Entertainment.svg", content: EntertainmentContent },
+        { id: "manufacture", title: "Manufacture", img: "/icons/industries/1/Manufacture.svg", content: ManufactureContent },
+        { id: "ecommerce", title: "eCommerce", img: "/icons/industries/1/eCommerce.svg", content: EcommerceContent },
+    ];
+
     const [active, setActive] = useState("healthcare");
 
+    const ActiveContent = INDUSTRY_TABS.find(t => t.id === active)?.content;
+
     return (
-        <section id="industries" className="py-20 bg-[var(--color-bg-alt)] text-[var(--color-header-text)]">
+        <BgSection>
             <div className="max-w-6xl mx-auto px-4">
 
                 {/* TITLE */}
                 <div className="text-center mb-10">
                     <h2 className="text-5xl font-bold uppercase relative inline-block">
                         industries
-                        <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-[2.5rem] opacity-10 font-bold">
-              {/*industries*/}
-            </span>
+                        <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-[2.5rem] opacity-10 font-bold"></span>
                     </h2>
                     <p className="mt-4 text-[--color-muted] max-w-2xl mx-auto">
                         Our custom software development company provides solutions across multiple industries:
                     </p>
                 </div>
 
-                {/* TAB BUTTONS */}
+                {/* TAB CARDS */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-12">
-                    {TABS.map((tab) => (
-                        <button
-                            key={tab.id}
-                            onClick={() => setActive(tab.id)}
-                            className={`text-[var(--color-text)] cursor-pointer rounded-xl p-4 flex flex-col items-center text-center transition  hover-[var(--color-secondary)]
-                ${active === tab.id ? "bg-[var(--color-secondary)] shadow-lg" : "bg-white hover:bg-[var(--color-secondary)] hover:shadow-md"}`}
-                        >
-                            <div className="mb-3 h-12 flex items-center justify-center">
-                                {/* ICON SLOT */}
-                                <div className="w-12 h-12 opacity-80">
-                                    <img width={50} src={tab.img} className="text-white" />
+                    {INDUSTRY_TABS.map((tab) => {
+                        const isActive = active === tab.id;
+
+                        return (
+                            <CardBackground
+                                key={tab.id}
+                                role="button"
+                                onClick={() => setActive(tab.id)}
+                                className={`
+                                    cursor-pointer flex flex-col items-center text-center transition
+                                    ${isActive
+                                    ? "!bg-[var(--color-secondary)] shadow-lg"
+                                    : "bg-white hover:bg-[var(--color-secondary)] hover:shadow-md"
+                                }
+                                `}
+                            >
+                                <div className="mb-3 h-12 flex items-center justify-center">
+                                    <img className="w-12 h-12 opacity-80" src={tab.img} alt={tab.title} />
                                 </div>
-                            </div>
-                            <h5 className="font-semibold">{tab.title}</h5>
-                        </button>
-                    ))}
+                                <p className="font-semibold">{tab.title}</p>
+                            </CardBackground>
+                        );
+                    })}
                 </div>
 
                 {/* CONTENT AREA */}
                 <div className="bg-[--color-bg-alt] rounded-2xl p-8 shadow-xl">
-                    {active === "fintech" && <FintechContent />}
-                    {active === "healthcare" && <HealthcareContent />}
-                    {active === "entertainment" && <EntertainmentContent />}
-                    {active === "manufacture" && <ManufactureContent />}
-                    {active === "ecommerce" && <EcommerceContent />}
+                    {ActiveContent && <ActiveContent />}
                 </div>
             </div>
-        </section>
+        </BgSection>
     );
 };
-
-/* ---------------- FINTECH CONTENT ---------------- */
 const FintechContent = () => (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <IndustryItem
@@ -88,7 +91,6 @@ const FintechContent = () => (
     </div>
 );
 
-/* -------------- HEALTHCARE CONTENT -------------- */
 const HealthcareContent = () => (
     <div className="text-[--color-muted]">
         <p className="text-xl font-semibold mb-4">Healthcare Industry</p>
@@ -99,35 +101,29 @@ const HealthcareContent = () => (
     </div>
 );
 
-/* -------------- ENTERTAINMENT CONTENT -------------- */
 const EntertainmentContent = () => (
     <div className="text-[--color-muted]">
         <p className="text-xl font-semibold mb-4">Entertainment Solutions</p>
         <p>
-            We develop streaming platforms, gaming applications, media portals, and high-traffic interactive
-            systems for entertainment businesses.
+            We develop streaming platforms, gaming applications, media portals, and high-traffic interactive systems.
         </p>
     </div>
 );
 
-/* -------------- MANUFACTURE CONTENT -------------- */
 const ManufactureContent = () => (
     <div className="text-[--color-muted]">
         <p className="text-xl font-semibold mb-4">Manufacturing Digitalization</p>
         <p>
-            Manufacturing automation tools, supply chain optimization systems, and real-time monitoring
-            dashboards for industrial companies.
+            Automation tools, supply chain optimization systems, and real-time monitoring dashboards.
         </p>
     </div>
 );
 
-/* -------------- ECOMMERCE CONTENT -------------- */
 const EcommerceContent = () => (
     <div className="text-[--color-muted]">
         <p className="text-xl font-semibold mb-4">eCommerce</p>
         <p>
-            Custom eCommerce platforms, product information systems, checkout flows, payment integrations,
-            and storefronts tailored to your business needs.
+            Custom platforms, payment integrations, checkout flows, and tailored storefront solutions.
         </p>
     </div>
 );

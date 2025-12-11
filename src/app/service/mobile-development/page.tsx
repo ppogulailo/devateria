@@ -5,10 +5,11 @@ import { ActionSection } from "@/components/Action/ActionSection";
 import { FAQ } from "@/components/FAQ";
 import { BgSection } from "@/components/ui/PrimaryBackground";
 import { Card } from "@/components/ui/card/Card";
-import { mobileDevelopmentPageData as data } from "@/data/pages/mobile-development.data";
+import { mobileDevelopmentPageData as data } from "@/data/pages/services/mobile-development.data";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { CardBackground } from "@/components/ui/card/CardBackground";
 import { JSX } from "react";
+import {SectionTitle} from "@/components/ui/SectionTitle";
 
 export default function MobileDevelopmentPage() {
     const {
@@ -48,9 +49,9 @@ export default function MobileDevelopmentPage() {
             <section className="py-20 bg-[--color-bg]">
                 <div className="container mx-auto px-4">
 
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[var(--color-primary)] mb-8">
+                    <SectionTitle>
                         {buildAppIntro.title}
-                    </h2>
+                    </SectionTitle>
 
                     <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
                         {buildAppIntro.paragraphs.map((p, idx) => (
@@ -75,9 +76,9 @@ export default function MobileDevelopmentPage() {
             <BgSection>
                 <div className="container mx-auto px-4">
 
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-4">
+                    <SectionTitle className="!mb-4">
                         {developmentCycle.title}
-                    </h2>
+                    </SectionTitle>
 
                     <p className="text-center text-[--color-muted] mb-16">
                         {developmentCycle.subtitle}
@@ -109,11 +110,11 @@ export default function MobileDevelopmentPage() {
             <section className="py-24 bg-[--color-bg]">
                 <div className="container mx-auto px-4">
 
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[var(--color-primary)] mb-8">
+                    <SectionTitle className="!mb-4">
                         {ourFocus.title}
-                    </h2>
+                    </SectionTitle>
 
-                    <div className="max-w-3xl mx-auto text-center text-[--color-muted] space-y-4 mb-16">
+                    <div className="max-w-3xl mx-auto text-[--color-muted]  mb-16">
                         {ourFocus.introParagraphs.map((p, idx) => (
                             <p key={idx}>{p}</p>
                         ))}
@@ -123,9 +124,9 @@ export default function MobileDevelopmentPage() {
                         {ourFocus.items.map((item) => (
                             <Card key={item.title}>
                                 <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                                <ul className="space-y-1 text-[--color-muted]">
+                                <ul className="space-y-1">
                                     {item.points.map((p) => (
-                                        <li key={p}>• {p}</li>
+                                        <li key={p}><p>• {p}</p></li>
                                     ))}
                                 </ul>
                             </Card>
@@ -139,9 +140,9 @@ export default function MobileDevelopmentPage() {
             <BgSection>
                 <div className="container mx-auto px-4">
 
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[var(--color-primary)] mb-6">
+                    <SectionTitle className="mb-4">
                         {hireProcess.title}
-                    </h2>
+                    </SectionTitle>
 
                     <p className="max-w-3xl mx-auto text-center text-[--color-muted] mb-16">
                         {hireProcess.subtitle}
@@ -166,9 +167,9 @@ export default function MobileDevelopmentPage() {
             <section className="py-24 bg-[--color-bg-alt]">
                 <div className="container mx-auto px-4">
 
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[var(--color-primary)] mb-16">
+                    <SectionTitle>
                         {superCharge.title}
-                    </h2>
+                    </SectionTitle>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {superCharge.items.map((item, idx) => (
@@ -192,9 +193,9 @@ export default function MobileDevelopmentPage() {
             <BgSection>
                 <div className="container mx-auto px-4">
 
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[var(--color-primary)] mb-6">
+                    <SectionTitle className="!mb-4">
                         {techStack.title}
-                    </h2>
+                    </SectionTitle>
 
                     <p className="text-center text-[--color-muted] max-w-3xl mx-auto mb-16">
                         {techStack.subtitle}
@@ -225,14 +226,14 @@ export default function MobileDevelopmentPage() {
                 <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
 
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-[var(--color-primary)] mb-10">
+                        <SectionTitle>
                             {whyChoose.title}
-                        </h2>
+                        </SectionTitle>
 
                         <div className="space-y-6 text-lg leading-relaxed text-[--color-muted]">
                             {whyChoose.items.map((item) => (
                                 <div key={item.title}>
-                                    <p className="font-semibold text-[--color-text]">{item.title}</p>
+                                    <h3 className="font-semibold text-[var(--color-primary)]">{item.title}</h3>
                                     <p>{item.text}</p>
                                 </div>
                             ))}
@@ -254,9 +255,9 @@ export default function MobileDevelopmentPage() {
             <BgSection>
                 <div className="container mx-auto px-4">
 
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-white mb-6">
+                    <SectionTitle className='!mb-4'>
                         {benefitsToBusiness.title}
-                    </h2>
+                    </SectionTitle>
 
                     <p className="text-center text-[--color-muted] mb-16 text-lg">
                         {benefitsToBusiness.subtitle}

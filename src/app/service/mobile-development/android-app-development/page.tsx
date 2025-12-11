@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card/Card";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { CardBackground } from "@/components/ui/card/CardBackground";
 import { androidAppDevelopmentPageData } from "@/data";
+import {SectionTitle} from "@/components/ui/SectionTitle";
 
 export default function AndroidAppDevelopmentPage() {
     const {
@@ -53,9 +54,9 @@ export default function AndroidAppDevelopmentPage() {
             {/* ANDROID SERVICES LIST */}
             <section className="py-24">
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12 leading-tight text-[var(--color-primary)]">
+                    <SectionTitle>
                         Our Android development<br />services include:
-                    </h2>
+                    </SectionTitle>
 
                     <div className="grid md:grid-cols-3 gap-6">
                         {items.map((item, idx) => (
@@ -92,9 +93,9 @@ export default function AndroidAppDevelopmentPage() {
                         </div>
 
                         <div className="bg-white rounded-2xl p-10">
-                            <h3 className="text-3xl md:text-4xl font-extrabold mb-6 text-[var(--color-primary)]">
+                            <SectionTitle align='left'>
                                 Android Apps for Any Device
-                            </h3>
+                            </SectionTitle>
 
                             <p className="text-black/70 leading-relaxed mb-6">
                                 Our Android application development services are undertaken by specialists
@@ -122,9 +123,9 @@ export default function AndroidAppDevelopmentPage() {
             {/* OUR APPROACH */}
             <BgSection>
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-white mb-14">
+                    <SectionTitle>
                         Our Approach
-                    </h2>
+                    </SectionTitle>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {items2.map((item, index) => (
@@ -157,9 +158,9 @@ export default function AndroidAppDevelopmentPage() {
             {/* TECHNOLOGY GRID */}
             <BgSection>
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-white mb-6">
+                    <SectionTitle>
                         Our Android App Development Technology
-                    </h2>
+                    </SectionTitle>
 
                     <p className="text-center text-white/70 max-w-3xl mx-auto mb-16 leading-relaxed">
                         Through our detailed knowledge of all databases, frameworks, tools, solutions, languages and new features,
@@ -193,9 +194,9 @@ export default function AndroidAppDevelopmentPage() {
             <section className="py-24">
                 <div className="max-w-7xl mx-auto px-6">
 
-                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[var(--color-primary)] mb-6">
+                    <SectionTitle className='!mb-4'>
                         Android Applications for Your Industry
-                    </h2>
+                    </SectionTitle>
 
                     <p className="text-center text-lg font-semibold text-[#1A1A1A] max-w-3xl mx-auto mb-4">
                         Whether your business is HR, Fintech, Logistics or Healthcare, we can design
@@ -232,9 +233,9 @@ export default function AndroidAppDevelopmentPage() {
             <BgSection>
                 <div className="max-w-7xl mx-auto px-6">
 
-                    <h2 className="text-center text-white text-4xl md:text-5xl font-extrabold mb-6">
+                    <SectionTitle className='!mb-4'>
                         Development Process at Deveteria
-                    </h2>
+                    </SectionTitle>
 
                     <p className="text-center text-gray-200 max-w-3xl mx-auto mb-3 font-semibold leading-relaxed">
                         Deveteria’s Android development services follow a clear, efficient process
@@ -269,9 +270,9 @@ export default function AndroidAppDevelopmentPage() {
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="text-4xl md:text-5xl font-extrabold text-[--color-text] mb-8">
+                            <SectionTitle className='mb-4' align='left'>
                                 Why Deveteria?
-                            </h2>
+                            </SectionTitle>
 
                             <div className="space-y-6 text-[17px] leading-relaxed text-[--color-text]">
 
@@ -331,9 +332,9 @@ export default function AndroidAppDevelopmentPage() {
             {/* EXPERTISE */}
             <BgSection>
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+                    <SectionTitle className='!mb-4'>
                         Select Android Development Expertise
-                    </h2>
+                    </SectionTitle>
 
                     <div className="text-[17px] text-[#CCCCD6] max-w-3xl mx-auto mb-16 leading-relaxed">
                         <p className="font-semibold">

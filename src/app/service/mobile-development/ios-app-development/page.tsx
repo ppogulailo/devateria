@@ -5,6 +5,7 @@ import {BgSection} from "@/components/ui/PrimaryBackground";
 import {CardBackground} from "@/components/ui/card/CardBackground";
 import {iosAppDevelopmentPageData} from "@/data";
 import {HeroSection} from "@/components/sections/HeroSection";
+import {SectionTitle} from "@/components/ui/SectionTitle";
 
 export default function IosAppDevelopmentPage() {
   const { hero, whyChooseIos, impactApps, fullCycleDevelopment, industries, faqItems } = iosAppDevelopmentPageData;
@@ -22,12 +23,12 @@ export default function IosAppDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-6">
 
             {/* TITLE */}
-            <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[--color-text] leading-tight mb-6">
+            <SectionTitle>
               The Deveteria iOS <br/>
               development team <br/>
               creates impactful apps for <br/>
               all Apple devices
-            </h2>
+            </SectionTitle>
 
             {/* SUBTITLE */}
             <p className="text-center text-[--color-muted] max-w-3xl mx-auto mb-16">
@@ -110,9 +111,9 @@ export default function IosAppDevelopmentPage() {
 
               {/* RIGHT CONTENT */}
               <div className="flex-1 bg-white rounded-xl p-10 shadow-sm">
-                <h2 className="text-4xl font-extrabold text-[--color-text] leading-tight mb-6">
+                <SectionTitle className='mb-4 !text-4xl' align='left'>
                   iOS apps for any <br/> device
-                </h2>
+                </SectionTitle>
 
                 <p className="text-[--color-muted] leading-relaxed mb-6">
                   Whether you are looking to build a product specifically for iPhone, or an app
@@ -123,10 +124,10 @@ export default function IosAppDevelopmentPage() {
                 </p>
 
                 <ul className="text-[--color-text] space-y-2">
-                  <li>• iPhone</li>
-                  <li>• iPad</li>
-                  <li>• iWatch</li>
-                  <li>• Apple TV</li>
+                  <li><p>• iPhone</p></li>
+                  <li><p>• iPad</p></li>
+                  <li><p>• iWatch</p></li>
+                  <li><p>• Apple TV</p></li>
                 </ul>
               </div>
 
@@ -137,9 +138,9 @@ export default function IosAppDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-6">
 
             {/* TITLE */}
-            <h2 className="text-center text-white text-5xl font-extrabold mb-6">
+            <SectionTitle className='!mb-4'>
               Full cycle development
-            </h2>
+            </SectionTitle>
 
             <p className="text-center text-gray-300 max-w-3xl mx-auto mb-16 leading-relaxed">
               With strong communication, flexibility and in-depth knowledge,
@@ -194,9 +195,9 @@ export default function IosAppDevelopmentPage() {
 
               {/* TEXT */}
               <div>
-                <h2 className="text-5xl font-extrabold text-[#111] leading-tight mb-8">
+                <SectionTitle align='left'>
                   Hire an iOS app<br />developer or team
-                </h2>
+                </SectionTitle>
 
                 <p className="text-[#444] leading-relaxed mb-6">
                   For a completely new venture we can gather a dedicated team with the right
@@ -234,9 +235,9 @@ export default function IosAppDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-6">
 
             {/* Title */}
-            <h2 className="text-center text-5xl font-extrabold mb-4">
+            <SectionTitle>
               Why Choose iOS Application Development?
-            </h2>
+            </SectionTitle>
 
             {/* Cards */}
             <div className="mt-16 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -269,9 +270,9 @@ export default function IosAppDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-6">
 
             {/* --- Title --- */}
-            <h2 className="text-center text-5xl font-extrabold mb-6 text-[--color-text]">
+            <SectionTitle>
               IOS application for your industry
-            </h2>
+            </SectionTitle>
 
             {/* --- Subtitle --- */}
             <p className="text-center text-lg max-w-4xl mx-auto text-[--color-muted] leading-relaxed mb-16">
@@ -344,9 +345,9 @@ export default function IosAppDevelopmentPage() {
 
               {/* LEFT TEXT BLOCK */}
               <div className="bg-white rounded-2xl p-10 shadow-sm">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-[--color-text] leading-tight mb-8">
+                <SectionTitle align='left'>
                   Why Deveteria?
-                </h2>
+                </SectionTitle>
 
                 <p className="text-[--color-text] font-semibold mb-3">
                   Outstanding developers

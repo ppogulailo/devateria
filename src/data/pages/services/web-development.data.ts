@@ -84,7 +84,20 @@ layout design, and integration with accounting systems.`,
             text: `We provide technical support tasks to ensure stable and continuous operation of your project.`,
         }
     ],
+    hero: {
+        title: "Empower your Web <br/> Development with <br/> Deveteria's expertise",
+        subtitle: "", // empty → because your original hero has no subtitle
+        ctaLabel: "Let’s Cooperate",
+        ctaHref: "#contact-us",
+        image: "/icons/pages/web-development/design.avif",
+        imageAlt: "Web Development Illustration",
 
+        // optional decorative boxes if you want to support them later
+        decorations: {
+            purpleBox: { top: -40, right: 40, width: 224, height: 160 },
+            whiteBox: { bottom: 0, right: 0, width: 288, height: 224 },
+        },
+    },
     benefitItems: [
         {
             icon: "🔍",

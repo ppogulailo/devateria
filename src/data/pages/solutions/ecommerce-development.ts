@@ -1,4 +1,14 @@
 export const ecommerceData = {
+    hero:{
+        title: "Our Ecommerce Development Services",
+        subtitle:
+            "If you’re thinking of starting or revamping an ecommerce store, work smarter, not harder, with ecommerce software development from Deveteria!",
+        ctaLabel: "",          // no CTA in original hero → leave empty or remove
+        ctaHref: "",
+        image:
+            "https://develux.com/wp-content/uploads/2023/05/company-accountant-doing-e-commerce-paperwork-in-o-2022-03-14-14-24-52-utc-1-1.jpg",
+        imageAlt: "Ecommerce Development",
+    },
     ecommerceFaq: [
         {
             question: "What will my eCommerce site be able to do?",

@@ -1,6 +1,7 @@
     "use client";
 
     import { useState } from "react";
+    import {SectionTitle} from "@/components/ui/SectionTitle";
 
     export interface FAQItem {
         question: string;
@@ -24,9 +25,9 @@
                 <div className="container mx-auto max-w-6xl px-6">
 
                     {/* Title */}
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-16 text-[var(--color-primary)]">
+                    <SectionTitle>
                         {title}
-                    </h2>
+                    </SectionTitle>
 
                     <div className="space-y-4">
                         {items.map((item, i) => {

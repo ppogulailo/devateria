@@ -100,7 +100,7 @@ export const Header: React.FC = () => {
                     </Link>
                     <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
                             <DropdownMega name="Services" data={servicesMegaMenu} href="/service" />
-                            <Dropdown name="Solutions" items={solutionsItems} href="/about-us" />
+                            <Dropdown name="Solutions" items={solutionsItems} href="/solutions" />
                             <Link href="/technologies" className="hover:text-[var(--color-primary)]">
                                 Technologies
                             </Link>

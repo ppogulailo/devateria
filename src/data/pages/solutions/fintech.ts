@@ -1,4 +1,14 @@
 export const bankingPageData = {
+    hero: {
+        title: "Banking and Financial Software<br/>Development Services",
+        subtitle:
+            "At Deveteria, we build intelligent financial apps and intuitive enterprise banking software.",
+        ctaLabel: "Let’s talk",
+        ctaHref: "#id_footer_form",
+        image:
+            "https://develux.com/wp-content/uploads/2023/05/smiling-banking-specialist-meeting-with-couple-2021-12-09-15-12-44-utc-1-1.jpg",
+        imageAlt: "Banking software development",
+    },
     customers: [
         {
             title: "Banks",

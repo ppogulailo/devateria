@@ -4,7 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "@/components/Footer";
 import BreadcrumbsWrapper from "@/components/BreadcrumbsWrapper";
 import { ContactSection } from "@/components/ContactSection";
-import {AboutUsSection} from "@/components/sections/AboutUsSection";
+// import {AboutUsSection} from "@/components/sections/AboutUsSection";
 
 type LayoutProps = {
     children: ReactNode;

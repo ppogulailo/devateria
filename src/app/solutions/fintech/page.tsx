@@ -4,49 +4,16 @@ import { FAQ } from "@/components/FAQ";
 import { BgSection } from "@/components/ui/PrimaryBackground";
 import { Card } from "@/components/ui/card/Card";
 import { bankingPageData } from "@/data/pages/solutions/fintech";
+import {HeroSection} from "@/components/sections/HeroSection";
+import {SectionTitle} from "@/components/ui/SectionTitle";
 
 export default function Page() {
-  const { customers, bankingFaq, features, bankingServices } = bankingPageData;
+  const { customers, bankingFaq, features, bankingServices, hero } = bankingPageData;
 
   return (
-      <div className="bg-[--color-bg] text-[--color-text]">
+      <div>
 
-        {/* =====================================
-          HERO SECTION
-      ====================================== */}
-        <section className="py-20">
-          <div className="container mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-            <div>
-              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-[--color-primary]">
-                Banking and Financial Software<br />
-                Development Services
-              </h1>
-
-              <p className="text-lg text-[--color-muted] mb-8">
-                At Deveteria, we build intelligent financial apps and intuitive enterprise banking software.
-              </p>
-
-              <Link
-                  href="#id_footer_form"
-                  className="inline-block bg-[--color-primary] text-white font-semibold px-8 py-3 rounded-xl hover:opacity-90 transition"
-              >
-                Let&apos;s talk
-              </Link>
-            </div>
-
-            <div className="flex justify-center md:justify-end">
-              <img
-                  src="https://develux.com/wp-content/uploads/2023/05/smiling-banking-specialist-meeting-with-couple-2021-12-09-15-12-44-utc-1-1.jpg"
-                  alt="banking software development"
-                  width={630}
-                  height={430}
-                  className="rounded-2xl object-cover shadow-md"
-              />
-            </div>
-
-          </div>
-        </section>
+        <HeroSection {...hero} />
 
         {/* =====================================
           CUSTOMERS
@@ -110,12 +77,12 @@ export default function Page() {
         <BgSection>
           <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
 
-            <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
+            <SectionTitle align='left'>
               We Prioritize<br />
               Security in FinTech<br />
               Software<br />
               Development
-            </h2>
+            </SectionTitle>
 
             <div className="text-lg text-white/70 space-y-6">
               <p className="font-semibold">Deveteria always prioritizes the protection of financial information and personal data.</p>
@@ -132,9 +99,9 @@ export default function Page() {
         <section className="py-20">
           <div className="container mx-auto max-w-7xl px-6">
 
-            <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-16 text-[--color-primary]">
+            <SectionTitle>
               What Custom Banking and Software Services<br />Do We Offer?
-            </h2>
+            </SectionTitle>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {bankingServices.map((item, idx) => (
@@ -176,9 +143,9 @@ export default function Page() {
         <BgSection>
           <div className="container mx-auto max-w-7xl px-6">
 
-            <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-6">
+            <SectionTitle className='!mb-4'>
               Our FinTech Solution Features
-            </h2>
+            </SectionTitle>
 
             <p className="text-center text-white/60 mb-14">
               We offer a wide range of features for the following niches:

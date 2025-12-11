@@ -2,228 +2,29 @@ import {ActionSection} from "@/components/Action/ActionSection";
 import { Card } from "@/components/ui/card/Card";
 import Link from "next/link";
 import {FAQ, FAQItem} from "@/components/FAQ";
+import {BgSection} from "@/components/ui/PrimaryBackground";
+import {CardBackground} from "@/components/ui/card/CardBackground";
+import {ChevronRightIcon} from "@radix-ui/react-icons";
+import {dedicatedTeamsData} from "@/data/pages/services/dedicated-teams.data";
+import {HeroSection} from "@/components/sections/HeroSection";
+import {SectionTitle} from "@/components/ui/SectionTitle";
 
 export default function DedicatedTeamsPage() {
-  const benefits = [
-    {
-      title: "High Quality Talent",
-      text: `A dedicated team model provides companies with unparalleled flexibility when it comes to talent acquisition. In a nutshell, this means instead of hiring full-time specialists, you simply rent our professionals to complete your project. This makes the recruitment process easier and provides access to a comprehensive array of talented IT specialists.`,
-      icon: "/icons/dedicated/icon1.svg",
-    },
-    {
-      title: "Save Time & Money",
-      text: `If you need to hire dedicate developers, Deveteria will help your businesses save time and money. We do the hard work, so you can focus on the big picture. In addition to saving resources on talent acquisition, our experts are located in a cost-efficient region, so you’ll lower your costs even more.`,
-      icon: "/icons/dedicated/icon1.svg",
-    },
-    {
-      title: "100% Transparency",
-      text: `We guarantee total transparency. At any time, our clients can directly communicate with their team to engage with the project, receive important progress updates, or to learn about the allocation of resources such as salaries, fees, office costs, and so on.`,
-      icon: "/icons/dedicated/icon1.svg",
-    },
-    {
-      title: "Complete Confidentiality",
-      text: `Protecting a client’s privacy and their trade secrets is our top priority. We always sign an NDA to safeguard your business’ private data, project details, and intellectual property.`,
-      icon: "/icons/dedicated/icon1.svg",
-    },
-  ];
 
-  const techData = [
-    {
-      title: "Frontend",
-      icons: [
-        {
-          static: "/tech/frontend/vue.svg",
-          hover: "/tech/frontend/vue-hover.svg",
-          alt: "Vue.js",
-        },
-        {
-          static: "/tech/frontend/angular.svg",
-          hover: "/tech/frontend/angular-hover.svg",
-          alt: "Angular",
-        },
-        {
-          static: "/tech/frontend/react.svg",
-          hover: "/tech/frontend/react-hover.svg",
-          alt: "React",
-        },
-        {
-          static: "/tech/frontend/webflow.svg",
-          hover: "/tech/frontend/webflow-hover.svg",
-          alt: "Webflow",
-        },
-      ],
-    },
-    {
-      title: "Backend",
-      icons: [
-        {
-          static: "/tech/backend/python.svg",
-          hover: "/tech/backend/python-hover.svg",
-          alt: "Python",
-        },
-        {
-          static: "/tech/backend/php.svg",
-          hover: "/tech/backend/php-hover.svg",
-          alt: "PHP",
-        },
-        {
-          static: "/tech/backend/go.svg",
-          hover: "/tech/backend/go-hover.svg",
-          alt: "Golang",
-        },
-        {
-          static: "/tech/backend/dotnet.svg",
-          hover: "/tech/backend/dotnet-hover.svg",
-          alt: ".NET",
-        },
-        {
-          static: "/tech/backend/scala.svg",
-          hover: "/tech/backend/scala-hover.svg",
-          alt: "Scala",
-        },
-        {
-          static: "/tech/backend/node.svg",
-          hover: "/tech/backend/node-hover.svg",
-          alt: "Node.js",
-        },
-      ],
-    },
-    {
-      title: "Fullstack Development",
-      icons: [
-        {
-          static: "/tech/fullstack/mean.svg",
-          hover: "/tech/fullstack/mean-hover.svg",
-          alt: "MEAN",
-        },
-        {
-          static: "/tech/fullstack/go-react.svg",
-          hover: "/tech/fullstack/go-react-hover.svg",
-          alt: "Golang + React",
-        },
-        {
-          static: "/tech/fullstack/php-vue.svg",
-          hover: "/tech/fullstack/php-vue-hover.svg",
-          alt: "PHP + Vue.js",
-        },
-        {
-          static: "/tech/fullstack/net-angular.svg",
-          hover: "/tech/fullstack/net-angular-hover.svg",
-          alt: ".NET + Angular",
-        },
-      ],
-    },
-    {
-      title: "Mobile",
-      icons: [
-        {
-          static: "/tech/mobile/ios.svg",
-          hover: "/tech/mobile/ios-hover.svg",
-          alt: "iOS",
-        },
-        {
-          static: "/tech/mobile/android.svg",
-          hover: "/tech/mobile/android-hover.svg",
-          alt: "Android",
-        },
-        {
-          static: "/tech/mobile/react-native.svg",
-          hover: "/tech/mobile/react-native-hover.svg",
-          alt: "React Native",
-        },
-        {
-          static: "/tech/mobile/ionic.svg",
-          hover: "/tech/mobile/ionic-hover.svg",
-          alt: "Ionic",
-        },
-      ],
-    },
-  ];
+  const { benefits, techData, services, steps, faqItems, hero } = dedicatedTeamsData;
 
-  const services = [
-    { title: "Python Developers for Hire", href: "/python-devs" },
-    { title: "Video Production Services", href: "/video-production" },
-    { title: "Research & Development Software Services", href: "/rnd" },
-    { title: "Digital Marketing Services", href: "/marketing" },
-    { title: "IT Consulting Services", href: "/consulting" },
-    { title: "Hire AngularJS Developer", href: "/angular-devs" },
-    { title: "Talent Mapping Service", href: "/talent-mapping" },
-    { title: "Offshore Software Development", href: "/offshore" },
-    { title: "IT Recruiting Services", href: "/it-recruiting" },
-  ];
-  const faqItems: FAQItem[] = [
-    {
-      question: "Can You Meet the Needs of Large-Scale Projects?",
-      answer:
-          "Yes. Our dedicated teams are structured to scale quickly and efficiently. Whether your project requires a small group of engineers or a fully staffed development unit, we assemble specialists with the right experience, ensure seamless onboarding, and maintain consistent delivery quality as your project grows."
-    },
-    {
-      question: "What Steps Should I Take to Hire Developers?",
-      answer:
-          "The hiring process is simple:\n1. Share your goals, requirements, and preferred tech stack.\n2. We shortlist candidates who match your needs.\n3. You interview and select the developers you want.\n4. We handle onboarding and integrate the team into your workflow. You remain fully in control throughout the process."
-    },
-    {
-      question: "How to Hire Remote Software Developers Effectively?",
-      answer:
-          "Successful remote hiring requires clear communication, defined responsibilities, and reliable processes. We provide vetted specialists with proven remote experience, ensure transparency in every step, and help set up efficient communication and project management so your team delivers smoothly from day one."
-    },
-    {
-      question: "What Specialists Work at Your Service?",
-      answer:
-          "We provide a wide range of specialists, including frontend and backend engineers, full-stack developers, QA experts, UI/UX designers, DevOps engineers, project managers, business analysts, and mobile developers. Every expert is selected based on your project’s specific requirements."
-    },
-    {
-      question: "Why Should I Hire a Complete Team?",
-      answer:
-          "A full dedicated team offers better synergy, faster execution, and clearer communication. Instead of coordinating multiple freelancers, you get a structured, aligned, and highly collaborative team that works as a unified extension of your business. This reduces risks, eliminates delays, and accelerates delivery."
-    },
-    {
-      question: "Where Do You Source Team Members From?",
-      answer:
-          "We recruit software engineers from top European tech hubs known for their strong technical education, English proficiency, and high software development standards. This ensures consistent quality, cultural alignment, and excellent communication across your project."
-    },
-    {
-      question: "Why Should I Choose You to Create a Dedicated Software Development Team?",
-      answer:
-          "We offer a proven approach: carefully selected senior engineers, transparent pricing, fast team assembly, and flexible scaling. You receive full control over the team, while we handle administration, processes, onboarding, and retention—allowing you to focus entirely on building your product."
-    }
-  ];
+
   return (
     <main className="py-12">
-      <section className="bg-[#eef0f8] py-20">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-            {/* LEFT TEXT */}
-            <div>
-              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-black">
-                Dedicated Development <br /> Teams Drive Success
-              </h1>
-
-              <p className="mt-6 text-lg text-black/70 leading-relaxed max-w-md">
-                We’re here to help you save time and beat the competition.
-              </p>
-
-              <a
-                  href="#contact"
-                  className="inline-block mt-10 px-10 py-4 rounded-xl bg-[var(--color-primary)] text-white font-semibold text-lg shadow-md hover:opacity-90 transition"
-              >
-                Let's talk
-              </a>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="flex justify-center lg:justify-end">
-              <img
-                  src="https://develux.com/wp-content/uploads/2023/05/lead-developer-managing-team-2022-07-12-14-37-20-utc-1-1-1.jpg"
-                  alt="Dedicated Development Team"
-                  className="rounded-2xl shadow-lg w-full max-w-lg object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-24 bg-[#eef0f8]">
+      <HeroSection
+          title={hero.title}
+          subtitle={hero.subtitle}
+          ctaLabel={hero.ctaLabel}
+          ctaHref={hero.ctaHref}
+          image={hero.image}
+          imageAlt={hero.imageAlt}
+      />
+      <section className="py-24 ">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
@@ -277,10 +78,10 @@ export default function DedicatedTeamsPage() {
             </div>
 
             {/* RIGHT CONTENT BLOCK */}
-            <div className="bg-white p-10 rounded-3xl shadow-md">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-black leading-tight mb-6">
+            <div className="p-10 rounded-3xl shadow-md">
+              <SectionTitle className='!text-4xl' align='left'>
                 How a Dedicated Development Team <br /> Can Transform Your Business Model
-              </h2>
+              </SectionTitle>
 
               <p className="text-black/70 leading-relaxed mb-4">
                 Organizations of all shapes and sizes are hiring dedicated development teams — but why?
@@ -303,15 +104,15 @@ export default function DedicatedTeamsPage() {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-[#eef0f8]">
+      <section className="py-24">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             {/* LEFT SIDE TEXT */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-black">
+              <SectionTitle align='left'>
                 Looking to hire a team of dedicated developers?
-              </h2>
+              </SectionTitle>
 
               <p className="text-lg font-semibold text-black mb-4">
                 Acquiring talented IT specialists is a time consuming and costly process,
@@ -341,16 +142,16 @@ export default function DedicatedTeamsPage() {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-[#1e1e1e]">
+      <BgSection>
         <div className="container mx-auto max-w-7xl px-6">
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
             {/* LEFT COLUMN */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">
+              <SectionTitle align='left'>
                 Why choose us?
-              </h2>
+              </SectionTitle>
 
               <p className="text-white/80 leading-relaxed">
                 Deveteria has the talent, resources, and expertise to meet the requirements of any
@@ -382,9 +183,9 @@ export default function DedicatedTeamsPage() {
 
           </div>
         </div>
-      </section>
+      </BgSection>
 
-      <section className="relative w-full h-[260px] flex items-center justify-center bg-[#f1f1f8] overflow-hidden">
+      <section className="relative w-full h-[260px] flex items-center justify-center overflow-hidden">
 
         {/* Background Image */}
         <img
@@ -410,13 +211,13 @@ export default function DedicatedTeamsPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#f2f2f8]">
+      <section className="py-24 ">
         <div className="container mx-auto max-w-7xl px-6">
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4">
+          <SectionTitle className='!mb-4'>
             The Benefits of Our Dedicated Team Model
-          </h2>
+          </SectionTitle>
 
           {/* Subtitle */}
           <p className="text-center text-[--color-muted] mb-14">
@@ -427,9 +228,7 @@ export default function DedicatedTeamsPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
             {benefits.slice(0, 3).map((benefit, i) => (
-                <div
-                    key={i}
-                    className="rounded-2xl border border-black/10 bg-white p-8 shadow-sm flex flex-col"
+                <Card key={i}
                 >
                   <img
                       src={benefit.icon}
@@ -446,7 +245,7 @@ export default function DedicatedTeamsPage() {
                   <p className="text-[--color-muted] text-sm leading-relaxed">
                     {benefit.text}
                   </p>
-                </div>
+                </Card>
             ))}
 
           </div>
@@ -475,13 +274,13 @@ export default function DedicatedTeamsPage() {
         </div>
       </section>
 
-      <section className="bg-[#1a1a1a] py-24 text-white">
+      <BgSection>
         <div className="container mx-auto max-w-7xl px-6">
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-10">
+          <SectionTitle>
             Here's How it Works
-          </h2>
+          </SectionTitle>
 
           {/* Subtitle */}
           <div className="max-w-3xl mx-auto text-center text-white/70 leading-relaxed mb-16">
@@ -494,37 +293,22 @@ export default function DedicatedTeamsPage() {
               When you hire a dedicated development team, there are 3 key elements:
             </p>
           </div>
-
-          {/* 3 Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-            {/* Card 1 */}
-            <div className="border border-white/10 rounded-2xl p-8 bg-[#131313]">
-              <p className="text-[var(--color-primary)] text-4xl font-bold mb-4">1</p>
-              <h3 className="text-xl font-semibold leading-snug">
-                You Share Your Vision, Values, and Goals.
-              </h3>
-            </div>
-
-            {/* Card 2 */}
-            <div className="border border-white/10 rounded-2xl p-8 bg-[#131313]">
-              <p className="text-[var(--color-primary)] text-4xl font-bold mb-4">2</p>
-              <h3 className="text-xl font-semibold leading-snug">
-                We Handpick Top IT Specialists and Launch Your Project.
-              </h3>
-            </div>
-
-            {/* Card 3 */}
-            <div className="border border-white/10 rounded-2xl p-8 bg-[#131313]">
-              <p className="text-[var(--color-primary)] text-4xl font-bold mb-4">3</p>
-              <h3 className="text-xl font-semibold leading-snug">
-                We Guide You through the Onboarding Process.
-              </h3>
-            </div>
-
+            {steps.map((step, index) => (
+                <CardBackground
+                    key={index}
+                >
+                  <p className="text-[var(--color-primary)] text-4xl font-bold mb-4">
+                    {step.number}
+                  </p>
+                  <h3 className="text-xl font-semibold leading-snug">
+                    {step.text}
+                  </h3>
+                </CardBackground>
+            ))}
           </div>
         </div>
-      </section>
+      </BgSection>
 
       <ActionSection
           title="Ready to develop a project?"
@@ -541,13 +325,13 @@ export default function DedicatedTeamsPage() {
             </svg>
           }
       />
-      <section className="py-28 bg-[#1a1a1c] text-white">
+      <BgSection>
         <div className="container mx-auto max-w-7xl px-6">
 
           {/* Title */}
-          <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-6">
+          <SectionTitle>
             Our Technological Expertise
-          </h2>
+          </SectionTitle>
 
           {/* Subtitle */}
           <p className="text-center text-lg text-gray-300 max-w-3xl mx-auto mb-16">
@@ -566,41 +350,39 @@ export default function DedicatedTeamsPage() {
                     {group.title}
                   </h3>
 
-                  <div className="flex flex-wrap justify-center gap-6">
-                    {group.icons.map((icon, i) => (
-                        <div key={i} className="relative w-16 h-16">
-                          {/* Static icon */}
-                          <img
-                              src={icon.static}
-                              alt={icon.alt}
-                              // fill
-                              className="opacity-100 transition-opacity duration-200 hover:opacity-0"
-                          />
+                  {group.icons.map((icon, i) => (
+                      <CardBackground key={i} >
+                        {/* Static icon */}
+                        <img
+                            src={icon.static}
+                            alt={icon.alt}
+                            // fill
+                            className="opacity-100 transition-opacity duration-200 hover:opacity-0"
+                        />
 
-                          {/* Hover icon */}
-                          <img
-                              src={icon.hover}
-                              alt={icon.alt}
-                              // fill
-                              className="opacity-0 absolute top-0 left-0 transition-opacity duration-200 hover:opacity-100"
-                          />
-                        </div>
-                    ))}
-                  </div>
+                        {/* Hover icon */}
+                        <img
+                            src={icon.hover}
+                            alt={icon.alt}
+                            // fill
+                            className="opacity-0 absolute top-0 left-0 transition-opacity duration-200 hover:opacity-100"
+                        />
+                      </CardBackground>
+                  ))}
                 </div>
             ))}
           </div>
         </div>
-      </section>
-      <section className="bg-[#f1f1f8] py-24">
+      </BgSection>
+      <section className="py-24">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             {/* TEXT */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-[--color-text] leading-tight mb-6">
+              <SectionTitle align='left'>
                 Where Do You Acquire Your Specialists?
-              </h2>
+              </SectionTitle>
 
               <p className="text-lg text-[--color-muted] max-w-xl leading-relaxed">
                 To deliver the best experts for your team, we discover and recruit
@@ -640,13 +422,13 @@ export default function DedicatedTeamsPage() {
           }
       />
 
-      <section className="bg-[#E8E8F3] py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4">
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          <SectionTitle className="mb-12">
             Related Services
-          </h2>
+          </SectionTitle>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -658,23 +440,10 @@ export default function DedicatedTeamsPage() {
 
                   <Link
                       href={service.href}
-                      className="flex items-center gap-2 text-[#6A4DFF] font-semibold hover:opacity-80 transition"
+                      className="flex items-center gap-2  font-semibold hover:opacity-80 transition"
                   >
                     Read more
-                    <svg
-                        width="12"
-                        height="18"
-                        viewBox="0 0 12 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0.43934 0.43934C1.02513 -0.146447 1.97487 -0.146447 2.56066 0.43934L11.1213 9L2.56066 17.5607C1.97487 18.1464 1.02513 18.1464 0.43934 17.5607C-0.146447 16.9749 -0.146447 16.0251 0.43934 15.4393L6.87868 9L0.43934 2.56066C-0.146447 1.97487 -0.146447 1.02513 0.43934 0.43934Z"
-                          fill="#6A4DFF"
-                      />
-                    </svg>
+                    <ChevronRightIcon />
                   </Link>
                 </Card>
             ))}

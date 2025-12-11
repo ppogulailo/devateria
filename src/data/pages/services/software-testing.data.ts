@@ -1,11 +1,13 @@
 export const softwareTestingPageData = {
+
     hero: {
-        title: "Software Testing & Quality Assurance",
+        title: "Software Testing <br/> & Quality Assurance",
         subtitle:
             "Testing is challenging — but with the right team, you achieve reliability, stability, and confidence.",
-        image: "/icons/pages/software-testing/Software%20Testing.webp",
         ctaLabel: "Let’s Improve Your Quality",
         ctaHref: "/contact-us",
+        image: "/icons/pages/software-testing/Software Testing.webp",
+        imageAlt: "Software Testing",
     },
 
     priorities: [
