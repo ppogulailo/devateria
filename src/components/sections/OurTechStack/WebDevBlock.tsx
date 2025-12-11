@@ -2,7 +2,7 @@
 
 import {ReactNode} from "react";
 
-const Card = ({ title, children }: {title:string, children: ReactNode}) => (
+export const Card = ({ title, children }: {title:string, children: ReactNode}) => (
     <div className="rounded-2xl border border-[--color-muted]/20 p-6">
         <div className="mb-4 text-xl font-semibold text-[--color-text]">
             {title}

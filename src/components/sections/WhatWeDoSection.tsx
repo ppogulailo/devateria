@@ -17,7 +17,7 @@ const SERVICES: ServiceItem[] = [
     { href: "/service/software-testing/manual-testing", img: "https://crystalogic.net/wp-content/uploads/2020/10/manual-icon.svg", alt: "Manual testing icon", label: "Manual Testing" },
 
     { href: "/service/web-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/hybrid-icon.svg", alt: "Hybrid mobile app development icon", label: "Hybrid Mobile App Development" },
-    { href: "/service/design/ui-ux", img: "https://crystalogic.net/wp-content/uploads/2020/10/ui-ux-design.svg", alt: "UI/UX design icon", label: "UI/UX Design" },
+    { href: "/service/ui-ux", img: "https://crystalogic.net/wp-content/uploads/2020/10/ui-ux-design.svg", alt: "UI/UX design icon", label: "UI/UX Design" },
     { href: "/service/software-testing/automation-testing", img: "https://crystalogic.net/wp-content/uploads/2020/10/automated-icon.svg", alt: "Automated testing icon", label: "Automated Testing" },
 
     { href: "/service/web-development/backend-web-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/backend-icon.svg", alt: "Backend icon", label: "Backend Development" },

@@ -22,7 +22,7 @@ export const PrincipleOfCooperationSection = () => {
             Reliability
             </div>
             <p className="text-sm leading-relaxed text-[--color-muted]">
-            Working with Develux, you minimise KPI business risks because we
+            Working with Deveteria, you minimise KPI business risks because we
         focus on achieving the desired results.
         </p>
         </div>
@@ -43,7 +43,7 @@ export const PrincipleOfCooperationSection = () => {
             Transparency
             </div>
             <p className="text-sm leading-relaxed text-[--color-muted]">
-            For you to fully understand all stages of cooperation with Develux,
+            For you to fully understand all stages of cooperation with Deveteria,
             we maintain a 100% transparent communication system with clients.
         </p>
         </div>

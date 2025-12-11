@@ -20,7 +20,7 @@ export const AboutUsSection = () => {
 
                             <div className="description_block mt-4 space-y-3 text-sm leading-relaxed text-[--color-muted]">
                                 <p>
-                                    Develux is a company that helps work stably and develop the
+                                    Deveteria is a company that helps work stably and develop the
                                     modern technical world by providing up-to-date IT services,
                                     increasing the efficiency and potential of projects.
                                 </p>
@@ -30,7 +30,7 @@ export const AboutUsSection = () => {
                                 {/*    business from competitors in market positions.*/}
                                 {/*</p>*/}
                                 <p>
-                                    Develux was founded as a small startup. We grew sustainably by
+                                    Deveteria was founded as a small startup. We grew sustainably by
                                     finding and retaining a strong in-house team and developing
                                     different digital solutions.
                                 </p>

@@ -28,10 +28,12 @@ export interface MegaMenuData {
 
 export default function DropdownMega({
                                          name,
-                                         data
+                                         data,
+    href
                                      }: {
     name: string;
     data: MegaMenuData;
+    href: string
 }) {
     const [open, setOpen] = useState(false);
 
@@ -56,7 +58,8 @@ export default function DropdownMega({
     return (
         <div className="relative" onMouseEnter={show} onMouseLeave={hide}>
             {/* BUTTON */}
-            <button
+            <Link
+                href={href}
                 className={`
                     h-15 px-5 flex items-center gap-2
                     text-sm font-semibold uppercase
@@ -69,7 +72,7 @@ export default function DropdownMega({
                 <ChevronDownIcon
                     className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
                 />
-            </button>
+            </Link>
 
             {/* PANEL */}
             {open && (
@@ -89,7 +92,8 @@ export default function DropdownMega({
                         {/* -------- LEVEL 1 -------- */}
                         <div className="flex flex-col gap-4">
                             {data.level1.map((item) => (
-                                <div
+                                <Link
+                                    href={item.href}
                                     key={item.label}
                                     onMouseEnter={() => {
                                         setHoverItem(item.label);
@@ -101,9 +105,9 @@ export default function DropdownMega({
                                         transition hover:bg-white/10 font-semibold
                                     "
                                 >
-                                    <a href={item.label}>{item.label}</a>
+                                    <div>{item.label}</div>
                                     <ChevronRightIcon />
-                                </div>
+                                </Link>
                             ))}
                         </div>
 

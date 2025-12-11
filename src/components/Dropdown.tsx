@@ -2,11 +2,12 @@
 
 import { useState, useRef } from "react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 type DropdownItem = { label: string; href?: string };
-type DropdownProps = { name: string; items: DropdownItem[] };
+type DropdownProps = { name: string; items: DropdownItem[], href: string };
 
-export default function Dropdown({ name, items }: DropdownProps) {
+export default function Dropdown({ name, items, href }: DropdownProps) {
     const [open, setOpen] = useState(false);
     const [hovered, setHovered] = useState(false);
     const hideTimeout = useRef<NodeJS.Timeout | null>(null);
@@ -31,19 +32,20 @@ export default function Dropdown({ name, items }: DropdownProps) {
             onMouseLeave={deactivate}
         >
             {/* BUTTON */}
-            <button
+            <Link
                 className={`
                     h-15 px-5 flex items-center gap-2
                     text-sm font-semibold uppercase cursor-pointer
                     rounded-t-lg transition-all duration-300
                     ${hovered ? "bg-[var(--color-primary)] text-white" : "bg-transparent text-[--color-text]"}
                 `}
+                href={href}
             >
                 {name}
                 <ChevronDownIcon
                     className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
                 />
-            </button>
+            </Link>
 
             {/* MEGA MENU — Now anchored to Header globally */}
             {open && (

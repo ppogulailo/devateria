@@ -74,7 +74,7 @@ const servicesMegaMenu = {
         { label: "MOBILE DEVELOPMENT", href: "/service/mobile-development" },
         { label: "OUTSTAFF", href: '/service/outstaff' },
         { label: "SOFTWARE TESTING", href: '/service/software-testing' },
-        { label: "DESIGN", href: '/service/design' },
+        // { label: "DESIGN", href: '/service/design' },
     ],
     level2: {
         "WEB DEVELOPMENT": [
@@ -103,7 +103,7 @@ const servicesMegaMenu = {
             { label: "Automation Testing Services", href: "/service/software-testing/automation-testing" }
         ],
         "DESIGN": [
-            { label: "UI/UX Design", href: "/service/design/ui-ux" }
+            { label: "UI/UX Design", href: "/service/ui-ux" }
         ],
     } as Record<string, { label: string; href: string }[]>
 };

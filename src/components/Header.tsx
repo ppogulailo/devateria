@@ -17,32 +17,32 @@ export const Header: React.FC = () => {
     const servicesMegaMenu = {
         level1: [
             { label: "WEB DEVELOPMENT", href: '/service/web-development' },
-            { label: "CLOUD DEVELOPMENT", href: "/service/cloud-development" },
+            // { label: "CLOUD DEVELOPMENT", href: "/service/cloud-development" },
             { label: "MOBILE DEVELOPMENT", href: "/service/mobile-development" },
             { label: "OUTSTAFF", href:'/service/outstaff' },
             { label: "SOFTWARE TESTING", href: '/service/software-testing' },
-            { label: "DESIGN", href:'/service/design' },
+            { label: "DESIGN", href:'/service/ui-ux' },
         ],
 
         level2: {
-            "WEB DEVELOPMENT": [
-                // { label: "Web Application Development", href: "/service/web-application-development" },
-                { label: "SAAS Application Development", href: "/service/web-development/saas-application-development" },
-                { label: "Front End Web Development", href: "/service/web-development/frontend-web-development" },
-                { label: "Backend Web Development", href: "/service/web-development/backend-web-development" }
-            ],
+            // "WEB DEVELOPMENT": [
+            //     // { label: "Web Application Development", href: "/service/web-application-development" },
+            //     { label: "SAAS Application Development", href: "/service/web-development/saas-application-development" },
+            //     { label: "Front End Web Development", href: "/service/web-development/frontend-web-development" },
+            //     { label: "Backend Web Development", href: "/service/web-development/backend-web-development" }
+            // ],
 
             "CLOUD DEVELOPMENT": [
-                // { label: "Cloud Application Development", href: "/service/cloud-application-development" },
-                { label: "Google Cloud Development", href: "/service/cloud-development/cloud-application-development" },
-                { label: "Amazon Web Services (AWS)", href: "/service/cloud-development/aws" }
+                { label: "Cloud Application Development", href: "/service/cloud-development" },
+                // { label: "Google Cloud Development", href: "/service/cloud-development/cloud-application-development" },
+                // { label: "Amazon Web Services (AWS)", href: "/service/cloud-development/aws" }
             ],
 
             "MOBILE DEVELOPMENT": [
-                { label: "Mobile Development Overview", href: "/service/mobile-development" },
-                { label: "Android App Development", href: "/service/mobile-development/android-app-development" },
-                { label: "iOS App Development", href: "/service/mobile-development/ios-app-development" },
-                { label: "Native App Development", href: "/service/mobile-development/native-app-development" }
+                // { label: "Cross-platform Mobile development", href: "/service/mobile-development" },
+                { label: "Android Development", href: "/service/mobile-development/android-app-development" },
+                { label: "iOS development", href: "/service/mobile-development/ios-app-development" },
+                // { label: "Native App Development", href: "/service/mobile-development/native-app-development" }
             ],
 
             "OUTSTAFF": [
@@ -53,13 +53,13 @@ export const Header: React.FC = () => {
 
             "SOFTWARE TESTING": [
                 { label: "Software Testing Services", href: "/service/software-testing" },
-                { label: "Mobile App Testing", href: "/service/software-testing/mobile-app-testing" },
-                { label: "Manual Testing Services", href: "/service/software-testing/manual-testing" },
-                { label: "Automation Testing Services", href: "/service/software-testing/automation-testing" }
+                // { label: "Mobile App Testing", href: "/service/software-testing/mobile-app-testing" },
+                // { label: "Manual Testing Services", href: "/service/software-testing/manual-testing" },
+                // { label: "Automation Testing Services", href: "/service/software-testing/automation-testing" }
             ],
 
             "DESIGN": [
-                { label: "UI/UX Design", href: "/service/design/ui-ux" }
+                { label: "UI/UX Design", href: "/service/ui-ux" }
             ],
         },
         level3: {
@@ -91,20 +91,20 @@ export const Header: React.FC = () => {
 
         <div className="mx-auto max-w-7xl px-6">
                 <div className="flex h-20 items-center justify-between">
-                    <a href="/" className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center gap-2">
                         <img
                             src="/header_logo.png"
                             alt="Header logo"
                             className="h-12 w-auto transition-transform duration-200 hover:scale-[1.03]"
                         />
-                    </a>
+                    </Link>
                     <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
-                        <DropdownMega name="Services" data={servicesMegaMenu} />
-                        <Dropdown name="Solutions" items={solutionsItems} />
-                        <Link href="/technologies" className="hover:text-[var(--color-primary)]">
-                            Technologies
-                        </Link>
-                        <Dropdown name="About Us" items={aboutUs} />
+                            <DropdownMega name="Services" data={servicesMegaMenu} href="/service" />
+                            <Dropdown name="Solutions" items={solutionsItems} href="/about-us" />
+                            <Link href="/technologies" className="hover:text-[var(--color-primary)]">
+                                Technologies
+                            </Link>
+                            <Dropdown name="About Us" items={aboutUs} href="/about-us" />
                     </nav>
 
                     <div className="hidden md:inline-flex ">
