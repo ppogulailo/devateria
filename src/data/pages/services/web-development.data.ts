@@ -1,6 +1,7 @@
 // src/data/pages/services/web-development.data.ts
 
 export const webDevelopmentPageData = {
+    whyChooseUs: { img: '/icons/pages/web-development/Team work-amico.svg'},
     steps: [
         {
             number: "1",
@@ -60,27 +61,33 @@ export const webDevelopmentPageData = {
     serviceItems: [
         {
             title: "Website Development:",
+            icon: "https://crystalogic.net/wp-content/uploads/2020/10/frontend-icon.svg",
             text: `It includes setting goals and objectives, developing technical specifications, 
 layout design, and integration with accounting systems.`,
         },
         {
             title: "E-commerce Development:",
+            icon: "/icons/pages/web-development/serviceItems/shopping-bag-commerce-and-shopping-svgrepo-com.svg",
             text: `Deveteria can combine convenience and attractiveness for sales for E-commerce platforms.`,
         },
         {
             title: "The Development of Plugins for CMS Systems:",
+            icon: "/icons/pages/web-development/serviceItems/plugin-svgrepo-com.svg",
             text: `Our team develops mini-applications that extend CRM functionality and perform specific tasks.`,
         },
         {
             title: "REST API Development:",
+            icon: "/icons/pages/web-development/serviceItems/api-svgrepo-com (1).svg",
             text: `Developers create interfaces that two systems can use for secure data exchange over the Internet.`,
         },
         {
             title: "Recovery of Hacked Sites:",
+            icon: "/icons/pages/web-development/serviceItems/gear-svgrepo-com.svg",
             text: `We help restore access and functionality after security incidents or hacking attempts.`,
         },
         {
             title: "Website Support:",
+            icon: "/icons/pages/web-development/serviceItems/cloud-coding-svgrepo-com.svg",
             text: `We provide technical support tasks to ensure stable and continuous operation of your project.`,
         }
     ],
@@ -89,7 +96,7 @@ layout design, and integration with accounting systems.`,
         subtitle: "", // empty → because your original hero has no subtitle
         ctaLabel: "Let’s Cooperate",
         ctaHref: "#contact-us",
-        image: "/icons/pages/web-development/design.avif",
+        image: "/icons/pages/web-development/Open source-bro.svg",
         imageAlt: "Web Development Illustration",
 
         // optional decorative boxes if you want to support them later
@@ -100,37 +107,37 @@ layout design, and integration with accounting systems.`,
     },
     benefitItems: [
         {
-            icon: "🔍",
+            icon: "/icons/pages/web-development/benefits/document-search-svgrepo-com (1).svg",
             strong: "Receive a comprehensive understanding of the project",
             text: `to study opportunities and growth points of the project. Timely detection of project
 development directly shapes future success in the market among competitors.`,
         },
         {
-            icon: "🔍",
+            icon: "/icons/pages/web-development/benefits/dollar-finance-money-49-svgrepo-com.svg",
             strong: "Optimize the cost of the project",
             text: `for equal budget distribution. Proper financial planning ensures sufficient coverage
 of all development needs in the future.`,
         },
         {
-            icon: "🔍",
+            icon: "/icons/pages/web-development/benefits/gear-mobile-optimization-svgrepo-com.svg",
             strong: "Access extensive technical expertise",
             text: `to acquire needed skills and tech stacks. Outsourcing web development allows you to bring
 in the right specialists at the right time.`,
         },
         {
-            icon: "🔍",
+            icon: "/icons/pages/web-development/benefits/dollar-finance-money-9-svgrepo-com.svg",
             strong: "Apply a market-oriented development strategy",
             text: `to stay aligned with business goals. A project must evolve in terms of both functionality
 and real market demand.`,
         },
         {
-            icon: "🔍",
+            icon: "/icons/pages/web-development/benefits/bugs-search-svgrepo-com.svg",
             strong: "Analyze and test at the initial stage",
             text: `to ensure quality. Early testing prevents bugs and issues that would be harder and more
 expensive to fix later.`,
         },
         {
-            icon: "🔍",
+            icon: "/icons/pages/web-development/benefits/shield-settings-svgrepo-com.svg",
             strong: "Maintain business stability",
             text: `by avoiding financial and reputational risks. High-quality development work ensures
 consistent performance and smooth project execution.`,
@@ -138,14 +145,14 @@ consistent performance and smooth project execution.`,
 
         // LAST ROW, centered items
         {
-            icon: "🔍",
+            icon: "/icons/pages/web-development/benefits/website-connection-communication-svgrepo-com.svg",
             strong: "Communicate clearly and transparently",
             text: `to ensure timely decision-making throughout the project. Consistent communication helps
 teams adapt to changes smoothly.`,
             className: "lg:col-span-1 md:col-span-2 lg:col-start-2",
         },
         {
-            icon: "🔍",
+            icon: "/icons/pages/web-development/benefits/clock-hour-timer-svgrepo-com.svg",
             strong: "Meet deadlines successfully",
             text: `thanks to coordinated teamwork. Timely development leads to high-quality final results
 and faster product delivery.`,

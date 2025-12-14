@@ -40,9 +40,9 @@ export const androidAppDevelopmentPageData = {
     },
 
     items: [
-        { label: "Custom mobile applications" },
-        { label: "Mobile Software Development Kits (SDKs)" },
-        { label: "Utilities development" },
+        { label: "Custom mobile applications", icon: 'https://crystalogic.net/wp-content/uploads/2020/10/android-mobile-app-development-icon.svg' },
+        { label: "Mobile Software Development Kits (SDKs)", icon: '/icons/pages/android-app-development/puzzle-piece-outline-svgrepo-com.svg' },
+        { label: "Utilities development", icon: '/icons/pages/android-app-development/screwdriver-wrench-svgrepo-com.svg' },
     ],
 
     items2: [
@@ -127,7 +127,7 @@ export const androidAppDevelopmentPageData = {
 
     industries: [
         {
-            icon: "/icons/industry.svg",
+            icon: '/icons/pages/mobile-development/ourFocus/shopping-bag-bag-svgrepo-com (1).svg',
             title: "Retail",
             content: [
                 "<strong>E-commerce platforms</strong>",
@@ -137,7 +137,7 @@ export const androidAppDevelopmentPageData = {
             ],
         },
         {
-            icon: "/icons/industry.svg",
+            icon: '/icons/pages/mobile-development/ourFocus/medical-kit-accident-svgrepo-com.svg',
             title: "Healthcare",
             content: [
                 "<strong>Tracking and patient management software</strong>",
@@ -147,7 +147,7 @@ export const androidAppDevelopmentPageData = {
             ],
         },
         {
-            icon: "/icons/industry.svg",
+            icon: '/icons/pages/mobile-development/ourFocus/wallet-svgrepo-com (2).svg',
             title: "FinTech",
             content: [
                 "<strong>Mobile banking platforms</strong>",
@@ -157,7 +157,7 @@ export const androidAppDevelopmentPageData = {
             ],
         },
         {
-            icon: "/icons/industry.svg",
+            icon: '/icons/pages/mobile-development/ourFocus/delivery-truck-truck-svgrepo-com.svg',
             title: "Logistics",
             content: [
                 "<strong>Delivery management systems</strong>",
@@ -167,7 +167,7 @@ export const androidAppDevelopmentPageData = {
             ],
         },
         {
-            icon: "/icons/industry.svg",
+            icon: '/icons/pages/mobile-development/ourFocus/scroll-svgrepo-com.svg',
             title: "Education",
             content: [
                 "<strong>Online course platforms</strong>",

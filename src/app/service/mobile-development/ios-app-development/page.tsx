@@ -44,11 +44,7 @@ export default function IosAppDevelopmentPage() {
               {impactApps.features.map((item, i) => (
                   <Card key={i}
                   >
-                    <img
-                        src="/icons/ios/icon_web.svg"
-                        alt="icon"
-                        className="w-10 h-10 mb-4 opacity-80"
-                    />
+                    <img src={item.icon} className="h-12 w-12" alt={item.title} />
 
                     <h3 className="font-semibold text-xl text-[--color-text] mb-3">
                       {item.title}
@@ -292,10 +288,11 @@ export default function IosAppDevelopmentPage() {
               {industries.items.slice(0, 3).map((item, idx) => (
                   <Card key={idx}
                   >
+                    <img src={item.icon} className="h-14 mb-4"></img>
                     <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
                     <ul className="text-[--color-muted] space-y-1">
                       {item.bullets.map((b, i) => (
-                          <li key={i} className="list-disc ml-5">{b}</li>
+                          <li key={i} className="list-disc ml-5"><p>{b}</p></li>
                       ))}
                     </ul>
                   </Card>
@@ -304,17 +301,17 @@ export default function IosAppDevelopmentPage() {
               {/* Bottom row: 2 centered cards */}
               <div className="md:col-span-3 flex flex-col md:flex-row gap-8 justify-center">
                 {industries.items.slice(3).map((item, idx) => (
-                    <div
+                    <Card
                         key={idx}
-                        className="w-full md:w-[45%] border border-[#00000020] bg-white rounded-2xl p-8 shadow-sm"
                     >
+                      <img src={item.icon} className="h-14 mb-4"></img>
                       <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
                       <ul className="text-[--color-muted] space-y-1">
                         {item.bullets.map((b, i) => (
-                            <li key={i} className="list-disc ml-5">{b}</li>
+                            <li key={i} className="list-disc ml-5"><p>{b}</p></li>
                         ))}
                       </ul>
-                    </div>
+                    </Card>
                 ))}
               </div>
 

@@ -16,7 +16,9 @@ export const CardBackground = ({ children, className = "", ...props }: CardProps
                 [&_h3]:text-[var(--color-primary)] 
                 [&_h3]:mb-4
                 [&_h3]:text-xl
+                [&_h3]:font-bold
                 [&_p]:!text-black/70
+                text-black/70
                 [&_p]:leading-relaxed
                 ${className}
             `}

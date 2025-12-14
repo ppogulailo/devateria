@@ -10,6 +10,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { CardBackground } from "@/components/ui/card/CardBackground";
 import { JSX } from "react";
 import {SectionTitle} from "@/components/ui/SectionTitle";
+import {TechnologiesGrid} from "@/components/ui/TechnologiesGrid";
 
 export default function MobileDevelopmentPage() {
     const {
@@ -26,11 +27,56 @@ export default function MobileDevelopmentPage() {
         faq,
     } = data;
 
-    const icons: Record<"ios" | "android" | "cross", JSX.Element> = {
-        ios: <Smartphone size={40} strokeWidth={1.5} />,
-        android: <TabletSmartphone size={40} strokeWidth={1.5} />,
-        cross: <Layers size={40} strokeWidth={1.5} />,
-    };
+    const sections = [
+        {
+            title: "Mobile",
+            items: [
+                { src: "/icons/technologies/software_development/mobile/Android%20Studio.svg" },
+                { src: "/icons/technologies/software_development/mobile/Objective-C.svg" },
+                { src: "/icons/technologies/software_development/mobile/Swift.svg" },
+                { src: "/icons/technologies/software_development/mobile/Kotlin.svg" },
+                { src: "/icons/technologies/software_development/mobile/Apple.svg" },
+                { src: "/icons/technologies/software_development/mobile/Android.svg" },
+                { src: "/icons/technologies/software_development/mobile/Ionic.svg" }
+            ]
+        },
+        {
+            title: "Data",
+            items: [
+                { src: "/icons/technologies/web_development/databases/PostgresSQL.svg" },
+                { src: "/icons/technologies/web_development/databases/MySQL.svg" },
+                { src: "/icons/technologies/web_development/databases/SQLite.svg" },
+                { src: "/icons/technologies/web_development/databases/MongoDB.svg" },
+                { src: "/icons/technologies/software_development/Data/Apache%20Kafka.svg" },
+                { src: "/icons/technologies/software_development/Data/aws-dynamodb-svgrepo-com.svg" },
+                { src: "/icons/technologies/software_development/Data/Azure%20SQL%20Database.svg" },
+                { src: "/icons/technologies/software_development/Data/Elastic%20Search.svg" },
+                { src: "/icons/technologies/software_development/Data/Firebase.svg" }
+            ]
+        },
+        {
+            title: "DevOps",
+            items: [
+                { src: "/icons/technologies/software_development/DevOps/png-clipart-continuous-integration-devops-continuous-delivery-software-testing-ci-cd-le-bio-au-risque-de-se-perdre-text-logo.png" },
+                { src: "/icons/technologies/software_development/DevOps/HashiCorp%20Terraform.svg" },
+                { src: "/icons/technologies/software_development/DevOps/Kubernetes.svg" },
+                { src: "/icons/technologies/software_development/DevOps/Docker.svg" }
+            ]
+        },
+        {
+            title: "Infrastructure",
+            items: [
+                { src: "/icons/technologies/software_development/Infrastructure/Digital%20Ocean.svg" },
+                { src: "/icons/technologies/software_development/Infrastructure/Azure.svg" },
+                { src: "/icons/technologies/software_development/Infrastructure/Google%20Cloud.svg" },
+                { src: "/icons/technologies/software_development/Infrastructure/AWS.svg" }
+            ]
+        },
+        {
+            title: "Fullstack Development",
+            items: [{ src: "/icons/technologies/software_development/full-stack/MERN.svg", width: 150 }]
+        }
+    ];
 
     return (
         <main className="py-12 [&_p]:text-black/70">
@@ -62,7 +108,7 @@ export default function MobileDevelopmentPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {buildAppFeatures.map((feature) => (
                             <Card key={feature.title}>
-                                <div className="mb-4 text-[var(--color-primary)]">{icons[feature.icon]}</div>
+                                <img src={feature.icon} className="h-14 mb-4"></img>
                                 <h3 className="text-xl font-bold text-[var(--color-primary)] mb-3">{feature.title}</h3>
                                 <p>{feature.text}</p>
                             </Card>
@@ -123,6 +169,7 @@ export default function MobileDevelopmentPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {ourFocus.items.map((item) => (
                             <Card key={item.title}>
+                                <img src={item.icon} className="h-14 mb-4"></img>
                                 <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
                                 <ul className="space-y-1">
                                     {item.points.map((p) => (
@@ -151,7 +198,7 @@ export default function MobileDevelopmentPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {hireProcess.steps.map((step, idx) => (
                             <CardBackground key={idx}>
-                                <div className="text-4xl font-extrabold mb-4 text-[var(--color-primary)]">
+                                <div className="text-4xl font-extrabold mb-4">
                                     {idx + 1}
                                 </div>
                                 <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
@@ -167,18 +214,14 @@ export default function MobileDevelopmentPage() {
             <section className="py-24 bg-[--color-bg-alt]">
                 <div className="container mx-auto px-4">
 
-                    <SectionTitle>
+                    <SectionTitle className='mb-14'>
                         {superCharge.title}
                     </SectionTitle>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {superCharge.items.map((item, idx) => (
                             <Card key={idx}>
-                                <div className="mb-6">
-                                    <div className="w-10 h-10 rounded-md bg-[--color-primary]/10 flex items-center justify-center">
-                                        <span className="text-[var(--color-primary)] text-xl">⬤</span>
-                                    </div>
-                                </div>
+                                <img src={item.icon} className="h-14 mb-4" alt={item.title}></img>
 
                                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                                 <p className="text-[--color-muted]">{item.text}</p>
@@ -201,22 +244,23 @@ export default function MobileDevelopmentPage() {
                         {techStack.subtitle}
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-                        {techStack.stacks.map((stack, idx) => (
-                            <CardBackground key={idx}>
-                                <h3 className="text-2xl font-semibold mb-8">{stack.title}</h3>
+                    <TechnologiesGrid sections={sections} cols={{ md: 2, lg: 2 }} />
+                    {/*<div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">*/}
+                    {/*    {techStack.stacks.map((stack, idx) => (*/}
+                    {/*        <CardBackground key={idx}>*/}
+                    {/*            <h3 className="text-2xl font-semibold mb-8">{stack.title}</h3>*/}
 
-                                <div className="flex flex-wrap gap-8">
-                                    {stack.items.map((tech) => (
-                                        <div key={tech.name} className="group relative w-20 h-20">
-                                            <img src={tech.default} className="absolute inset-0 transition-opacity group-hover:opacity-0" />
-                                            <img src={tech.hover} className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100" />
-                                        </div>
-                                    ))}
-                                </div>
-                            </CardBackground>
-                        ))}
-                    </div>
+                    {/*            <div className="flex flex-wrap gap-8">*/}
+                    {/*                {stack.items.map((tech) => (*/}
+                    {/*                    <div key={tech.name} className="group relative w-20 h-20">*/}
+                    {/*                        <img src={tech.default} className="absolute inset-0 transition-opacity group-hover:opacity-0" />*/}
+                    {/*                        <img src={tech.hover} className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100" />*/}
+                    {/*                    </div>*/}
+                    {/*                ))}*/}
+                    {/*            </div>*/}
+                    {/*        </CardBackground>*/}
+                    {/*    ))}*/}
+                    {/*</div>*/}
 
                 </div>
             </BgSection>
@@ -226,7 +270,7 @@ export default function MobileDevelopmentPage() {
                 <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
 
                     <div>
-                        <SectionTitle>
+                        <SectionTitle className='mb-14'>
                             {whyChoose.title}
                         </SectionTitle>
 
@@ -266,7 +310,7 @@ export default function MobileDevelopmentPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {benefitsToBusiness.items.map((item) => (
                             <CardBackground key={item.number}>
-                                <div className="text-4xl font-bold text-[var(--color-primary)] mb-4">{item.number}</div>
+                                <div className="text-4xl font-bold mb-4">{item.number}</div>
                                 <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
                                 <p className="text-[--color-muted]">{item.text}</p>
                             </CardBackground>

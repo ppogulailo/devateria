@@ -15,6 +15,8 @@ export const Card = ({ children, className = "" }: CardProps) => {
                  [&_h3]:text-[var(--color-primary)] 
                 [&_h3]:mb-4
                 [&_h3]:text-xl
+                [&_h3]:font-extrabold
+                text-black/70
                 [&_p]:text-black/70
                 [&_p]:leading-relaxed
                 ${className}

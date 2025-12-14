@@ -9,7 +9,7 @@ import {HeroSection} from "@/components/sections/HeroSection";
 import {softwareTestingPageData} from "@/data";
 import {SectionTitle} from "@/components/ui/SectionTitle";
 export default function SoftwareTestingPage() {
-   const {hero, priorities, reasons, services, faq} = softwareTestingPageData
+   const {hero, priorities, reasons, services, faq, companyStatement} = softwareTestingPageData
     return (
         <div className="[&_p]:text-black/70]">
 
@@ -18,13 +18,14 @@ export default function SoftwareTestingPage() {
 
                 {/* ================= PRIORITIES ================= */}
                 <section className="py-20">
-                    <SectionTitle>
+                    <SectionTitle className='mb-14'>
                         Our Testing Priorities
                     </SectionTitle>
 
                     <div className="grid md:grid-cols-3 gap-10">
                         {priorities.map((p, i) => (
                             <Card key={i}>
+                                <img src={p.icon} className="h-14 mb-4"></img>
                                 <h3 className="text-xl font-semibold mb-4">{p.title}</h3>
                                 <p className="text-sm leading-relaxed text-[--color-muted]">{p.text}</p>
                             </Card>
@@ -34,13 +35,14 @@ export default function SoftwareTestingPage() {
 
                 {/* ================= SERVICES ================= */}
                 <section className="py-20">
-                    <SectionTitle>
+                    <SectionTitle className='mb-14'>
                         Quality Assurance Services We Provide
                     </SectionTitle>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {services.map((s, i) => (
                             <Card key={i}>
+                                <img src={s.icon} className="h-14 mb-4"></img>
                                 <h3 className="text-xl font-semibold mb-4">{s.title}</h3>
                                 <p className="text-sm leading-relaxed text-[--color-muted]">{s.text}</p>
                             </Card>
@@ -55,14 +57,14 @@ export default function SoftwareTestingPage() {
                 <div className="grid md:grid-cols-2 gap-16 items-center">
 
                     <img
-                        src="/icons/pages/software-testing/Types-of-Software-Testing.jpg"
+                        src={companyStatement.image}
                         alt="QA Team"
                         className="rounded-3xl w-full object-cover shadow-xl"
                     />
 
                     <div className="space-y-6">
                         <SectionTitle align='left'>
-                            Deveteria as Your Testing Partner
+                            {companyStatement.title}
                         </SectionTitle>
 
                         <p className="leading-relaxed text-[--color-muted]">
@@ -80,13 +82,14 @@ export default function SoftwareTestingPage() {
             {/* ================= WHY CHOOSE ================= */}
             <PageSection>
                 <section className="py-20">
-                    <SectionTitle className='mb-10'>
+                    <SectionTitle className='mb-14'>
                         Why Choose Deveteria for QA?
                     </SectionTitle>
 
                     <div className="grid md:grid-cols-3 gap-10">
                         {reasons.map((r, i) => (
                             <Card key={i}>
+                                <img src={r.icon} className="h-14 mb-4"></img>
                                 <h3 className="text-xl font-semibold mb-4">{r.title}</h3>
                                 <p className="text-sm leading-relaxed text-[--color-muted]">{r.text}</p>
                             </Card>

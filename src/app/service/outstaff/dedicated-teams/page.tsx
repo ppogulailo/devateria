@@ -8,10 +8,62 @@ import {ChevronRightIcon} from "@radix-ui/react-icons";
 import {dedicatedTeamsData} from "@/data/pages/services/dedicated-teams.data";
 import {HeroSection} from "@/components/sections/HeroSection";
 import {SectionTitle} from "@/components/ui/SectionTitle";
+import {TechnologiesGrid} from "@/components/ui/TechnologiesGrid";
 
 export default function DedicatedTeamsPage() {
 
   const { benefits, techData, services, steps, faqItems, hero } = dedicatedTeamsData;
+
+  const sections = [
+    {
+      title: "Mobile",
+      items: [
+        { src: "/icons/technologies/software_development/mobile/Android%20Studio.svg" },
+        { src: "/icons/technologies/software_development/mobile/Objective-C.svg" },
+        { src: "/icons/technologies/software_development/mobile/Swift.svg" },
+        { src: "/icons/technologies/software_development/mobile/Kotlin.svg" },
+        { src: "/icons/technologies/software_development/mobile/Apple.svg" },
+        { src: "/icons/technologies/software_development/mobile/Android.svg" },
+        { src: "/icons/technologies/software_development/mobile/Ionic.svg" }
+      ]
+    },
+    {
+      title: "Data",
+      items: [
+        { src: "/icons/technologies/web_development/databases/PostgresSQL.svg" },
+        { src: "/icons/technologies/web_development/databases/MySQL.svg" },
+        { src: "/icons/technologies/web_development/databases/SQLite.svg" },
+        { src: "/icons/technologies/web_development/databases/MongoDB.svg" },
+        { src: "/icons/technologies/software_development/Data/Apache%20Kafka.svg" },
+        { src: "/icons/technologies/software_development/Data/aws-dynamodb-svgrepo-com.svg" },
+        { src: "/icons/technologies/software_development/Data/Azure%20SQL%20Database.svg" },
+        { src: "/icons/technologies/software_development/Data/Elastic%20Search.svg" },
+        { src: "/icons/technologies/software_development/Data/Firebase.svg" }
+      ]
+    },
+    {
+      title: "DevOps",
+      items: [
+        { src: "/icons/technologies/software_development/DevOps/png-clipart-continuous-integration-devops-continuous-delivery-software-testing-ci-cd-le-bio-au-risque-de-se-perdre-text-logo.png" },
+        { src: "/icons/technologies/software_development/DevOps/HashiCorp%20Terraform.svg" },
+        { src: "/icons/technologies/software_development/DevOps/Kubernetes.svg" },
+        { src: "/icons/technologies/software_development/DevOps/Docker.svg" }
+      ]
+    },
+    {
+      title: "Infrastructure",
+      items: [
+        { src: "/icons/technologies/software_development/Infrastructure/Digital%20Ocean.svg" },
+        { src: "/icons/technologies/software_development/Infrastructure/Azure.svg" },
+        { src: "/icons/technologies/software_development/Infrastructure/Google%20Cloud.svg" },
+        { src: "/icons/technologies/software_development/Infrastructure/AWS.svg" }
+      ]
+    },
+    {
+      title: "Fullstack Development",
+      items: [{ src: "/icons/technologies/software_development/full-stack/MERN.svg", width: 150 }]
+    }
+  ];
 
 
   return (
@@ -230,13 +282,7 @@ export default function DedicatedTeamsPage() {
             {benefits.slice(0, 3).map((benefit, i) => (
                 <Card key={i}
                 >
-                  <img
-                      src={benefit.icon}
-                      width={40}
-                      height={40}
-                      alt={benefit.title}
-                      className="mb-6"
-                  />
+                  <img src={benefit.icon} className="h-14 mb-4"></img>
 
                   <h3 className="text-xl font-semibold mb-4">
                     {benefit.title}
@@ -252,7 +298,7 @@ export default function DedicatedTeamsPage() {
 
           {/* Single full-width card for last item */}
           <div className="mt-8 max-w-2xl mx-auto">
-            <div className="rounded-2xl border border-black/10 bg-white p-8 shadow-sm">
+            <Card >
               <img
                   src={benefits[3].icon}
                   width={40}
@@ -268,7 +314,7 @@ export default function DedicatedTeamsPage() {
               <p className="text-[--color-muted] text-sm leading-relaxed">
                 {benefits[3].text}
               </p>
-            </div>
+            </Card>
           </div>
 
         </div>
@@ -340,38 +386,39 @@ export default function DedicatedTeamsPage() {
           </p>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {techData.map((group, index) => (
-                <div
-                    key={index}
-                    className="border border-white/10 rounded-2xl p-8 flex flex-col items-center"
-                >
-                  <h3 className="text-xl font-semibold mb-6 text-center">
-                    {group.title}
-                  </h3>
+          <TechnologiesGrid sections={sections} cols={{ md: 2, lg: 2 }} />
+          {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">*/}
+          {/*  {techData.map((group, index) => (*/}
+          {/*      <div*/}
+          {/*          key={index}*/}
+          {/*          className="border border-white/10 rounded-2xl p-8 flex flex-col items-center"*/}
+          {/*      >*/}
+          {/*        <h3 className="text-xl font-semibold mb-6 text-center">*/}
+          {/*          {group.title}*/}
+          {/*        </h3>*/}
 
-                  {group.icons.map((icon, i) => (
-                      <CardBackground key={i} >
-                        {/* Static icon */}
-                        <img
-                            src={icon.static}
-                            alt={icon.alt}
-                            // fill
-                            className="opacity-100 transition-opacity duration-200 hover:opacity-0"
-                        />
+          {/*        {group.icons.map((icon, i) => (*/}
+          {/*            <CardBackground key={i} >*/}
+          {/*              /!* Static icon *!/*/}
+          {/*              <img*/}
+          {/*                  src={icon.static}*/}
+          {/*                  alt={icon.alt}*/}
+          {/*                  // fill*/}
+          {/*                  className="opacity-100 transition-opacity duration-200 hover:opacity-0"*/}
+          {/*              />*/}
 
-                        {/* Hover icon */}
-                        <img
-                            src={icon.hover}
-                            alt={icon.alt}
-                            // fill
-                            className="opacity-0 absolute top-0 left-0 transition-opacity duration-200 hover:opacity-100"
-                        />
-                      </CardBackground>
-                  ))}
-                </div>
-            ))}
-          </div>
+          {/*              /!* Hover icon *!/*/}
+          {/*              <img*/}
+          {/*                  src={icon.hover}*/}
+          {/*                  alt={icon.alt}*/}
+          {/*                  // fill*/}
+          {/*                  className="opacity-0 absolute top-0 left-0 transition-opacity duration-200 hover:opacity-100"*/}
+          {/*              />*/}
+          {/*            </CardBackground>*/}
+          {/*        ))}*/}
+          {/*      </div>*/}
+          {/*  ))}*/}
+          {/*</div>*/}
         </div>
       </BgSection>
       <section className="py-24">

@@ -202,7 +202,7 @@ export default function DedicatedTeamsPage() {
                             <CardBackground
                                 key={item.number}
                             >
-                            <span className="text-4xl font-bold text-[var(--color-primary)]">
+                            <span className="text-4xl font-bold ">
                                 {item.number}
                             </span>
 
@@ -435,7 +435,7 @@ export default function DedicatedTeamsPage() {
                             <CardBackground
                                 key={index}
                             >
-      <span className="text-[var(--color-primary,#7C6BFF)] text-3xl font-bold">
+      <span className="text-3xl font-bold">
         {model.number}
       </span>
 

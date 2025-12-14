@@ -5,11 +5,11 @@ import {CardBackground} from "@/components/ui/card/CardBackground";
 
 export const IndustriesSection = () => {
     const INDUSTRY_TABS = [
-        { id: "fintech", title: "Fintech", img: "/icons/industries/1/Fintech.svg", content: FintechContent },
-        { id: "healthcare", title: "Healthcare", img: "/icons/industries/1/Healthcare.svg", content: HealthcareContent },
-        { id: "entertainment", title: "Entertainment", img: "/icons/industries/1/Entertainment.svg", content: EntertainmentContent },
-        { id: "manufacture", title: "Manufacture", img: "/icons/industries/1/Manufacture.svg", content: ManufactureContent },
-        { id: "ecommerce", title: "eCommerce", img: "/icons/industries/1/eCommerce.svg", content: EcommerceContent },
+        { id: "fintech", title: "Fintech", img: "/icons/industries/money-svgrepo-com.svg", content: FintechContent },
+        { id: "healthcare", title: "Healthcare", img: "/icons/industries/details.png", content: HealthcareContent },
+        { id: "entertainment", title: "Entertainment", img: "/icons/industries/clapperboard-svgrepo-com.svg", content: EntertainmentContent },
+        { id: "manufacture", title: "Manufacture", img: "/icons/industries/factories-factory-svgrepo-com.svg", content: ManufactureContent },
+        { id: "ecommerce-development", title: "eCommerce", img: "/icons/industries/ecommerce-svgrepo-com.svg", content: EcommerceContent },
     ];
 
     const [active, setActive] = useState("healthcare");

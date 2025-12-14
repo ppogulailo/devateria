@@ -26,25 +26,7 @@ export default function DedicatedTeamsPage() {
                                 key={i}
                             >
                                 {/* Icon */}
-                                <div className="mb-6">
-                                    <svg width="60" height="60" viewBox="0 0 104 86" fill="none">
-                                        <path
-                                            d="M52 1C33 1 15 13 6 33C-3 53 1 75 1 75H103C103 63 101 51 94 40C87 29 78 20 67 14C59 8 52 1 52 1Z"
-                                            stroke="#111"
-                                            strokeWidth="3"
-                                        />
-                                        <path
-                                            d="M52 30C33 30 15 42 6 62C-3 82 1 104 1 104H103C103 92 101 80 94 69C87 58 78 49 67 43C59 36 52 30 52 30Z"
-                                            stroke="#6C4CF7"
-                                            strokeWidth="3"
-                                        />
-                                        <path
-                                            d="M52 59C33 59 15 71 6 91C-3 111 1 133 1 133H103C103 121 101 109 94 98C87 87 78 78 67 72C59 65 52 59 52 59Z"
-                                            stroke="#6C4CF7"
-                                            strokeWidth="3"
-                                        />
-                                    </svg>
-                                </div>
+                                <img src={s.icon} className="h-14 mb-4"></img>
 
                                 {/* Title */}
                                 <h3 className="text-xl font-semibold text-[--color-text] mb-3">
@@ -141,9 +123,9 @@ export default function DedicatedTeamsPage() {
 
                     <div className="grid md:grid-cols-2 gap-10">
                         {industryCards.map((card, index) => (
-                            <div
+                            <Card
                                 key={index}
-                                className="border border-[--color-muted]/20 rounded-2xl p-8 bg-[--color-bg-alt]"
+                                // className="border border-[--color-muted]/20 rounded-2xl p-8 bg-[--color-bg-alt]"
                             >
                                 <div className="flex items-center gap-4 mb-4">
                                     <img src={card.icon} className="h-12 w-12" alt={card.title} />
@@ -162,7 +144,7 @@ export default function DedicatedTeamsPage() {
                                         <li key={i}>{item}</li>
                                     ))}
                                 </ul>
-                            </div>
+                            </Card>
                         ))}
                     </div>
                 </div>

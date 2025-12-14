@@ -12,22 +12,15 @@ import { ActionSection } from "@/components/Action/ActionSection";
 import {uiuxContent} from "@/data";
 import {HeroSection} from "@/components/sections/HeroSection";
 import {SectionTitle} from "@/components/ui/SectionTitle";
+import {CardBackground} from "@/components/ui/card/CardBackground";
 
 export default function UIUXPage() {
-    const uiUxHeroData = {
-        title: "UI / UX Design <br/> Services",
-        subtitle: "We design intuitive and elegant experiences that make your product smooth and enjoyable to use.",
-        ctaLabel: "Start a Project",
-        ctaHref: "/contact-us",
-        image: "/icons/pages/ui-ux/ui-ux.avif",
-        imageAlt: "UI/UX Design illustration",
-    };
   return (
       <div className="bg-[--color-bg] text-[--color-text]">
 
         {/* ================= HERO ================= */}
         <section className="mx-auto w-full max-w-6xl px-4 py-20 md:py-28">
-            <HeroSection {...uiUxHeroData} />
+            <HeroSection {...uiuxContent.hero} />
         </section>
 
         {/* ================= INTRO ================= */}
@@ -43,13 +36,14 @@ export default function UIUXPage() {
 
         {/* ================= BENEFITS ================= */}
         <section className="py-20 mx-auto w-full max-w-6xl px-4">
-          <SectionTitle>
+          <SectionTitle className='mb-14'>
             What Our UI/UX Design Helps You Achieve
           </SectionTitle>
 
           <div className="grid md:grid-cols-3 gap-10">
             {uiuxContent.benefits.map((b, i) => (
                 <Card key={i}>
+                    <img src={b.icon} className="h-12 w-12" alt={b.title} />
                   <h3 className="text-xl font-bold mb-4">{b.title}</h3>
                   <p className="text-sm leading-relaxed text-black/70">{b.text}</p>
                 </Card>
@@ -65,13 +59,13 @@ export default function UIUXPage() {
 
             <div className="grid md:grid-cols-4 gap-10">
               {uiuxContent.process.map((step) => (
-                  <Card key={step.number}>
-                    <div className="text-3xl text-[var(--color-primary)] font-bold mb-4">
+                  <CardBackground key={step.number}>
+                    <div className="text-3xl font-bold mb-4">
                       {step.number}
                     </div>
-                    <h3 className="font-semibold text-lg mb-2 !text-black">{step.title}</h3>
-                    <p className="text-sm !text-black/70 leading-relaxed">{step.text}</p>
-                  </Card>
+                    <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
+                    <p className="text-sm  leading-relaxed">{step.text}</p>
+                  </CardBackground>
               ))}
             </div>
         </BgSection>
@@ -136,9 +130,9 @@ export default function UIUXPage() {
                     {/* RIGHT — IMAGE */}
                     <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
                         <img
-                            src="https://crystalogic.net/wp-content/themes/crystal-master/assets/img/Why-choose-us.svg"
+                            src="/icons/pages/ui-ux/Team spirit-bro.svg"
                             alt="Why Choose Us Illustration"
-                            className="max-w-full w-[420px] object-contain"
+                            className="max-w-full object-contain"
                         />
                     </div>
                 </div>
@@ -162,7 +156,7 @@ export default function UIUXPage() {
             </div>
 
             <img
-                src="/icons/pages/ui-ux/ui-ux_principles.jpg"
+                src="/icons/pages/ui-ux/UI-UX differences-amico (1).svg"
                 className="rounded-3xl w-full object-cover shadow-lg"
                 alt="UI UX Principles"
             />

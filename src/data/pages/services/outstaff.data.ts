@@ -4,7 +4,7 @@ import { FAQItem } from "@/components/FAQ";
 
 export const outstaffData = {
     hero:  {
-        title: "IT Outsourcing <br /> Services",
+        title: "IT Outsourcing Services",
         subtitle:
             "Take advantage of the opportunity to acquire a team with the right skills and experience to expand your development capabilities with IT outsourcing services.",
         ctaLabel: "Let’s Cooperate",
@@ -47,29 +47,56 @@ export const outstaffData = {
         },
     ],
 
+    // whyChoose: [
+    //     {
+    //         title: "Experienced Developers:",
+    //         icon:'/icons/our_values/shield-ribbon-svgrepo-com.svg',
+    //         text: "We have a team of professional developers specializing in various technologies and industries. They bring their knowledge and expertise to every project, ensuring your specific needs are met.",
+    //     },
+    //     {
+    //         title: "Customized Solutions:",
+    //         text: "We provide tailored solutions aligned with your business objectives. Our team collaborates with you to understand requirements and deliver solutions that match your expectations.",
+    //     },
+    //     {
+    //         title: "Quality Assurance:",
+    //         text: "We prioritize QA and testing to ensure your solutions meet industry standards. Our engineers use modern tools and methodologies to deliver reliable, scalable, secure software.",
+    //     },
+    //     {
+    //         title: "Competitive Pricing:",
+    //         // title: "Global talent pool:",
+    //         text: "Access specialists worldwide — ideal for companies looking to expand into new markets or needing rare expertise.",
+    //     },
+    // ],
+
     whyChoose: [
         {
             title: "Experienced Developers:",
+            icon:'/icons/our_values/shield-ribbon-svgrepo-com.svg',
             text: "We have a team of professional developers specializing in various technologies and industries. They bring their knowledge and expertise to every project, ensuring your specific needs are met.",
         },
         {
             title: "Customized Solutions:",
+            icon:'/icons/pages/outstaff/whyChoose/gear-svgrepo-com (3).svg',
             text: "We provide tailored solutions aligned with your business objectives. Our team collaborates with you to understand requirements and deliver solutions that match your expectations.",
         },
         {
             title: "Quality Assurance:",
+            icon:'/icons/our_values/shield-ribbon-svgrepo-com.svg',
             text: "We prioritize QA and testing to ensure your solutions meet industry standards. Our engineers use modern tools and methodologies to deliver reliable, scalable, secure software.",
         },
         {
             title: "Competitive Pricing:",
+            icon:'/icons/pages/outstaff/whyChoose/price-tag-3-svgrepo-com.svg',
             text: "We offer cost-effective pricing with transparent engagement models that help you reduce expenses while maintaining high-quality project delivery.",
         },
         {
             title: "Communication and Collaboration:",
+            icon:'/icons/pages/outstaff/whyChoose/communication-world-svgrepo-com.svg',
             text: "We value seamless communication, keeping you informed and involved throughout development. This ensures your project stays on track and aligned with your objectives.",
         },
         {
             title: "On-Time Delivery:",
+            icon:'/icons/pages/outstaff/whyChoose/clock-svgrepo-com.svg',
             text: "We deliver on time and within budget. Our management and development processes ensure predictable schedules and successful outcomes.",
         },
     ],
@@ -159,28 +186,28 @@ export const outstaffData = {
     cooperationModels: [
         {
             title: "Staff Augmentation",
-            icon: "/icons/general/team.svg",
+            icon: '/icons/pages/mobile-development/superCharge/handshake-deal-svgrepo-com.svg',
             color: "text-[var(--color-header-text)]",
             description:
                 "Unleash the power of your business with our staff/team augmentation services. Whether you need to fill a skills gap or add highly skilled professionals to your existing team, we’ve got you covered.",
         },
         {
             title: "Dedicated Team",
-            icon: "/icons/general/team.svg",
+            icon: "/icons/pages/outstaff/group-people-svgrepo-com.svg",
             color: "text-[var(--color-primary)]",
             description:
                 "A flexible collaboration model empowering you to reach your goals through a dedicated team.",
         },
         {
             title: "Remote Development Team",
-            icon: "/icons/general/team.svg",
+            icon: "/icons/pages/outstaff/globe-1-svgrepo-com.svg",
             color: "text-[var(--color-header-text)]",
             description:
                 "Access a global pool of highly skilled developers ready to take on projects of any complexity.",
         },
         {
             title: "IT Recruiting",
-            icon: "/icons/general/team.svg",
+            icon: "/icons/pages/outstaff/human-resources-svgrepo-com (1).svg",
             color: "text-[var(--color-primary)]",
             fullWidth: true,
             description:

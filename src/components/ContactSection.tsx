@@ -59,7 +59,7 @@ export const ContactSection = () => {
     const inputText = isContactPage ? "text-black placeholder-black" : "border-[var(--color-form-text)]";
 
     return (
-        <section id="contact" className={`p-20 ${bgClass}`}>
+        <section id="contact" className={`p-20 ${bgClass} text-black/70`}>
             <div className="max-w-5xl mx-auto px-4">
 
                 {/* Title */}
@@ -172,7 +172,7 @@ export const ContactSection = () => {
                     </div>
 
                     {/* Submit */}
-                    <Button type="submit" className="w-full md:w-auto text-[var(--color-bg-alt)]" disabled={submitting}>
+                    <Button type="submit" className="w-full md:w-auto bg-[var(--color-secondary)]" disabled={submitting}>
                         {submitting ? "Sending..." : "Submit"}
                     </Button>
                 </form>

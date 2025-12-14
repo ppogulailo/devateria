@@ -10,7 +10,7 @@ export const Button: React.FC<ButtonProps> = ({ children, className, ...props })
         <button
             {...props}
             className={clsx(
-                "cursor-pointer inline-flex items-center justify-center px-10 py-3 rounded-xl font-medium shadow-sm transition-all duration-200 hover:shadow-md active:scale-[0.98]",
+                "cursor-pointer inline-flex items-center justify-center px-10 py-3 rounded-xl font-medium shadow-sm transition-all duration-200 hover:shadow-md active:scale-[0.98] bg",
                 className
             )}
         >

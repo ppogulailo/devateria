@@ -4,11 +4,61 @@ import { Card } from "@/components/ui/card/Card";
 import { BgSection } from "@/components/ui/PrimaryBackground";
 import { CardBackground } from "@/components/ui/card/CardBackground";
 import { webDevelopmentPageData } from "@/data/pages/services/web-development.data";
-import { WebDevelopmentTechnologies } from "@/components/sections/WebDevelopmentTechnologies";
+// import { WebDevelopmentTechnologies } from "@/components/sections/WebDevelopmentTechnologies";
 import {HeroSection} from "@/components/sections/HeroSection";
+import {TechnologiesGrid} from "@/components/ui/TechnologiesGrid";
 
 export default function DedicatedTeamsPage() {
-    const { steps, faqItems, serviceItems, benefitItems, hero } = webDevelopmentPageData;
+    const { steps, faqItems, serviceItems, benefitItems, hero, whyChooseUs } = webDevelopmentPageData;
+
+    const width = 45;
+
+    const sections = [
+        {
+            title: "PHP Frameworks",
+            items: [
+                { src: "/icons/technologies/web_development/backend/Symfony.png", width },
+                { src: "/icons/technologies/web_development/backend/Laravel.png", width },
+            ],
+        },
+        {
+            title: "Frontend",
+            items: [
+                { src: "/icons/technologies/web_development/cms/WordPress.svg", width },
+                { src: "/icons/technologies/web_development/cms/Drupal.svg", width },
+                { src: "/icons/technologies/web_development/cms/Webflow.svg", width },
+                { src: "/icons/technologies/web_development/cms/WooCommerce.svg", width },
+            ],
+        },
+        {
+            title: "JavaScript Frameworks",
+            items: [
+                { src: "/icons/technologies/web_development/frontend/React.svg", width },
+                { src: "/icons/technologies/web_development/frontend/angular.svg", width },
+                { src: "/icons/technologies/web_development/frontend/Vue.js.svg", width },
+            ],
+        },
+        {
+            title: "HTML5, CSS3",
+            items: [
+                { src: "/icons/technologies/web_development/frontend/CSS3.svg", width: 50 },
+                { src: "/icons/technologies/web_development/frontend/HTML5.svg", width: 50 },
+            ],
+        },
+        {
+            title: "Databases",
+            items: [
+                { src: "/icons/technologies/web_development/databases/PostgresSQL.svg", width },
+                { src: "/icons/technologies/web_development/databases/MySQL.svg", width },
+                { src: "/icons/technologies/web_development/databases/SQLite.svg", width },
+                { src: "/icons/technologies/web_development/databases/MongoDB.svg", width },
+            ],
+        },
+        {
+            title: "Caching systems",
+            items: [{ src: "/icons/technologies/web_development/caching/Redis.svg", width }],
+        },
+    ];
 
     return (
         <main className="py-12">
@@ -30,6 +80,7 @@ export default function DedicatedTeamsPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {serviceItems.map((item, i) => (
                             <Card key={i}>
+                                <img src={item.icon} className="h-14 mb-4"></img>
                                 <h3 className="font-bold text-xl mb-2 text-[--color-primary]">{item.title}</h3>
                                 <p className="text-black/70 whitespace-pre-line">{item.text}</p>
                             </Card>
@@ -48,7 +99,7 @@ export default function DedicatedTeamsPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {benefitItems.map((item, i) => (
                             <CardBackground key={i}>
-                                <div className="text-4xl mb-4">{item.icon}</div>
+                                <img src={item.icon} className="h-14 mb-4"></img>
                                 <p className="text-black/70 leading-relaxed whitespace-pre-line">
                                     <strong className="text-black">{item.strong}</strong> {item.text}
                                 </p>
@@ -75,7 +126,23 @@ export default function DedicatedTeamsPage() {
             />
 
             {/* TECHNOLOGIES */}
-            <WebDevelopmentTechnologies />
+            <section className="py-24 ">
+                <div className="max-w-7xl mx-auto px-6">
+
+                    {/* TITLE */}
+                    <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[var(--color-primary)] mb-6">
+                        Web Development Technology Expertise
+                    </h2>
+
+                    <p className="text-center max-w-3xl mx-auto text-black/70 mb-16">
+                        Let us help take your business to the next level by conducting web development
+                        services with the right tech stacks for your unique requirements. You can rely
+                        on our technology expertise to ensure the most professional development practices.
+                    </p>
+
+                    <TechnologiesGrid sections={sections} cols={{ md: 2, lg: 3 }} />
+                </div>
+            </section>
 
             {/* PROCESS */}
             <BgSection>
@@ -87,7 +154,7 @@ export default function DedicatedTeamsPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {steps.map((step, i) => (
                             <CardBackground key={i}>
-                                <div className="text-4xl font-extrabold mb-4">{step.number}</div>
+                                <div className="text-4xl font-extrabold mb-4 ">{step.number}</div>
                                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                                 <p className="text-white/70 leading-relaxed">{step.text}</p>
                             </CardBackground>
@@ -131,7 +198,7 @@ export default function DedicatedTeamsPage() {
                     </div>
 
                     <div className="flex justify-center">
-                        <img src="/icons/pages/web-development/computer-programmer.jpg" alt="Programmer" />
+                        <img src={whyChooseUs.img} alt="Programmer" />
                     </div>
                 </div>
             </section>

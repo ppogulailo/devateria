@@ -21,19 +21,15 @@ export default function Page() {
         <section className="py-24">
           <div className="container mx-auto max-w-7xl px-6">
 
-            <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-16">
+            <SectionTitle className='mb-10'>
               Our Customers
-            </h2>
+            </SectionTitle>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-              {customers.slice(0, 3).map((item, i) => (
+              {customers.map((item, i) => (
                   <Card key={i}>
-                    <svg width="32" height="32" viewBox="0 0 24 24" className="text-[--color-primary] mb-4" fill="currentColor">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4
-                  1.79-4 4 1.79 4 4 4zm0 2c-2.67
-                  0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
+                      <img src={item.icon} className="h-14 mb-4"></img>
 
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
 
@@ -43,20 +39,20 @@ export default function Page() {
                   </Card>
               ))}
 
-              {/* Full width 4th item */}
-              <Card className="md:col-span-2 lg:col-span-1 bg-white">
-                <svg width="32" height="32" viewBox="0 0 24 24" className="text-[--color-primary] mb-4" fill="currentColor">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4
-                1.79-4 4 1.79 4 4 4zm0 2c-2.67
-                0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                </svg>
+              {/*/!* Full width 4th item *!/*/}
+              {/*<Card className="md:col-span-2 lg:col-span-1 bg-white">*/}
+              {/*  <svg width="32" height="32" viewBox="0 0 24 24" className="text-[--color-primary] mb-4" fill="currentColor">*/}
+              {/*    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4*/}
+              {/*  1.79-4 4 1.79 4 4 4zm0 2c-2.67*/}
+              {/*  0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>*/}
+              {/*  </svg>*/}
 
-                <h3 className="text-xl font-bold mb-3">{customers[3].title}</h3>
+              {/*  <h3 className="text-xl font-bold mb-3">{customers[3].title}</h3>*/}
 
-                <p className="text-black/70 text-sm leading-relaxed whitespace-pre-line">
-                  {customers[3].text}
-                </p>
-              </Card>
+              {/*  <p className="text-black/70 text-sm leading-relaxed whitespace-pre-line">*/}
+              {/*    {customers[3].text}*/}
+              {/*  </p>*/}
+              {/*</Card>*/}
 
             </div>
           </div>
@@ -106,6 +102,7 @@ export default function Page() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {bankingServices.map((item, idx) => (
                   <Card key={idx}>
+                      <img src={item.icon} className="h-14 mb-4"></img>
                     <h3 className="text-lg font-semibold mb-4 text-[--color-primary]">
                       {item.title}
                     </h3>
@@ -154,7 +151,7 @@ export default function Page() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {features.map((item, i) => (
                   <Card key={i}>
-                    <div className="text-[--color-primary] text-3xl font-bold mb-4">
+                    <div className="text-3xl font-bold mb-4">
                       {i + 1}
                     </div>
 

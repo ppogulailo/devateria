@@ -14,22 +14,22 @@ export const dedicatedTeamsData = {
         {
             title: "High Quality Talent",
             text: `A dedicated team model provides companies with unparalleled flexibility...`,
-            icon: "/icons/dedicated/icon1.svg",
+            icon: "/icons/pages/dedicated-teams/benefits/winner-quality-svgrepo-com.svg",
         },
         {
             title: "Save Time & Money",
             text: `If you need to hire dedicated developers, Deveteria will help...`,
-            icon: "/icons/dedicated/icon1.svg",
+            icon: "/icons/pages/dedicated-teams/benefits/investment-insurance-svgrepo-com.svg",
         },
         {
             title: "100% Transparency",
             text: `We guarantee total transparency...`,
-            icon: "/icons/dedicated/icon1.svg",
+            icon: "/icons/pages/dedicated-teams/benefits/eye-recognition-recognition-facial-biometric-smart-home-svgrepo-com.svg",
         },
         {
             title: "Complete Confidentiality",
             text: `Protecting a client’s privacy and their trade secrets...`,
-            icon: "/icons/dedicated/icon1.svg",
+            icon: "/icons/pages/dedicated-teams/benefits/settings-gear-svgrepo-com (1).svg",
         },
     ],
 

@@ -8,7 +8,7 @@ export const technologiesPageData = {
         subtitle: "Create your project with well-chosen tech stacks",
         ctaLabel: "Let’s Cooperate",
         ctaHref: "#id_footer_form",
-        image: "/icons/technologies/page/TechExpertise.jpg",
+        image: "/icons/pages/technologies/tech company-bro.svg",
         imageAlt: "Technology expertise illustration",
     },
 

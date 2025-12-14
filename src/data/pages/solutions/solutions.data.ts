@@ -4,19 +4,19 @@ export const solutionsPageData = {
         subtitle: "Improve your development process with tech expertise in the niche needed",
         ctaLabel: "Let’s Cooperate",
         ctaHref: "#id_footer_form",
-        image: "https://develux.com/wp-content/uploads/2023/05/image_03-1.webp",
+        image: "/icons/pages/solutions/tech company-amico.svg",
         imageAlt: "Solutions",
     },
 
     solutions: [
         {
             title: "E-Commerce Solution",
-            icon: "https://develux.com/wp-content/uploads/2023/04/icon-11.svg",
-            href: "/solutions/ecommerce-development",
+            icon: "/icons/pages/service/industryCards/ecommerce-svgrepo-com.svg",
+            href: "/solutions/ecommerce-development-development",
         },
         {
             title: "Fintech Solution",
-            icon: "https://develux.com/wp-content/uploads/2023/04/industries_icon-2.svg",
+            icon: "/icons/pages/service/industryCards/money-svgrepo-com.svg",
             href: "solutions/fintech",
         },
     ],

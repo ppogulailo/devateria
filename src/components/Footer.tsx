@@ -170,7 +170,7 @@ export const Footer: React.FC = () => {
                         <FooterSection
                             title="Solutions"
                             items={[
-                                { label: "Ecommerce Development", href: "/solutions/ecommerce-development" },
+                                { label: "Ecommerce Development", href: "/solutions/ecommerce-development-development" },
                                 { label: "Fintech", href: "/solutions/fintech" },
                                 { label: "Custom CRM Development", href: "/solutions/crm-systems" },
                             ]}

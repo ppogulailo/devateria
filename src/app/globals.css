@@ -9,7 +9,7 @@
 
 :root {
   /* Page background and surfaces */
-  --color-bg: #F6F7F8;       /* very light, soft mint/teal background */
+  --color-bg: #F6FCFE;       /* very light, soft mint/teal background */
   /*--color-bg-alt: #ffffff;      !* cards / sections (slightly off-white) *!*/
 
   /* Brand accents */
@@ -46,6 +46,7 @@ html, body {
   line-height: 160%;
   font-weight: 700;
   font-style: normal;
+  background-color: var(--color-bg);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

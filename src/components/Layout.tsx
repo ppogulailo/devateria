@@ -12,7 +12,7 @@ type LayoutProps = {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
-        <div className="min-h-screen bg-[--color-bg] text-[--color-text] flex flex-col">
+        <div className="min-h-screen bg-[--color-bg] text-[--color-text] flex flex-col"  >
             <Header />
             <BreadcrumbsWrapper />
             {/*<AboutUsSection/>*/}

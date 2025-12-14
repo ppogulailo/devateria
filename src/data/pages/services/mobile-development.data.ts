@@ -7,8 +7,8 @@ export const mobileDevelopmentPageData = {
             "A strong mobile app adds value to your business by drawing in and retaining customers or optimizing internal processes.",
         ctaLabel: "Let’s Cooperate",
         ctaHref: "#contact",
-        image:
-            "https://develux.com/wp-content/uploads/2023/05/Custom-Mobile-Development.png",
+        image: "/icons/pages/mobile-development/App development-amico.svg",
+            // "https://develux.com/wp-content/uploads/2023/05/Custom-Mobile-Development.png",
     },
 
     buildAppIntro: {
@@ -22,17 +22,17 @@ export const mobileDevelopmentPageData = {
     buildAppFeatures: [
         {
             title: "iOS",
-            icon: "ios" as const,
+            icon: "https://crystalogic.net/wp-content/uploads/2020/10/iOS-mobile-development-icon.svg" as const,
             text: "Develop a custom mobile application using native iOS programming languages like Swift or Objective-C.",
         },
         {
             title: "Android",
-            icon: "android" as const,
+            icon: "https://crystalogic.net/wp-content/uploads/2020/10/android-mobile-app-development-icon.svg" as const,
             text: "Fully utilize device capabilities with a high-performance Android app built in Kotlin.",
         },
         {
             title: "Cross-platform",
-            icon: "cross" as const,
+            icon: "https://crystalogic.net/wp-content/uploads/2020/10/automated-icon.svg" as const,
             text: "Reach a wider audience using React Native or Flutter to build applications that run across multiple platforms.",
         },
     ],
@@ -82,11 +82,11 @@ export const mobileDevelopmentPageData = {
             "Our mobile banking expertise comes from working with major players in finance and e-commerce.",
         ],
         items: [
-            { title: "Retail", points: ["E-commerce platforms", "Consumer analytics applications"] },
-            { title: "Healthcare", points: ["Patient management systems", "Diagnostic tools"] },
-            { title: "FinTech", points: ["Mobile banking platforms", "E-wallet applications"] },
-            { title: "Logistics", points: ["Delivery management systems", "Parcel navigation software"] },
-            { title: "Education", points: ["Online course platforms", "Student registration systems"] },
+            { title: "Retail", points: ["E-commerce platforms", "Consumer analytics applications"], icon: '/icons/pages/mobile-development/ourFocus/shopping-bag-bag-svgrepo-com (1).svg' },
+            { title: "Healthcare", points: ["Patient management systems", "Diagnostic tools"] , icon: '/icons/pages/mobile-development/ourFocus/medical-kit-accident-svgrepo-com.svg' },
+            { title: "FinTech", points: ["Mobile banking platforms", "E-wallet applications"], icon: '/icons/pages/mobile-development/ourFocus/wallet-svgrepo-com (2).svg' },
+            { title: "Logistics", points: ["Delivery management systems", "Parcel navigation software"] , icon: '/icons/pages/mobile-development/ourFocus/delivery-truck-truck-svgrepo-com.svg' },
+            { title: "Education", points: ["Online course platforms", "Student registration systems"], icon: '/icons/pages/mobile-development/ourFocus/scroll-svgrepo-com.svg' },
         ],
     },
 
@@ -109,14 +109,17 @@ export const mobileDevelopmentPageData = {
         items: [
             {
                 title: "Expand Your Reach",
+                icon: '/icons/pages/mobile-development/superCharge/radar-svgrepo-com (1).svg',
                 text: "Nearly 2 billion people shop online — mobile apps let you reach a global audience.",
             },
             {
                 title: "Increase Brand Exposure",
+                icon: '/icons/pages/mobile-development/superCharge/megaphone-miscellaneous-svgrepo-com.svg',
                 text: "90% of smartphone activity happens in apps — be where the users are.",
             },
             {
                 title: "Build Engagement and Loyalty",
+                icon: '/icons/pages/mobile-development/superCharge/handshake-deal-svgrepo-com.svg',
                 text: "Push notifications help boost retention and conversion.",
             },
         ],
@@ -196,7 +199,7 @@ export const mobileDevelopmentPageData = {
                     "We value a human, friendly relationship with clients — not stiff corporate communication.",
             },
         ],
-        image: "https://develux.com/wp-content/uploads/2021/05/2-3.jpeg",
+        image: "/icons/pages/mobile-development/Coworking-rafiki.svg",
     },
 
     benefitsToBusiness: {

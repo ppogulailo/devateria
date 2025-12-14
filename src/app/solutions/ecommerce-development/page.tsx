@@ -84,6 +84,7 @@ export default function Page() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {serviceBlocks.map((item, idx) => (
                   <Card key={idx}>
+                      <img src={item.icon} className="h-14 mb-4"></img>
                     <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm leading-relaxed">{item.text}</p>
                   </Card>
@@ -120,11 +121,11 @@ export default function Page() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {ecommerceProcess.map((item, idx) => (
                   <CardBackground key={idx}>
-                    <div className="text-[var(--color-primary)] text-3xl font-bold mb-4">
+                    <div className="text-3xl font-bold mb-4">
                       {item.number}
                     </div>
 
-                    <div className="text-2xl font-semibold mb-3">{item.title}</div>
+                    <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
 
                     <p className="text-black">{item.text}</p>
                   </CardBackground>

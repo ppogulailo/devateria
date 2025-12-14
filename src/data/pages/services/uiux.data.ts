@@ -1,21 +1,27 @@
 export const uiuxContent = {
-    hero: {
-        title: "UI / UX Design Services",
-        subtitle: "We design intuitive and elegant experiences...",
-        image: "/icons/pages/ui-ux/ui-ux.avif",
-    },
+ hero:{
+    title: "UI / UX Design <br/> Services",
+        subtitle: "We design intuitive and elegant experiences that make your product smooth and enjoyable to use.",
+    ctaLabel: "Start a Project",
+    ctaHref: "/contact-us",
+    image: "/icons/pages/ui-ux/UI-UX differences-rafiki.svg",
+    imageAlt: "UI/UX Design illustration",
+},
 
     benefits: [
         {
             title: "Increase Conversions",
+            icon: "/icons/pages/ui-ux/benefits/communication-world-svgrepo-com.svg",
             text: "We highlight key actions, simplify interactions, and guide users naturally — boosting engagement."
         },
         {
             title: "Impress Clients & Investors",
+            icon: "/icons/pages/ui-ux/benefits/quality-medal-svgrepo-com (1).svg",
             text: "High-fidelity prototypes help stakeholders visualize your idea and accelerate decision-making."
         },
         {
             title: "Reduce Development Costs",
+            icon: "/icons/pages/ui-ux/benefits/dollar-finance-money-2-svgrepo-com.svg",
             text: "A solid design system prevents redesigns, reduces engineering time, and keeps UI consistent."
         }
     ],

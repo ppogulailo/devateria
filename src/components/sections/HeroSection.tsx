@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface HeroSectionProps {
     title: string;        // can contain <br/>
     subtitle: string;
@@ -18,7 +20,7 @@ export function HeroSection({
     const titleLines = title.split("<br/>");
 
     return (
-        <section className="relative py-20 bg-[--color-bg]">
+        <section className="relative py-20"  style={{ backgroundImage: "url('/icons/pages/home/hero_background.svg')" }}>
             <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
 
                 {/* TEXT */}
@@ -36,12 +38,12 @@ export function HeroSection({
                         {subtitle}
                     </p>
 
-                    <a
+                    <Link
                         href={ctaHref}
-                        className="inline-block px-10 py-4 rounded-xl bg-[--color-primary] text-white font-semibold text-lg hover:opacity-90 transition"
+                        className="inline-block px-10 py-4 rounded-xl bg-[var(--color-primary)] text-white font-semibold text-lg hover:opacity-90 transition"
                     >
                         {ctaLabel}
-                    </a>
+                    </Link>
                 </div>
 
                 {/* IMAGE */}

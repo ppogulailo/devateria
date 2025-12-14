@@ -10,6 +10,7 @@ import {ChevronRightIcon} from "@radix-ui/react-icons";
 import {outstaffData} from "@/data/pages/services/outstaff.data";
 import {HeroSection} from "@/components/sections/HeroSection";
 import {SectionTitle} from "@/components/ui/SectionTitle";
+import {TechnologiesGrid} from "@/components/ui/TechnologiesGrid";
 
 export default function DedicatedTeamsPage() {
     const {
@@ -22,6 +23,57 @@ export default function DedicatedTeamsPage() {
         stats,
         hero
     } = outstaffData;
+
+    const sections = [
+        {
+            title: "Mobile",
+            items: [
+                { src: "/icons/technologies/software_development/mobile/Android%20Studio.svg" },
+                { src: "/icons/technologies/software_development/mobile/Objective-C.svg" },
+                { src: "/icons/technologies/software_development/mobile/Swift.svg" },
+                { src: "/icons/technologies/software_development/mobile/Kotlin.svg" },
+                { src: "/icons/technologies/software_development/mobile/Apple.svg" },
+                { src: "/icons/technologies/software_development/mobile/Android.svg" },
+                { src: "/icons/technologies/software_development/mobile/Ionic.svg" }
+            ]
+        },
+        {
+            title: "Data",
+            items: [
+                { src: "/icons/technologies/web_development/databases/PostgresSQL.svg" },
+                { src: "/icons/technologies/web_development/databases/MySQL.svg" },
+                { src: "/icons/technologies/web_development/databases/SQLite.svg" },
+                { src: "/icons/technologies/web_development/databases/MongoDB.svg" },
+                { src: "/icons/technologies/software_development/Data/Apache%20Kafka.svg" },
+                { src: "/icons/technologies/software_development/Data/aws-dynamodb-svgrepo-com.svg" },
+                { src: "/icons/technologies/software_development/Data/Azure%20SQL%20Database.svg" },
+                { src: "/icons/technologies/software_development/Data/Elastic%20Search.svg" },
+                { src: "/icons/technologies/software_development/Data/Firebase.svg" }
+            ]
+        },
+        {
+            title: "DevOps",
+            items: [
+                { src: "/icons/technologies/software_development/DevOps/png-clipart-continuous-integration-devops-continuous-delivery-software-testing-ci-cd-le-bio-au-risque-de-se-perdre-text-logo.png" },
+                { src: "/icons/technologies/software_development/DevOps/HashiCorp%20Terraform.svg" },
+                { src: "/icons/technologies/software_development/DevOps/Kubernetes.svg" },
+                { src: "/icons/technologies/software_development/DevOps/Docker.svg" }
+            ]
+        },
+        {
+            title: "Infrastructure",
+            items: [
+                { src: "/icons/technologies/software_development/Infrastructure/Digital%20Ocean.svg" },
+                { src: "/icons/technologies/software_development/Infrastructure/Azure.svg" },
+                { src: "/icons/technologies/software_development/Infrastructure/Google%20Cloud.svg" },
+                { src: "/icons/technologies/software_development/Infrastructure/AWS.svg" }
+            ]
+        },
+        {
+            title: "Fullstack Development",
+            items: [{ src: "/icons/technologies/software_development/full-stack/MERN.svg", width: 150 }]
+        }
+    ];
     return (
         <main className="py-12 [&_p]:text-black/70">
             <HeroSection {...hero} />
@@ -46,11 +98,7 @@ export default function DedicatedTeamsPage() {
                     {cooperationModels.map((item, index) => (
                         <Card key={index} className={item.fullWidth ? "md:col-span-3" : ""}>
                             <div className="flex items-start gap-4">
-                                <img
-                                    src={item.icon}
-                                    alt={item.title}
-                                    className="w-8 h-8 opacity-70"
-                                />
+                                <img src={item.icon} className="h-14 mb-4"></img>
                                 <div>
                                     <h3 className={`text-xl font-semibold mb-4 ${item.color}`}>
                                         {item.title}
@@ -140,7 +188,7 @@ export default function DedicatedTeamsPage() {
                         {benefits.map((benefit, index) => (
                             <CardBackground key={index}
                             >
-                                <div className="text-4xl font-extrabold text-[var(--color-primary)] mb-4">
+                                <div className="text-4xl font-extrabold mb-4">
                                     {index + 1}
                                 </div>
 
@@ -175,11 +223,7 @@ export default function DedicatedTeamsPage() {
 
                             {/* Icon placeholder */}
                             <div className="mb-4">
-                                <img
-                                    src="/icons/default/service-icon.svg"
-                                    className="w-10 h-10 opacity-80"
-                                    alt="Service Icon"
-                                />
+                                <img src={item.icon} className="h-14 mb-4"></img>
                             </div>
 
                             <h3 className="text-xl font-semibold mb-4 text-[var(--color-primary)]">
@@ -221,42 +265,43 @@ export default function DedicatedTeamsPage() {
                         reliability, and scalability for every client project.
                     </p>
 
+                    <TechnologiesGrid sections={sections} cols={{ md: 2, lg: 2 }} />
                     {/* GRID */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {techStacks.map((category) => (
-                            <Card
-                                key={category.title}
-                            >
-                                <h3 className="text-lg font-semibold mb-6">
-                                    {category.title}
-                                </h3>
+                    {/*<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">*/}
+                    {/*    {techStacks.map((category) => (*/}
+                    {/*        <Card*/}
+                    {/*            key={category.title}*/}
+                    {/*        >*/}
+                    {/*            <h3 className="text-lg font-semibold mb-6">*/}
+                    {/*                {category.title}*/}
+                    {/*            </h3>*/}
 
-                                <div className="flex flex-wrap gap-6">
-                                    {category.items.map((icon) => (
-                                        <div
-                                            key={icon.alt}
-                                        >
-                                            {/* DEFAULT ICON */}
-                                            <img
-                                                src={icon.static}
-                                                alt={icon.alt}
-                                                // fill
-                                                className="object-contain transition-opacity duration-300 group-hover:opacity-0"
-                                            />
+                    {/*            <div className="flex flex-wrap gap-6">*/}
+                    {/*                {category.items.map((icon) => (*/}
+                    {/*                    <div*/}
+                    {/*                        key={icon.alt}*/}
+                    {/*                    >*/}
+                    {/*                        /!* DEFAULT ICON *!/*/}
+                    {/*                        <img*/}
+                    {/*                            src={icon.static}*/}
+                    {/*                            alt={icon.alt}*/}
+                    {/*                            // fill*/}
+                    {/*                            className="object-contain transition-opacity duration-300 group-hover:opacity-0"*/}
+                    {/*                        />*/}
 
-                                            {/* HOVER ICON */}
-                                            <img
-                                                src={icon.hover}
-                                                alt={icon.alt}
-                                                // fill
-                                                className="object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            </Card>
-                        ))}
-                    </div>
+                    {/*                        /!* HOVER ICON *!/*/}
+                    {/*                        <img*/}
+                    {/*                            src={icon.hover}*/}
+                    {/*                            alt={icon.alt}*/}
+                    {/*                            // fill*/}
+                    {/*                            className="object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"*/}
+                    {/*                        />*/}
+                    {/*                    </div>*/}
+                    {/*                ))}*/}
+                    {/*            </div>*/}
+                    {/*        </Card>*/}
+                    {/*    ))}*/}
+                    {/*</div>*/}
                 </div>
             </BgSection>
 

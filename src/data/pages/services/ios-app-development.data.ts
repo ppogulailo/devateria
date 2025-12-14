@@ -21,26 +21,32 @@ project.`,
         features: [
             {
                 title: "Experienced developers",
+                icon:'/icons/our_values/shield-ribbon-svgrepo-com.svg',
                 text: "We only screen and employ iOS development specialists for your project.",
             },
             {
                 title: "In-house code",
+                icon:'/icons/pages/ios-app-development/impactApps/code-coding-development-programming-web-webpage-svgrepo-com.svg',
                 text: "All code is written and verified by our team of expert developers.",
             },
             {
                 title: "Customized full service",
+                icon:'/icons/pages/ios-app-development/impactApps/gear-svgrepo-com.svg',
                 text: "We take charge of all aspects of iOS application development, including consulting, recruitment, strategy and design, UX/UI development, QA and technical delivery.",
             },
             {
                 title: "Agile process",
+                icon:'/icons/pages/ios-app-development/impactApps/check-list-clipboard-list-svgrepo-com.svg',
                 text: "By using a custom agile framework, we minimize risk while maximizing efficiency and transparency.",
             },
             {
                 title: "App Store deployment",
+                icon:'/icons/pages/ios-app-development/impactApps/apple-store-svgrepo-com.svg',
                 text: "We leverage our skillful marketing unit to promote the app and handle the tricky App Store submission process.",
             },
             {
                 title: "Maintenance & Support",
+                icon:'/icons/pages/ios-app-development/impactApps/screwdriver-wrench-svgrepo-com.svg',
                 text: "We continue to provide maintenance and support packages to keep in line with updates.",
             },
         ],
@@ -162,27 +168,32 @@ making sure your application is successful…`,
         items: [
             {
                 title: "Retail",
+                icon: '/icons/pages/mobile-development/ourFocus/shopping-bag-bag-svgrepo-com (1).svg',
                 bullets: ["E-commerce platforms", "Consumer analytics applications"],
             },
             {
                 title: "Healthcare",
+                icon: '/icons/pages/mobile-development/ourFocus/medical-kit-accident-svgrepo-com.svg',
                 bullets: ["Tracking and patient management software", "Diagnostic tools"],
             },
             {
                 title: "FinTech",
+                icon: '/icons/pages/mobile-development/ourFocus/wallet-svgrepo-com (2).svg',
                 bullets: ["Mobile banking platforms", "E-wallet applications"],
             },
             {
                 title: "Logistics",
+                icon: '/icons/pages/mobile-development/ourFocus/delivery-truck-truck-svgrepo-com.svg',
                 bullets: ["Delivery management systems", "Parcel navigation software"],
             },
             {
                 title: "Education",
+                icon: '/icons/pages/mobile-development/ourFocus/scroll-svgrepo-com.svg',
                 bullets: ["Online course platforms", "Student registration systems"],
             },
         ],
-    },
 
+    },
     faqItems: [
         {
             question: "Where to hire a mobile app developer?",

@@ -6,12 +6,13 @@ export const bankingPageData = {
         ctaLabel: "Let’s talk",
         ctaHref: "#id_footer_form",
         image:
-            "https://develux.com/wp-content/uploads/2023/05/smiling-banking-specialist-meeting-with-couple-2021-12-09-15-12-44-utc-1-1.jpg",
+            "/icons/pages/solutions/fintech/E-Wallet-amico.svg",
         imageAlt: "Banking software development",
     },
     customers: [
         {
             title: "Banks",
+            icon:'/icons/pages/solutions/fintech/customers/pig-money-safe-svgrepo-com.svg',
             text: `Whether you are a retail bank, community bank, corporate bank, 
 or a credit union, we’d be happy to create a solution for you. 
 While working on banking software development, we take your bank’s 
@@ -20,18 +21,21 @@ custom-tailored to help you achieve your business goals.`,
         },
         {
             title: "Insurance Companies",
+            icon:'/icons/pages/solutions/fintech/customers/insurance-svgrepo-com.svg',
             text: `At Deveteria, our software experts create all-in-one insurance 
 applications for insurance companies, presenting their customers, 
 partners, agents, and employees with a more comprehensive experience.`,
         },
         {
             title: "Investment Companies",
+            icon:'/icons/pages/solutions/fintech/customers/investment-money-svgrepo-com.svg',
             text: `We are well-versed in creating a wide array of investment banking 
 solutions – from the development of trading platforms to portfolio 
 management applications, we’ll do it all.`,
         },
         {
             title: "Funds & Trusts",
+            icon:'/icons/pages/solutions/fintech/customers/finances-svgrepo-com (1).svg',
             text: `With Deveteria, you never have to think twice about keeping track 
 of crucial fund case documents, contacts, and messages – with our 
 trusts & funds development service, you’ll get a solution with 
@@ -115,6 +119,7 @@ law firm calendars, and more.`,
     bankingServices: [
         {
             title: "Payment & Billing Solutions",
+            icon:'/icons/pages/solutions/fintech/bankingServices/payment-method-bank-svgrepo-com.svg',
             textTop: `
 At Deveteria, the premier financial software development company, we can create
 all sorts of custom banking solutions to meet your organization’s needs. Some
@@ -131,6 +136,7 @@ examples include:
         },
         {
             title: "Insurance Software",
+            icon:'/icons/pages/solutions/fintech/bankingServices/insurance-shield-svgrepo-com (1).svg',
             text: `
 Our software experts create end-to-end insurance solutions for intermediaries.
 Brokers and agents can easily manage customers, policies, and reporting.
@@ -139,6 +145,7 @@ Cloud-based platforms simplify workflows and administrative tasks.
         },
         {
             title: "Stock Analytics",
+            icon:'/icons/pages/solutions/fintech/bankingServices/chart-financial-svgrepo-com.svg',
             text: `
 Need accurate stock market technical analysis software? We can build scalable
 repositories, AI-powered analytics, financial data tools, and real-time stock
@@ -147,6 +154,7 @@ exchange simulators.
         },
         {
             title: "Financial Management of Healthcare Organizations",
+            icon:'/icons/pages/solutions/fintech/bankingServices/health-care-svgrepo-com (1).svg',
             text: `
 We build healthcare billing systems, claims management tools, and processing
 software — fully integrable with existing EMR/EHR systems.
@@ -154,6 +162,7 @@ software — fully integrable with existing EMR/EHR systems.
         },
         {
             title: "Electronic Document Management Systems",
+            icon:'/icons/pages/solutions/fintech/bankingServices/health-insurance-svgrepo-com (1).svg',
             text: `
 We create secure document management platforms for banks — with automated
 file compilation, scheduling, notifications, and integrity tracking across

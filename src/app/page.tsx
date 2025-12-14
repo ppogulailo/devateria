@@ -22,8 +22,8 @@ export default function Home() {
                     <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {aboutStats.map((item, i) => (
                             <div key={i} className="text-center">
-                                <div className="text-3xl font-bold text-[--color-text]">{item.number}</div>
-                                <div className="mt-1 text-sm text-[--color-muted]">{item.label}</div>
+                                <p className="text-3xl font-bold">{item.number}</p>
+                                <p className="mt-1 text-sm ">{item.label}</p>
                             </div>
                         ))}
                     </div>
