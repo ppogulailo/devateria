@@ -107,14 +107,15 @@ export const Footer: React.FC = () => {
 
                     {/* MIDDLE: Services + Solutions */}
                     <div className="space-y-10">
-                        {/* --- Changed: pass layer1 and level2 map so footer shows proper level2 variants */}
                         <FooterSection
+                            variant="footer"
                             title="Services"
                             items={servicesMegaMenu.level1}
                             subMap={servicesMegaMenu.level2}
                         />
 
                         <FooterSection
+                            variant="footer"
                             title="Solutions"
                             items={[
                                 { label: "Ecommerce Development", href: "/solutions/ecommerce-development-development" },

@@ -32,6 +32,8 @@ export const FooterSection = ({
     const [openItem, setOpenItem] = useState<number | null>(null);
     const isMobile = variant === "mobile";
 
+    const itemPadding = isMobile ? "pl-9" : "pl-0";
+
     return (
         <div>
             {/* SECTION TITLE */}
@@ -53,17 +55,17 @@ export const FooterSection = ({
                         ? "text-white"
                         : isMobile
                             ? "text-white/70"
-                            : "text-black/70";
+                            : "text-white/70";
 
                     const chevronColor = isOpen
                         ? "text-white"
                         : isMobile
                             ? "text-white/70"
-                            : "text-black";
+                            : "text-white/70";
 
                     return (
-                        <li key={idx} className="pl-9">
-                            {/* MAIN ROW */}
+                        <li key={idx} className={itemPadding}>
+                        {/* MAIN ROW */}
                             <div className="flex items-center justify-between py-6 border-b border-white/10">
                                 <a
                                     href={item.href}
@@ -113,7 +115,7 @@ export const FooterSection = ({
                                                 block py-6 pl-4
                                                 font-semibold uppercase
                                                 border-b border-white/10
-                                                ${isMobile ? "text-white/70" : "text-black/70"}
+                                                ${isMobile ? "text-white/70" : "text-white/70"}
                                             `}
                                         >
                                             {c.label}
