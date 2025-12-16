@@ -16,8 +16,20 @@ export default function Home() {
         <main className="w-full">
 
             {/* ================= HERO + STATS ================= */}
-            <section id="banner-main" className="w-full py-20 md:py-28 bg-cover bg-no-repeat"     style={{ backgroundImage: "url('/icons/pages/home/hero_background.svg')" }}>
-                <div className="max-w-6xl mx-auto px-6">
+            <section
+                id="banner-main"
+                className="
+    w-full
+    py-8            /* mobile */
+    sm:py-0        /* small screens */
+    md:py-14        /* tablets */
+    lg:py-20        /* desktop */
+    bg-cover bg-no-repeat
+  "
+                style={{ backgroundImage: "url('/icons/pages/home/hero_background.svg')" }}
+            >
+
+            <div className="max-w-6xl mx-auto px-6">
                     <HeroSection {...aboutDeveteriaHeroData} />
 
                     {/* Stats */}

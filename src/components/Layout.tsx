@@ -1,23 +1,25 @@
-// src/components/Layout.tsx
-import React, { ReactNode } from "react";
+"use client";
+
+import React, { ReactNode, useState } from "react";
 import { Header } from "./Header";
 import { Footer } from "@/components/Footer";
 import BreadcrumbsWrapper from "@/components/BreadcrumbsWrapper";
 import { ContactSection } from "@/components/ContactSection";
-// import {AboutUsSection} from "@/components/sections/AboutUsSection";
+import { MobileMenu } from "@/components/MobileMenu";
 
-type LayoutProps = {
-    children: ReactNode;
-};
+export const Layout = ({ children }: { children: ReactNode }) => {
+    const [mobileOpen, setMobileOpen] = useState(false);
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
-        <div className="min-h-screen bg-[--color-bg] text-[--color-text] flex flex-col"  >
-            <Header />
+        <div className="min-h-screen bg-[--color-bg] text-[--color-text] flex flex-col">
+            <Header onOpenMenu={() => setMobileOpen(true)} />
+
+            <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
+
             <BreadcrumbsWrapper />
-            {/*<AboutUsSection/>*/}
+
             <main className="flex-1 [&_p]:text-black/70 font-medium">
-                    {children}
+                {children}
             </main>
 
             <ContactSection />

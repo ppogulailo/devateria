@@ -3,69 +3,7 @@
 import React, { useState } from "react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-
-// --- Changed: FooterSection now accepts an optional subMap to show level2 variants
-interface FooterSectionProps {
-    title: string;
-    items: { label: string; href?: string }[];
-    subMap?: Record<string, { label: string; href: string }[]>;
-}
-
-const FooterSection: React.FC<FooterSectionProps> = ({ title, items, subMap }) => {
-    const [openItem, setOpenItem] = useState<number | null>(null);
-
-    return (
-        <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-[var(--color-form-text)] opacity-90">
-                {title}
-            </h3>
-
-            <ul className="space-y-3">
-                {items.map((item, idx) => {
-                    const isOpen = openItem === idx;
-                    const children = subMap?.[item.label];
-
-                    return (
-                        <li key={idx}>
-                            <button
-                                onClick={() => setOpenItem(isOpen ? null : idx)}
-                                className="cursor-pointer w-full flex items-center justify-between text-lg font-bold uppercase transition py-1"
-                            >
-                                {item.label}
-
-                                <ChevronDownIcon
-                                    className={`w-5 h-5 transition-transform ${isOpen ? "rotate-180" : ""}`}
-                                />
-                            </button>
-
-                            {isOpen && (
-                                <div className="ml-2 mt-2 text-[var(--color-muted)] text-sm">
-                                    {children && children.length ? (
-                                        <ul className="space-y-2">
-                                            {children.map((c, i) => (
-                                                <li key={i}>
-                                                    <a href={c.href} className="hover:text-[var(--color-form-text)]">
-                                                        {c.label}
-                                                    </a>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    ) : (
-                                        <a href={item.href} className="hover:text-[var(--color-primary)]">
-                                            Learn more →
-                                        </a>
-                                    )}
-                                </div>
-                            )}
-
-                            <div className="border-b border-white/10 mt-2" />
-                        </li>
-                    );
-                })}
-            </ul>
-        </div>
-    );
-};
+import {FooterSection} from "@/components/FooterSection";
 
 // --- Added: local copy of the services mega menu (level1 + level2)
 const servicesMegaMenu = {

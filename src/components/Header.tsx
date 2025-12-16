@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/Button";
 import Dropdown from "@/components/Dropdown";
 import DropdownMega from "@/components/DropdownMega";
 
-export const Header: React.FC = () => {
+export const Header = ({ onOpenMenu }: { onOpenMenu: () => void }) => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     useEffect(() => {
         const onScroll = () => setIsScrolled(window.scrollY > 100);
@@ -103,8 +104,8 @@ export const Header: React.FC = () => {
                         </span>
                     </Link>
 
-                    <nav className="hidden items-center gap-8 text-sm font-semibold md:flex uppercase">
-                            <DropdownMega name="Services" data={servicesMegaMenu} href="/service" />
+                    <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold uppercase">
+                    <DropdownMega name="Services" data={servicesMegaMenu} href="/service" />
                             <Dropdown name="Solutions" items={solutionsItems} href="/solutions" />
                             <Link href="/technologies" className="hover:text-[var(--color-primary)]">
                                 Technologies
@@ -112,9 +113,19 @@ export const Header: React.FC = () => {
                             <Dropdown name="About Us" items={aboutUs} href="/about-us" />
                     </nav>
 
-                    <div className="hidden md:inline-flex ">
+                    {/* hamburger */}
+                    <button
+                        onClick={onOpenMenu}
+                        className="cursor-pointer lg:hidden"
+                        // className="lg:hidden rounded-xl border px-4 py-2 border-black/70 text-black/70"
+                    >
+                        {/*☰*/}
+                        <img src="/icons/header/hamburger.svg" alt=""/>
+                    </button>
+
+                    <div className="hidden lg:flex">
                         <Link href="/contact-us">
-                            <Button className="hover:bg-[var(--color-primary)] rounded-full px-6 py-2 text-sm font-semibold hover:bg-gray-100">
+                            <Button className="rounded-full px-6 py-2 text-sm font-semibold hover:bg-[var(--color-primary)]">
                                 Let’s Talk
                             </Button>
                         </Link>
@@ -122,7 +133,6 @@ export const Header: React.FC = () => {
 
                 </div>
             </div>
-
             {/* Bottom animation bar */}
             <div className="w-full flex justify-center">
                 <div
@@ -133,6 +143,7 @@ export const Header: React.FC = () => {
                     `}
                 />
             </div>
+
         </header>
     );
 };
