@@ -20,10 +20,10 @@ export default function Home() {
                 id="banner-main"
                 className="
     w-full
-    py-8            /* mobile */
-    sm:py-0        /* small screens */
-    md:py-14        /* tablets */
-    lg:py-20        /* desktop */
+    py-8
+    sm:py-0
+    md:py-14
+    lg:py-20
     bg-cover bg-no-repeat
   "
                 style={{ backgroundImage: "url('/icons/pages/home/hero_background.svg')" }}

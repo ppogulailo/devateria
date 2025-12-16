@@ -52,11 +52,11 @@ export const ContactSection = () => {
 
     // ⭐ Dynamic classes based on the page
     const bgClass = isContactPage
-        ? " text-black"
+        ? "text-black/70"
         : "bg-[var(--color-bg-alt)] text-[var(--color-header-text)]";
 
-    const textClass = isContactPage ? "text-black" : "text-[var(--color-header-text)]";
-    const inputText = isContactPage ? "text-black placeholder-black" : "border-[var(--color-form-text)]";
+    const textClass = isContactPage ? "text-black/70" : "text-white/70";
+    const inputText = isContactPage ? "text-black/70 placeholder-black/70" : "text-white/70 placeholder-white/70";
 
     return (
         <section id="contact" className={`p-20 ${bgClass} text-black/70`}>
@@ -153,7 +153,7 @@ export const ContactSection = () => {
                                 checked={form.accept_terms}
                                 onChange={handleChange}
                             />
-                            <span className={isContactPage ? "text-black" : "text-[var(--color-form-text)]"}>
+                            <span className={isContactPage ? "text-black/70" : "text-white/70"}>
                                 I accept the Terms & Conditions and Privacy Policy.
                             </span>
                         </label>
@@ -165,14 +165,14 @@ export const ContactSection = () => {
                                 checked={form.accept_news}
                                 onChange={handleChange}
                             />
-                            <span className={isContactPage ? "text-black" : "text-[var(--color-form-text)]"}>
+                            <span className={isContactPage ? "text-black/70" : "text-white/70"}>
                                 I would like to receive relevant updates and news.
                             </span>
                         </label>
                     </div>
 
                     {/* Submit */}
-                    <Button type="submit" className="w-full md:w-auto bg-[var(--color-secondary)]" disabled={submitting}>
+                    <Button type="submit" className="w-full md:w-auto bg-white/70 text-black/70" disabled={submitting}>
                         {submitting ? "Sending..." : "Submit"}
                     </Button>
                 </form>
