@@ -17,7 +17,7 @@ export const technologiesPageData = {
             title: "Software Development",
             subtitle:
                 "In order to help clients achieve their business aims, our specialists choose tech stacks depending on project requirements such as scalability, real-time data processing needs, or the level of interactivity.",
-            image: "https://develux.com/wp-content/uploads/2023/05/image-04-2.webp",
+            image: "/icons/technologies/tech_1.jpeg",
             accordions: [
                 {
                     title: "Frontend",
@@ -86,7 +86,7 @@ export const technologiesPageData = {
             title: "Web Development",
             subtitle:
                 "When choosing tech stacks for web development, we consider the required level of interaction, performance goals, and budget to create the most efficient solution.",
-            image: "https://develux.com/wp-content/uploads/2023/05/image-04-3.webp",
+            image: "/icons/technologies/tech_2.webp",
             accordions: [
                 {
                     title: "PHP Frameworks",

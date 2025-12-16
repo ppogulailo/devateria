@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/card/Card";
 import { BgSection } from "@/components/ui/PrimaryBackground";
 import { FAQ } from "@/components/FAQ";
-import { WhyChooseUs } from "@/components/sections/WhyShouldYouChooseUS";
 import { PageSection } from "@/components/ui/PageSection";
 import { ActionSection } from "@/components/Action/ActionSection";
 import {uiuxContent} from "@/data";

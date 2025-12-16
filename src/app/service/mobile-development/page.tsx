@@ -1,6 +1,5 @@
 "use client";
 
-import { Smartphone, TabletSmartphone, Layers } from "lucide-react";
 import { ActionSection } from "@/components/Action/ActionSection";
 import { FAQ } from "@/components/FAQ";
 import { BgSection } from "@/components/ui/PrimaryBackground";

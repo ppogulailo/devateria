@@ -26,3 +26,4 @@ export const Card = ({ children, className = "" }: CardProps) => {
         </div>
     );
 };
+// hover:bg-[#e7f3ff]

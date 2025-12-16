@@ -17,7 +17,7 @@ export const OurTechStackSection = () => {
                 {/* HEADER */}
                 <div className="wrapper mb-10 flex flex-col gap-6 md:flex-row md:items-end">
                     <div className="col8 md:w-2/3">
-                        <SectionTitle className="!mb-0 !ml-0 text-5xl font-semibold text-[var(--color-primary)]" align="left">
+                        <SectionTitle className="!mb-0 !ml-0 text-5xl text-[var(--color-primary)]" align="left">
                             Our Tech Stacks
                         </SectionTitle>
                     </div>

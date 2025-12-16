@@ -155,7 +155,7 @@ export default function DedicatedTeamsPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://develux.com/wp-content/uploads/2023/05/programmer-and-ux-ui-designer-working-in-a-softwar-2022-11-11-18-29-35-utc-1-1-1.jpg"
+                        src="/icons/pages/offshore-development/offshore-development-bg.png"
                         alt="Offshore development background"
                         className="w-full h-full object-cover"
                     />
@@ -217,87 +217,84 @@ export default function DedicatedTeamsPage() {
                         ))}
                     </div>
             </BgSection>
-            <section className="py-24 ">
+            <section className="py-24">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+                    <div className="flex flex-col lg:flex-row w-full gap-6 items-stretch">
 
-                        {/* Left Image */}
-                        <div className="rounded-2xl overflow-hidden">
+                        {/* LEFT IMAGE */}
+                        <div className="flex-1 rounded-xl overflow-hidden">
                             <img
-                                src="https://develux.com/wp-content/uploads/2023/05/female-programmer-working-on-coding-software-deve-2023-05-23-22-48-56-utc-1-1-1.jpg"
+                                src="/icons/pages/offshore-development/developer_2.jpg"
                                 alt="Developer working"
                                 className="w-full h-full object-cover"
                             />
                         </div>
 
-                        {/* Middle Decorative SVGs */}
-                        <div className="flex justify-center lg:justify-start">
-                            <div className="flex flex-col items-center gap-4">
-                                {/* Top line semicircle */}
-                                <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
+                        {/* MIDDLE BLACK PANEL */}
+                        <div
+                            className="w-full lg:w-1/3 bg-[var(--color-primary)] rounded-l-xl rounded-r-xl lg:rounded-r-none flex items-center justify-center p-10">
+                            <div className="relative">
+                                {/* Semicircle SVG Stack */}
+                                <svg width="104" height="54" viewBox="0 0 104 54" fill="none" className="mb-3">
                                     <path
                                         d="M51.985 1C38.4611 1.00533 25.4929 6.41532 15.932 16.0404C6.37099 25.6654 0.999999 38.7175 1 52.3267H103C103 45.5855 101.68 38.9104 99.1165 32.6825C96.5527 26.4546 92.7947 20.7959 88.0574 16.0297C83.3201 11.2634 77.6962 7.48296 71.5068 4.90414C65.3175 2.32533 58.684 0.998682 51.985 1Z"
-                                        stroke="#D6D6D6"
+                                        stroke="#F6FCFE"
                                         strokeWidth="2"
                                     />
                                 </svg>
 
-                                {/* Purple filled semicircle */}
-                                <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
+                                <svg width="104" height="54" viewBox="0 0 104 54" fill="none" className="mb-3">
                                     <path
                                         d="M51.985 1C38.4602 1.00799 25.492 6.42016 15.9314 16.0468C6.37067 25.6734 0.999998 38.7266 1 52.3367H103C103 38.7213 97.6252 25.6636 88.058 16.0361C78.4909 6.40863 65.5151 1 51.985 1Z"
-                                        fill="#584EE5"
-                                        stroke="#584EE5"
+                                        fill="#F6FCFE"
+                                        stroke="#2e536f"
                                         strokeWidth="2"
                                     />
                                 </svg>
 
-                                {/* Bottom line semicircle */}
                                 <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
                                     <path
                                         d="M51.985 1.66309C38.4602 1.67107 25.492 7.08325 15.9314 16.7099C6.37067 26.3365 0.999998 39.3897 1 52.9998H103C103 39.3844 97.6252 26.3268 88.058 16.6993C78.4909 7.07177 65.5151 1.66309 51.985 1.66309Z"
-                                        stroke="#D6D6D6"
+                                        stroke="#F6FCFE"
                                         strokeWidth="2"
                                     />
                                 </svg>
                             </div>
                         </div>
 
-                        {/* Right Content Block */}
-                        <div>
-                            <div className="rounded-2xl shadow-lg p-10">
-                                <SectionTitle>
-                                    Why choose us?
-                                </SectionTitle>
 
-                                <div className="text-black/70 space-y-5 leading-relaxed">
-                                    <p>
-                                        Deveteria provides the highest quality of offshore programming services.
-                                        We have the talent, resources, and expertise to meet the requirements of any project.
-                                        Our experts select the top IT experts from our wide range of dedicated specialists,
-                                        to craft an offshore development team that matches your project’s needs and seamlessly
-                                        integrates into your organization.
-                                    </p>
+                        {/* RIGHT CONTENT */}
+                        <div className="flex-1 bg-white rounded-xl p-10 shadow-sm">
+                            <SectionTitle align="left" className="mb-6">
+                                Why choose us?
+                            </SectionTitle>
 
-                                    <p>
-                                        “We began our journey as a startup and grew Deveteria into a leading product company
-                                        in our market segment. This unique experience enabled us to develop an incredible
-                                        talent for recruiting exceptional engineers, who build quality software products.
-                                    </p>
+                            <div className="text-[--color-muted] space-y-5 leading-relaxed">
+                                <p>
+                                    Deveteria provides the highest quality of offshore programming services.
+                                    We have the talent, resources, and expertise to meet the requirements of any project.
+                                    Our experts select top engineers to build offshore teams that integrate seamlessly
+                                    into your organization.
+                                </p>
 
-                                    <p>
-                                        Now it’s our mission to share our expertise, so that you can reach your goals.
-                                        Deveteria has successfully launched over 20 different offshore projects and delivered
-                                        outstanding results for our clients. Partner with us to receive your dream team and
-                                        reach new horizons of success.
-                                    </p>
-                                </div>
+                                <p>
+                                    We began our journey as a startup and grew Deveteria into a strong product company.
+                                    This experience helped us master recruiting exceptional engineers who build
+                                    reliable, scalable software.
+                                </p>
+
+                                <p>
+                                    Today, our mission is to share that expertise with you.
+                                    Deveteria has successfully launched over 20 offshore projects and delivered
+                                    measurable results for clients worldwide.
+                                </p>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </section>
+
             <BgSection>
                 <div className="max-w-7xl mx-auto
 ">
@@ -348,74 +345,75 @@ export default function DedicatedTeamsPage() {
                     </svg>
                 }
             />
-            <section className="py-24 ">
+            <section className="py-24">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row items-center gap-10">
+                    <div className="flex flex-col lg:flex-row w-full gap-6 items-stretch">
 
-                        {/* LEFT CARD */}
-                        <div className="bg-white rounded-3xl p-12 shadow-sm w-full lg:w-[55%]">
-                            <SectionTitle align='left' className='text-4xl'>
-                                Where Do You Aquire<br />Your Specialists?
+                        {/* LEFT CONTENT CARD */}
+                        <div className="flex-1 bg-white rounded-xl p-12 shadow-sm">
+                            <SectionTitle align="left" className="mb-6 !text-4xl">
+                                Where Do You Acquire <br /> Your Specialists?
                             </SectionTitle>
 
-                            <p className=" text-lg leading-relaxed mb-6">
+                            <p className="text-[--color-muted] text-lg leading-relaxed mb-6">
                                 To deliver the best experts for your project, we discover and recruit
-                                top-level software engineers from all across Europe.
+                                top-level software engineers from across Europe.
                             </p>
 
                             <a
                                 href="/about-us"
-                                className=" font-semibold underline text-lg"
+                                className="inline-block font-semibold underline text-[var(--color-primary)] text-lg"
                             >
                                 Our Story
                             </a>
                         </div>
 
-                        {/* MIDDLE BLACK BLOCK WITH SVG */}
-                        <div className="bg-[var(--color-primary)] rounded-3xl p-10 flex justify-center items-center w-full lg:w-[22%]">
-                            <div className="flex flex-col gap-2 items-center">
-                                {/* TOP SEMICIRCLE */}
-                                <svg width="100" height="54" viewBox="0 0 104 54" fill="none">
+                        {/* MIDDLE BLACK PANEL */}
+                        <div
+                            className="w-full lg:w-1/3 bg-[var(--color-primary)] rounded-l-xl rounded-r-xl lg:rounded-r-none flex items-center justify-center p-10">
+                            <div className="relative">
+                                {/* Semicircle SVG Stack */}
+                                <svg width="104" height="54" viewBox="0 0 104 54" fill="none" className="mb-3">
                                     <path
-                                        d="M51.985 1C38.4611 1.00533 25.4929 6.41532 15.932 16.0404C6.37099 25.6654 1 38.7175 1 52.3267H103C103 45.5855 101.68 38.9104 99.1165 32.6825C96.5527 26.4546 92.7947 20.7959 88.0574 16.0297C83.3201 11.2634 77.6962 7.48296 71.5068 4.90414C65.3175 2.32533 58.684 0.998682 51.985 1Z"
-                                        stroke="#D6D6D6"
+                                        d="M51.985 1C38.4611 1.00533 25.4929 6.41532 15.932 16.0404C6.37099 25.6654 0.999999 38.7175 1 52.3267H103C103 45.5855 101.68 38.9104 99.1165 32.6825C96.5527 26.4546 92.7947 20.7959 88.0574 16.0297C83.3201 11.2634 77.6962 7.48296 71.5068 4.90414C65.3175 2.32533 58.684 0.998682 51.985 1Z"
+                                        stroke="#F6FCFE"
                                         strokeWidth="2"
                                     />
                                 </svg>
 
-                                {/* MIDDLE PURPLE SEMICIRCLE */}
-                                <svg width="100" height="54" viewBox="0 0 104 54" fill="none">
+                                <svg width="104" height="54" viewBox="0 0 104 54" fill="none" className="mb-3">
                                     <path
-                                        d="M51.985 1C38.4602 1.00799 25.492 6.42016 15.9314 16.0468C6.37067 25.6734 1 38.7266 1 52.3367H103C103 38.7213 97.6252 25.6636 88.058 16.0361C78.4909 6.40863 65.5151 1 51.985 1Z"
-                                        fill="#584EE5"
-                                        stroke="#584EE5"
+                                        d="M51.985 1C38.4602 1.00799 25.492 6.42016 15.9314 16.0468C6.37067 25.6734 0.999998 38.7266 1 52.3367H103C103 38.7213 97.6252 25.6636 88.058 16.0361C78.4909 6.40863 65.5151 1 51.985 1Z"
+                                        fill="#F6FCFE"
+                                        stroke="#2e536f"
                                         strokeWidth="2"
                                     />
                                 </svg>
 
-                                {/* BOTTOM SEMICIRCLE */}
-                                <svg width="100" height="54" viewBox="0 0 104 54" fill="none">
+                                <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
                                     <path
-                                        d="M51.985 1.66309C38.4602 1.67107 25.492 7.08325 15.9314 16.7099C6.37067 26.3365 1 39.3897 1 52.9998H103C103 39.3844 97.6252 26.3268 88.058 16.6993C78.4909 7.07177 65.5151 1.66309 51.985 1.66309Z"
-                                        stroke="#D6D6D6"
+                                        d="M51.985 1.66309C38.4602 1.67107 25.492 7.08325 15.9314 16.7099C6.37067 26.3365 0.999998 39.3897 1 52.9998H103C103 39.3844 97.6252 26.3268 88.058 16.6993C78.4909 7.07177 65.5151 1.66309 51.985 1.66309Z"
+                                        stroke="#F6FCFE"
                                         strokeWidth="2"
                                     />
                                 </svg>
                             </div>
                         </div>
 
+
                         {/* RIGHT IMAGE */}
-                        <div className="w-full lg:w-[40%]">
+                        <div className="flex-1 rounded-xl overflow-hidden">
                             <img
-                                src="https://develux.com/wp-content/uploads/2023/05/serious-and-scorn-centered-man-in-the-office-at-wo-2023-02-03-00-10-36-utc-1-1-1.jpg"
+                                src="/icons/pages/offshore-development/developer.jpg"
                                 alt="Developer"
-                                className="rounded-3xl object-cover w-full h-full"
+                                className="w-full h-full object-cover"
                             />
                         </div>
 
                     </div>
                 </div>
             </section>
+
             <BgSection>
                 <div className="max-w-7xl mx-auto px-6">
 
@@ -499,7 +497,7 @@ export default function DedicatedTeamsPage() {
                         {/* RIGHT IMAGE */}
                         <div className="flex justify-center md:justify-end">
                             <img
-                                src="https://develux.com/wp-content/uploads/2023/05/two-businessmen-business-partners-office-african-a-2023-05-23-16-22-52-utc-1-1-1.jpg"
+                                src="/icons/pages/offshore-development/Team%20page-bro.svg"
                                 alt="Client testimonial"
                                 className="w-full max-w-[620px] rounded-2xl object-cover"
                             />
@@ -550,7 +548,7 @@ export default function DedicatedTeamsPage() {
                         {/* IMAGE */}
                         <div className="rounded-xl overflow-hidden shadow-lg">
                             <img
-                                src="https://develux.com/wp-content/uploads/2023/05/1-42-768x512.jpeg"
+                                src="/icons/pages/offshore-development/Team-amico.svg"
                                 alt="IT Outsourcing"
                                 width={768}
                                 height={512}

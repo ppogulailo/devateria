@@ -8,7 +8,7 @@ export default function TechnologiesPage() {
     const { hero, sections } = technologiesPageData;
   return (
     <div>
-        <div className="bg-[--color-bg] text-[--color-text] mx-auto w-full max-w-6xl px-4">
+        <div className="bg-[--color-bg] text-[--color-text]  px-4">
             <HeroSection {...hero} />
 
             <section className="our_technologies bg-[--color-bg-alt] py-20 md:py-28">

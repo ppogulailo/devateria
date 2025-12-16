@@ -61,7 +61,7 @@ export const webDevelopmentPageData = {
     serviceItems: [
         {
             title: "Website Development:",
-            icon: "https://crystalogic.net/wp-content/uploads/2020/10/frontend-icon.svg",
+            icon: "/icons/pages/web-development/serviceItems/web-interface-svgrepo-com (1).svg",
             text: `It includes setting goals and objectives, developing technical specifications, 
 layout design, and integration with accounting systems.`,
         },

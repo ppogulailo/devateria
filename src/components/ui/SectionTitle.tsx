@@ -16,6 +16,7 @@ export const SectionTitle = ({
     return (
         <h2
             className={`
+                text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
                 relative text-4xl md:text-5xl font-bold leading-tight 
                 text-[var(--color-primary)] mb-4
                 ${align === "center" ? "text-center" : "text-left"}

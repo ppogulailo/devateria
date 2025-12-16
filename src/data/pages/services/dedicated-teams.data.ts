@@ -6,7 +6,7 @@ export const dedicatedTeamsData = {
         subtitle: "We’re here to help you save time and beat the competition.",
         ctaLabel: "Let's talk",
         ctaHref: "#contact",
-        image: "https://develux.com/wp-content/uploads/2023/05/lead-developer-managing-team-2022-07-12-14-37-20-utc-1-1-1.jpg",
+        image: "/icons/pages/dedicated-teams/team%20checklist-amico.svg",
         imageAlt: "Dedicated Development Team",
     },
 

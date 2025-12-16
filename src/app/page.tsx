@@ -6,6 +6,8 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { BgSection } from "@/components/ui/PrimaryBackground";
 import { CardBackground } from "@/components/ui/card/CardBackground";
 import { homePageData } from "@/data/pages/main.data";
+import {SectionTitle} from "@/components/ui/SectionTitle";
+import {Card} from "@/components/ui/card/Card";
 
 export default function Home() {
     const { aboutDeveteriaHeroData, aboutStats, SERVICES, valuesData, principlesData } = homePageData;
@@ -43,12 +45,12 @@ export default function Home() {
                             text-[90px] md:text-[120px] font-extrabold uppercase
                             text-black/5 select-none pointer-events-none
                         ">
-                            WHAT WE DO
-                        </span>
+                        What We Do
+                    </span>
 
-                        <h2 className="relative text-5xl font-extrabold uppercase tracking-wide text-[var(--color-primary)]">
+                        <SectionTitle>
                             What We Do
-                        </h2>
+                        </SectionTitle>
                     </div>
 
                     <p className="text-gray-500 max-w-3xl mx-auto mb-12">
@@ -59,16 +61,16 @@ export default function Home() {
                     {/* Services Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {SERVICES.map(item => (
-                            <a
+                            <Card
                                 key={item.label}
-                                href={item.href}
-                                className="p-8 rounded-xl shadow-sm bg-[#F3F9FF] hover:bg-[#e7f3ff] transition flex flex-col items-center text-center"
+                                // href={item.href}
+                                className="cursor-pointer p-8 rounded-xl shadow-sm bg-[#F3F9FF] hover:bg-[#e7f3ff] transition flex flex-col items-center text-center"
                             >
                                 <img src={item.img} alt={item.alt} className="h-14 mb-4" />
                                 <p className="font-semibold uppercase text-sm text-gray-700">
                                     {item.label}
                                 </p>
-                            </a>
+                            </Card>
                         ))}
                     </div>
 
@@ -86,15 +88,16 @@ export default function Home() {
             <section className="py-16 md:py-24 bg-[--color-bg]">
                 <div className="max-w-6xl mx-auto px-4">
 
-                    <h2 className="text-4xl font-semibold uppercase text-[var(--color-primary)]">
+                    <SectionTitle align='left'>
                         Our Values
-                    </h2>
+                    </SectionTitle>
 
                     <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                         {valuesData.map((item, i) => (
-                            <div
+                            <Card
                                 key={i}
-                                className="flex flex-col gap-3 p-6 rounded-2xl border border-[--color-muted]/20 bg-[--color-bg]"
+
+                                // className="flex flex-col gap-3 p-6 rounded-2xl border border-[--color-muted]/20 bg-[--color-bg]"
                             >
                                 <img width={50} src={item.icon} alt={item.title} />
 
@@ -105,7 +108,7 @@ export default function Home() {
                                 <p className="text-sm leading-relaxed text-[--color-muted]">
                                     {item.description}
                                 </p>
-                            </div>
+                            </Card>
                         ))}
                     </div>
 

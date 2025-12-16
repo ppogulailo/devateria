@@ -49,7 +49,7 @@ export default function AndroidAppDevelopmentPage() {
         {
             title: "DevOps",
             items: [
-                { src: "/icons/technologies/software_development/DevOps/png-clipart-continuous-integration-devops-continuous-delivery-software-testing-ci-cd-le-bio-au-risque-de-se-perdre-text-logo.png" },
+                // { src: "/icons/technologies/software_development/DevOps/png-clipart-continuous-integration-devops-continuous-delivery-software-testing-ci-cd-le-bio-au-risque-de-se-perdre-text-logo.png" },
                 { src: "/icons/technologies/software_development/DevOps/HashiCorp%20Terraform.svg" },
                 { src: "/icons/technologies/software_development/DevOps/Kubernetes.svg" },
                 { src: "/icons/technologies/software_development/DevOps/Docker.svg" }
@@ -76,15 +76,7 @@ export default function AndroidAppDevelopmentPage() {
             <HeroSection {...hero} />
 
             {/* INTRO SECTION */}
-            <section className="relative w-full">
-                <div className="absolute inset-0">
-                    <img
-                        src="https://develux.com/wp-content/uploads/2023/05/creative-development-of-programming-websites-for-m-2022-11-11-18-47-33-utc-2-1-1-1024x223.jpg"
-                        alt="Android service banner"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30" />
-                </div>
+            <BgSection>
 
                 <div className="relative max-w-5xl mx-auto px-6 py-20 text-center text-white">
                     <div className="flex justify-center mb-8">
@@ -99,7 +91,7 @@ export default function AndroidAppDevelopmentPage() {
                         that works flawlessly across devices with backend and system integration.
                     </p>
                 </div>
-            </section>
+            </BgSection>
 
             {/* ANDROID SERVICES LIST */}
             <section className="py-24">
@@ -124,22 +116,16 @@ export default function AndroidAppDevelopmentPage() {
             {/* ANDROID APPS FOR ANY DEVICE */}
             <section className="py-24">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid lg:grid-cols-3 gap-10 items-stretch">
+                    <div className="grid lg:grid-cols-2 gap-10 items-stretch">
 
-                        <div className="overflow-hidden rounded-2xl">
+                        <div className="">
                             <img
-                                src="https://develux.com/wp-content/uploads/2023/05/developer-smartphone-coding.jpg"
+                                src="/icons/pages/android-app-development/Chat bot-cuate.svg"
                                 alt="Android development"
                                 className="w-full h-full object-cover"
                             />
                         </div>
 
-                        <div className="rounded-2xl bg-muted flex items-center justify-center p-8">
-                            <svg width="120" height="120" viewBox="0 0 104 104">
-                                <path d="M52 2C26 2 2 26 2 52H102C102 26 78 2 52 2Z" fill="currentColor" />
-                                <path d="M52 52C26 52 2 76 2 102H102C102 76 78 52 52 52Z" />
-                            </svg>
-                        </div>
 
                         <div className="bg-background rounded-2xl p-10">
                             <SectionTitle align="left">
@@ -152,10 +138,10 @@ export default function AndroidAppDevelopmentPage() {
                             </p>
 
                             <ul className="space-y-2 mb-6 text-muted-foreground">
-                                <li>• Android Mobile App Development</li>
-                                <li>• Android TV App Development</li>
-                                <li>• Android Tablet App Development</li>
-                                <li>• Android Wear App Development</li>
+                                <li><p>• Android Mobile App Development</p></li>
+                                <li><p>• Android TV App Development</p></li>
+                                <li><p>• Android Tablet App Development</p></li>
+                                <li><p>• Android Wear App Development</p></li>
                             </ul>
 
                             <p className="font-semibold text-foreground">
@@ -308,7 +294,7 @@ export default function AndroidAppDevelopmentPage() {
                         </div>
 
                         <img
-                            src="https://develux.com/wp-content/uploads/2023/05/programmer-developing-software-on-computer-2023-05-04-22-42-37-utc-1-1-1-1.jpg"
+                            src="/icons/pages/android-app-development/Team-bro.svg"
                             alt="Developer working"
                             className="rounded-2xl w-full object-cover"
                         />

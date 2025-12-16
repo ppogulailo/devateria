@@ -76,79 +76,71 @@ export default function DedicatedTeamsPage() {
           image={hero.image}
           imageAlt={hero.imageAlt}
       />
-      <section className="py-24 ">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row w-full gap-6">
 
             {/* LEFT IMAGE */}
-            <div className="w-full">
+            <div className="flex-1">
               <img
-                  src="https://develux.com/wp-content/uploads/2023/05/group-of-developers-working-in-team-2022-12-23-00-03-01-utc-1-1-1.jpg"
+                  src="/icons/pages/dedicated-teams/dedicated-team.webp"
                   alt="Developers working"
-                  className="rounded-2xl shadow-lg w-full object-cover"
+                  className="rounded-xl w-full h-full object-cover"
               />
             </div>
 
-            {/* MIDDLE SEMICIRCLE DECORATION */}
-            <div className="hidden lg:flex justify-center">
-              <div className="w-[140px] h-[260px] bg-[#1c1c1c] rounded-3xl flex items-center justify-center relative">
-                {/* Center semicircle graphic */}
-                <div className="flex flex-col items-center gap-4">
-                  {/* Top outline arc */}
-                  <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
-                    <path
-                        d="M51.985 1C38.4611 1.00533 25.4929 6.41532 15.932 16.0404C6.37099 25.6654 1 38.7175 1 52.3267H103C103 45.5855
-                                        101.68 38.9104 99.1165 32.6825C96.5527 26.4546 92.7947 20.7959 88.0574 16.0297C83.3201 11.2634 77.6962 7.48296
-                                        71.5068 4.90414C65.3175 2.32533 58.684 0.998682 51.985 1Z"
-                        stroke="#D6D6D6"
-                        strokeWidth="2"
-                    />
-                  </svg>
+            {/* MIDDLE BLACK PANEL */}
+            <div
+                className="w-full lg:w-1/3 bg-[var(--color-primary)] rounded-l-xl rounded-r-xl lg:rounded-r-none flex items-center justify-center p-10">
+              <div className="relative">
+                {/* Semicircle SVG Stack */}
+                <svg width="104" height="54" viewBox="0 0 104 54" fill="none" className="mb-3">
+                  <path
+                      d="M51.985 1C38.4611 1.00533 25.4929 6.41532 15.932 16.0404C6.37099 25.6654 0.999999 38.7175 1 52.3267H103C103 45.5855 101.68 38.9104 99.1165 32.6825C96.5527 26.4546 92.7947 20.7959 88.0574 16.0297C83.3201 11.2634 77.6962 7.48296 71.5068 4.90414C65.3175 2.32533 58.684 0.998682 51.985 1Z"
+                      stroke="#F6FCFE"
+                      strokeWidth="2"
+                  />
+                </svg>
 
-                  {/* Filled semicircle */}
-                  <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
-                    <path
-                        d="M51.985 1C38.4602 1.00799 25.492 6.42016 15.9314 16.0468C6.37067 25.6734 1 38.7266 1 52.3367H103C103 38.7213
-                                        97.6252 25.6636 88.058 16.0361C78.4909 6.40863 65.5151 1 51.985 1Z"
-                        fill="#584EE5"
-                        stroke="#584EE5"
-                        strokeWidth="2"
-                    />
-                  </svg>
+                <svg width="104" height="54" viewBox="0 0 104 54" fill="none" className="mb-3">
+                  <path
+                      d="M51.985 1C38.4602 1.00799 25.492 6.42016 15.9314 16.0468C6.37067 25.6734 0.999998 38.7266 1 52.3367H103C103 38.7213 97.6252 25.6636 88.058 16.0361C78.4909 6.40863 65.5151 1 51.985 1Z"
+                      fill="#F6FCFE"
+                      stroke="#2e536f"
+                      strokeWidth="2"
+                  />
+                </svg>
 
-                  {/* Bottom outline arc */}
-                  <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
-                    <path
-                        d="M51.985 1.66309C38.4602 1.67107 25.492 7.08325 15.9314 16.7099C6.37067 26.3365 1 39.3897 1 52.9998H103C103 39.3844
-                                        97.6252 26.3268 88.058 16.6993C78.4909 7.07177 65.5151 1.66309 51.985 1.66309Z"
-                        stroke="#D6D6D6"
-                        strokeWidth="2"
-                    />
-                  </svg>
-                </div>
+                <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
+                  <path
+                      d="M51.985 1.66309C38.4602 1.67107 25.492 7.08325 15.9314 16.7099C6.37067 26.3365 0.999998 39.3897 1 52.9998H103C103 39.3844 97.6252 26.3268 88.058 16.6993C78.4909 7.07177 65.5151 1.66309 51.985 1.66309Z"
+                      stroke="#F6FCFE"
+                      strokeWidth="2"
+                  />
+                </svg>
               </div>
             </div>
 
-            {/* RIGHT CONTENT BLOCK */}
-            <div className="p-10 rounded-3xl shadow-md">
-              <SectionTitle className='!text-4xl' align='left'>
-                How a Dedicated Development Team <br /> Can Transform Your Business Model
+
+            {/* RIGHT CONTENT */}
+            <div className="flex-1 bg-white rounded-xl p-10 shadow-sm">
+              <SectionTitle className="mb-4 !text-4xl" align="left">
+                How a Dedicated Development Team <br />
+                Can Transform Your Business Model
               </SectionTitle>
 
-              <p className="text-black/70 leading-relaxed mb-4">
+              <p className="text-[--color-muted] leading-relaxed mb-6">
                 Organizations of all shapes and sizes are hiring dedicated development teams — but why?
               </p>
 
-              <ul className="list-disc pl-5 space-y-3 text-black/70 leading-relaxed">
+              <ul className="text-[--color-text] space-y-3 leading-relaxed">
                 <li>
                   By accessing the global talent pool, you can significantly expand your technology stack
-                  skills, removing the need to retrain your staff. Modern tools allow hired developers to
-                  collaborate seamlessly with your in-house engineers.
+                  skills, removing the need to retrain your staff.
                 </li>
                 <li>
-                  A dedicated development team model offers excellent agility. As teams grow, flexibility drops —
-                  but outside experts stay fully engaged, adapt fast, and deliver work on time even during
-                  changing requirements.
+                  A dedicated development team model offers excellent agility. Outside experts stay fully
+                  engaged, adapt fast, and deliver on time even during changing requirements.
                 </li>
               </ul>
             </div>
@@ -156,6 +148,7 @@ export default function DedicatedTeamsPage() {
           </div>
         </div>
       </section>
+
       <section className="py-24">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -185,7 +178,7 @@ export default function DedicatedTeamsPage() {
             {/* RIGHT SIDE IMAGE */}
             <div className="flex justify-center">
               <img
-                  src="https://develux.com/wp-content/uploads/2023/05/young-team-of-professional-developers-using-skills-2022-12-01-07-24-10-utc-1-1-1.jpg"
+                  src="/icons/pages/dedicated-teams/Interview-bro.svg"
                   alt="Developers working together"
                   className="rounded-2xl shadow-md w-full object-cover"
               />
@@ -241,7 +234,7 @@ export default function DedicatedTeamsPage() {
 
         {/* Background Image */}
         <img
-            src="https://develux.com/wp-content/uploads/2023/05/business-meeting-creative-team-of-young-multiethn-2021-09-10-02-17-02-utc-1-1-1.jpg"
+            src="/icons/pages/dedicated-teams/dedicated-teams.webp"
             alt="team working"
             className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
@@ -362,7 +355,7 @@ export default function DedicatedTeamsPage() {
           btnHref="/contact-us"
           bgColor="bg-[--color-primary]"
           textColor="text-white"
-          className="mt-20"
+          // className="mt-20"
           icon={
             <svg width="140" height="80" viewBox="0 0 200 100" fill="none">
               <circle cx="60" cy="50" r="36" stroke="white" strokeWidth="3" />
@@ -441,7 +434,7 @@ export default function DedicatedTeamsPage() {
             <div className="flex justify-center lg:justify-end">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                    src="/images/specialists.jpg"
+                    src="/icons/pages/dedicated-teams/Search-rafiki.svg"
                     alt="Developers working together"
                     width={620}
                     height={430}

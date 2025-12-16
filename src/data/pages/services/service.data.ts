@@ -42,13 +42,13 @@ export const serviceData = {
     services: [
         {
             title: "Web Development",
-            icon: 'https://crystalogic.net/wp-content/uploads/2020/10/frontend-icon.svg',
+            icon: 'icons/pages/service/services/web-interface-svgrepo-com (1).svg',
             description:
                 "Create a high-quality, intuitive, attractive website or application that matches your business goals.",
         },
         {
             title: "Software Development",
-            icon: 'https://crystalogic.net/wp-content/uploads/2020/10/automated-icon.svg',
+            icon: '/icons/pages/service/services/api-svgrepo-com (2).svg', // /icons/pages/home/services/black/automated-icon.svg
             description:
                 "Get up-to-date software with all the desired functions, integrations, and top-notch technologies.",
         },

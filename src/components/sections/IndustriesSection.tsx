@@ -2,14 +2,16 @@
 import {useState} from "react";
 import { BgSection } from "../ui/PrimaryBackground";
 import {CardBackground} from "@/components/ui/card/CardBackground";
+import {SectionTitle} from "@/components/ui/SectionTitle";
 
 export const IndustriesSection = () => {
     const INDUSTRY_TABS = [
-        { id: "fintech", title: "Fintech", img: "/icons/industries/money-svgrepo-com.svg", content: FintechContent },
+        { id: "fintech", title: "Fintech", img: "/icons/industries/safebox-bank-locker-3-svgrepo-com.svg", content: FintechContent },
         { id: "healthcare", title: "Healthcare", img: "/icons/industries/details.png", content: HealthcareContent },
         { id: "entertainment", title: "Entertainment", img: "/icons/industries/clapperboard-svgrepo-com.svg", content: EntertainmentContent },
         { id: "manufacture", title: "Manufacture", img: "/icons/industries/factories-factory-svgrepo-com.svg", content: ManufactureContent },
         { id: "ecommerce-development", title: "eCommerce", img: "/icons/industries/ecommerce-svgrepo-com.svg", content: EcommerceContent },
+        { id: "edtech", title: "Education", img: "/icons/industries/education-learning-18-svgrepo-com.svg", content: EcommerceContent },
     ];
 
     const [active, setActive] = useState("healthcare");
@@ -22,17 +24,18 @@ export const IndustriesSection = () => {
 
                 {/* TITLE */}
                 <div className="text-center mb-10">
-                    <h2 className="text-5xl font-bold uppercase relative inline-block">
-                        industries
+                    <SectionTitle>
+                        Industries
                         <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-[2.5rem] opacity-10 font-bold"></span>
-                    </h2>
+                    </SectionTitle>
                     <p className="mt-4 text-[--color-muted] max-w-2xl mx-auto">
                         Our custom software development company provides solutions across multiple industries:
                     </p>
                 </div>
 
                 {/* TAB CARDS */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/*<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-12">*/}
                     {INDUSTRY_TABS.map((tab) => {
                         const isActive = active === tab.id;
 
@@ -42,17 +45,17 @@ export const IndustriesSection = () => {
                                 role="button"
                                 onClick={() => setActive(tab.id)}
                                 className={`
-                                    cursor-pointer flex flex-col items-center text-center transition
+                                  cursor-pointer p-8 rounded-xl transition flex flex-col items-center text-center
                                     ${isActive
-                                    ? "!bg-[var(--color-secondary)] shadow-lg"
-                                    : "bg-white hover:bg-[var(--color-secondary)] hover:shadow-md"
+                                    ? "!bg-[#e7f3ff] shadow-lg"
+                                    : "bg-[#F3F9FF] hover:bg-[#e7f3ff]"
                                 }
                                 `}
                             >
                                 <div className="mb-3 h-12 flex items-center justify-center">
                                     <img className="w-12 h-12 opacity-80" src={tab.img} alt={tab.title} />
                                 </div>
-                                <p className="font-semibold">{tab.title}</p>
+                                <div>{tab.title}</div>
                             </CardBackground>
                         );
                     })}
@@ -70,22 +73,22 @@ const FintechContent = () => (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <IndustryItem
             title="Blockchain"
-            img="https://crystalogic.net/wp-content/themes/crystal-master/assets/img/blockchain.svg"
+            img="/icons/industries/section/blockchain.svg"
             text="Blockchain is a decentralized ledger enabling secure, distributed transaction storage that will influence future financial services."
         />
         <IndustryItem
             title="Insurtech"
-            img="https://crystalogic.net/wp-content/themes/crystal-master/assets/img/Insurtech.svg"
+            img="/icons/industries/section/Insurtech.svg"
             text="We deliver digital insurance solutions that automate processes and empower customer self-service."
         />
         <IndustryItem
             title="Investment Platforms"
-            img="https://crystalogic.net/wp-content/themes/crystal-master/assets/img/Investment-platforms.svg"
+            img="/icons/industries/section/Investment-platforms.svg"
             text="Platforms that allow users to manage stocks, funds, and digital assets in one place with real-time insights."
         />
         <IndustryItem
             title="Consumer Banking"
-            img="https://crystalogic.net/wp-content/themes/crystal-master/assets/img/Consumer-banking.svg"
+            img="/icons/industries/section/Consumer-banking.svg"
             text="Alternative digital banking solutions providing lower fees, better UX, and modern financial tools."
         />
     </div>
@@ -93,7 +96,7 @@ const FintechContent = () => (
 
 const HealthcareContent = () => (
     <div className="text-[--color-muted]">
-        <p className="text-xl font-semibold mb-4">Healthcare Industry</p>
+        <h3 className="text-xl font-semibold mb-4 !text-white/90">Healthcare Industry</h3>
         <p>
             Healthcare software helps clinics, hospitals, and medical institutions automate workflows,
             manage patient records, and deliver better care through digital tools.
@@ -103,7 +106,7 @@ const HealthcareContent = () => (
 
 const EntertainmentContent = () => (
     <div className="text-[--color-muted]">
-        <p className="text-xl font-semibold mb-4">Entertainment Solutions</p>
+        <p className="text-xl font-semibold mb-4 !text-white/90">Entertainment Solutions</p>
         <p>
             We develop streaming platforms, gaming applications, media portals, and high-traffic interactive systems.
         </p>
@@ -112,7 +115,7 @@ const EntertainmentContent = () => (
 
 const ManufactureContent = () => (
     <div className="text-[--color-muted]">
-        <p className="text-xl font-semibold mb-4">Manufacturing Digitalization</p>
+        <p className="text-xl font-semibold mb-4 !text-white/90">Manufacturing Digitalization</p>
         <p>
             Automation tools, supply chain optimization systems, and real-time monitoring dashboards.
         </p>
@@ -121,7 +124,7 @@ const ManufactureContent = () => (
 
 const EcommerceContent = () => (
     <div className="text-[--color-muted]">
-        <p className="text-xl font-semibold mb-4">eCommerce</p>
+        <p className="text-xl font-semibold mb-4 !text-white/90">eCommerce</p>
         <p>
             Custom platforms, payment integrations, checkout flows, and tailored storefront solutions.
         </p>

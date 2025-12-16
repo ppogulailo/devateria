@@ -139,7 +139,7 @@ export default function DedicatedTeamsPage() {
                     {/* IMAGE */}
                     <div>
                         <img
-                            src="https://develux.com/wp-content/uploads/2023/05/programmer-working-with-program-code-2021-12-09-03-16-11-utc-1-1024x683.jpg"
+                            src="/icons/pages/outstaff/Remote meeting-rafiki.svg"
                             alt="IT Outsourcing"
                             className="rounded-3xl w-full object-cover shadow-xl"
                         />
@@ -151,7 +151,7 @@ export default function DedicatedTeamsPage() {
                 {/* BG IMAGE */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://develux.com/wp-content/uploads/2023/05/1-27-1536x1024.jpeg"
+                        src="/icons/pages/outstaff/outstaff-bg.webp"
                         className="w-full h-full object-cover opacity-40"
                         alt="Outsourcing background"
                     />
@@ -355,7 +355,7 @@ export default function DedicatedTeamsPage() {
                         {/* IMAGE */}
                         <div className="rounded-xl overflow-hidden shadow-lg">
                             <img
-                                src="https://develux.com/wp-content/uploads/2023/05/1-42-768x512.jpeg"
+                                src="/icons/pages/outstaff/Remote%20team-amico.svg"
                                 alt="IT Outsourcing"
                                 width={768}
                                 height={512}

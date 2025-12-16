@@ -87,18 +87,23 @@ export const Header: React.FC = () => {
     ];
 
     return (
-        <header className="sticky top-0 z-50 w-full backdrop-blur-xl uppercase relative">
+        <header className="sticky top-0 z-50 w-full backdrop-blur-xl relative">
 
         <div className="mx-auto max-w-7xl px-6">
                 <div className="flex h-20 items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center gap-3">
                         <img
-                            src="/header_logo.png"
-                            alt="Header logo"
-                            className="h-12 w-auto transition-transform duration-200 hover:scale-[1.03]"
+                            src="/logo.svg"
+                            alt="Deveteria logo"
+                            className="h-12"
                         />
+
+                        <span className="text-xl font-semibold tracking-tight text-[--color-text]">
+                            Deveteria
+                        </span>
                     </Link>
-                    <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
+
+                    <nav className="hidden items-center gap-8 text-sm font-semibold md:flex uppercase">
                             <DropdownMega name="Services" data={servicesMegaMenu} href="/service" />
                             <Dropdown name="Solutions" items={solutionsItems} href="/solutions" />
                             <Link href="/technologies" className="hover:text-[var(--color-primary)]">

@@ -62,7 +62,7 @@ export const SoftwareDevBlock = () => {
                         <h3>DevOps</h3>
                     </div>
                     <div className="flex flex-wrap gap-4">
-                        <img width={width} src="/icons/technologies/software_development/DevOps/png-clipart-continuous-integration-devops-continuous-delivery-software-testing-ci-cd-le-bio-au-risque-de-se-perdre-text-logo.png" />
+                        {/*<img width={width} src="/icons/technologies/software_development/DevOps/png-clipart-continuous-integration-devops-continuous-delivery-software-testing-ci-cd-le-bio-au-risque-de-se-perdre-text-logo.png" />*/}
                         <img width={width} src="/icons/technologies/software_development/DevOps/HashiCorp%20Terraform.svg" />
                         <img width={width} src="/icons/technologies/software_development/DevOps/Kubernetes.svg" />
                         <img width={width} src="/icons/technologies/software_development/DevOps/Docker.svg" />

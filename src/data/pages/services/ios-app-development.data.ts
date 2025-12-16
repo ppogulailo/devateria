@@ -10,7 +10,7 @@ to create personalized software solutions.`,
         ctaLabel: "Let’s Cooperate",
         ctaHref: "#id_footer_form",
         image:
-            "https://develux.com/wp-content/uploads/2023/05/group-of-software-development-working-on-web-site-2022-08-23-23-01-54-utc-1-4-scaled.jpg",
+            "/icons/pages/ios-app-development/Usability testing-pana.svg",
     },
 
     impactApps: {
@@ -26,7 +26,7 @@ project.`,
             },
             {
                 title: "In-house code",
-                icon:'/icons/pages/ios-app-development/impactApps/code-coding-development-programming-web-webpage-svgrepo-com.svg',
+                icon:'/icons/pages/ios-app-development/impactApps/tools-and-utensils-programmer-svgrepo-com.svg',
                 text: "All code is written and verified by our team of expert developers.",
             },
             {
@@ -41,7 +41,7 @@ project.`,
             },
             {
                 title: "App Store deployment",
-                icon:'/icons/pages/ios-app-development/impactApps/apple-store-svgrepo-com.svg',
+                icon:'/icons/pages/ios-app-development/impactApps/upload-symbol-on-phone-screen-svgrepo-com.svg',
                 text: "We leverage our skillful marketing unit to promote the app and handle the tricky App Store submission process.",
             },
             {
@@ -53,7 +53,6 @@ project.`,
     },
 
     appForAnyDevice: {
-        image: "https://develux.com/wp-content/uploads/2022/04/1-768x432.jpeg",
         title: `iOS apps for any device`,
         text: `Whether you are looking to build a product specifically for iPhone, or an app
 that can be used with satisfaction no matter the device, we can ably assist.
@@ -129,7 +128,7 @@ that we can quickly find the perfect candidate for your operation.`,
             "Continuous support and handling of all administrative issues",
             "Complete transparency and all costs up front.",
         ],
-        image: "https://develux.com/wp-content/uploads/2023/05/1-30-768x520.jpeg",
+        image: "/icons/pages/ios-app-development/Hiring-amico.svg",
     },
 
     whyChooseIos: {

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 // --- Changed: FooterSection now accepts an optional subMap to show level2 variants
 interface FooterSectionProps {
@@ -118,9 +119,17 @@ export const Footer: React.FC = () => {
 
                     {/* LEFT: Logo + Contact */}
                     <div className="space-y-6">
-                        <a href="/" className="inline-flex items-center">
-                            <img src="/header_logo.png" alt="Deveteria" className="h-10" />
-                        </a>
+                        <Link href="/" className="flex items-center gap-3">
+                            <img
+                                src="/logo.svg"
+                                alt="Deveteria logo"
+                                className="h-12"
+                            />
+
+                            <span className="text-xl font-semibold tracking-tight text-[--color-text]">
+                            Deveteria
+                        </span>
+                        </Link>
 
                         <div className="space-y-3 text-[var(--color-form-text)] text-sm">
                             <div>

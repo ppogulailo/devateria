@@ -9,9 +9,9 @@ export const homePageData = {
     aboutDeveteriaHeroData: {
         title: "Deveteria",
         subtitle:
-            "Deveteria is a company that helps work stably and develop the modern technical world by providing up-to-date IT services, increasing the efficiency and potential of projects. Deveteria was founded as a small startup. We grew sustainably by finding and retaining a strong in-house team and developing different digital solutions.",
+            "Deveteria is a company that helps work stably and develop the modern technical world by providing up-to-date IT services, increasing the efficiency and potential of projects.",
         ctaLabel: "Get a free quote",
-        ctaHref: "https://crystalogic.net/contact-us/",
+        ctaHref: "/contact-us",
         image: "/icons/pages/home/at-office.svg",
         imageAlt: "Team work",
     },
@@ -30,21 +30,18 @@ export const homePageData = {
     // WHAT WE DO — SERVICES GRID
     // ---------------------------
     SERVICES: [
-        { href: "/service/mobile-development/ios-app-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/iOS-mobile-development-icon.svg", alt: "iOS mobile development icon", label: "iOS Mobile Development" },
-        { href: "/service/web-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/frontend-icon.svg", alt: "Frontend icon", label: "Frontend Development" },
-        { href: "/service/web-development/saas-application-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/Saas-icons.svg", alt: "SaaS icon", label: "SAAS Development" },
+        { href: "/service/mobile-development/ios-app-development", img: "/icons/pages/home/services/ios-mobile-development.svg", alt: "iOS mobile development icon", label: "iOS Mobile Development" },
+        { href: "/service/web-development", img: "/icons/pages/home/services/frontend-icon.svg", alt: "Frontend icon", label: "Frontend Development" },
+        { href: "/service/web-development/saas-application-development", img: "/icons/pages/home/services/Saas-icons.svg", alt: "SaaS icon", label: "SAAS Development" },
 
-        { href: "/service/mobile-development/android-app-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/android-mobile-app-development-icon.svg", alt: "Android mobile app development icon", label: "Android Mobile App Development" },
-        { href: "/service/mobile-development/system-design", img: "https://crystalogic.net/wp-content/uploads/2020/10/prototyping-icon.svg", alt: "Prototyping icon", label: "System Design" },
-        { href: "/service/software-testing", img: "https://crystalogic.net/wp-content/uploads/2020/10/manual-icon.svg", alt: "Manual testing icon", label: "Manual Testing" },
+        { href: "/service/mobile-development/android-app-development", img: "/icons/pages/home/services/android-mobile-app-development-icon.svg", alt: "Android mobile app development icon", label: "Android Mobile App Development" },
+        { href: "/service/mobile-development/system-design", img: "/icons/pages/home/services/prototyping-icon.svg", alt: "Prototyping icon", label: "System Design" },
+        { href: "/service/software-testing", img: "/icons/pages/home/services/manual-icon.svg", alt: "Manual testing icon", label: "Manual Testing" },
 
-        // { href: "/service/web-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/hybrid-icon.svg", alt: "Hybrid mobile app development icon", label: "Hybrid Mobile App Development" },
-        { href: "/service/ui-ux", img: "https://crystalogic.net/wp-content/uploads/2020/10/ui-ux-design.svg", alt: "UI/UX design icon", label: "UI/UX Design" },
-        { href: "/service/software-testing", img: "https://crystalogic.net/wp-content/uploads/2020/10/automated-icon.svg", alt: "Automated testing icon", label: "Automated Testing" },
+        { href: "/service/ui-ux", img: "/icons/pages/home/services/ui-ux-design.svg", alt: "UI/UX design icon", label: "UI/UX Design" },
+        { href: "/service/software-testing", img: "/icons/pages/home/services/automated-icon.svg", alt: "Automated testing icon", label: "Automated Testing" },
 
-        { href: "/service/web-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/backend-icon.svg", alt: "Backend icon", label: "Backend Development" },
-        // { href: "/service/cloud-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/cloud-icon.svg", alt: "Cloud application development icon", label: "Cloud Application Development" },
-        // { href: "/service/mobile-development/native-app-development", img: "https://crystalogic.net/wp-content/uploads/2020/10/software-icon.svg", alt: "Software quality assurance icon", label: "Native App Development" },
+        { href: "/service/web-development", img: "/icons/pages/home/services/backend-icon.svg", alt: "Backend icon", label: "Backend Development" },
     ],
 
     // ---------------------------

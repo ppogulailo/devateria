@@ -67,7 +67,7 @@ export default function IosAppDevelopmentPage() {
               {/* LEFT IMAGE */}
               <div className="flex-1">
                 <img
-                    src="https://develux.com/wp-content/uploads/2022/04/1-768x432.jpeg"
+                    src="/icons/pages/ios-app-development/apple-devices.webp"
                     alt="iPhones"
                     className="rounded-xl w-full h-full object-cover"
                 />
@@ -75,13 +75,13 @@ export default function IosAppDevelopmentPage() {
 
               {/* MIDDLE BLACK PANEL */}
               <div
-                  className="w-full lg:w-1/3 bg-[#1E1E1E] rounded-l-xl rounded-r-xl lg:rounded-r-none flex items-center justify-center p-10">
+                  className="w-full lg:w-1/3 bg-[var(--color-primary)] rounded-l-xl rounded-r-xl lg:rounded-r-none flex items-center justify-center p-10">
                 <div className="relative">
                   {/* Semicircle SVG Stack */}
                   <svg width="104" height="54" viewBox="0 0 104 54" fill="none" className="mb-3">
                     <path
                         d="M51.985 1C38.4611 1.00533 25.4929 6.41532 15.932 16.0404C6.37099 25.6654 0.999999 38.7175 1 52.3267H103C103 45.5855 101.68 38.9104 99.1165 32.6825C96.5527 26.4546 92.7947 20.7959 88.0574 16.0297C83.3201 11.2634 77.6962 7.48296 71.5068 4.90414C65.3175 2.32533 58.684 0.998682 51.985 1Z"
-                        stroke="#D6D6D6"
+                        stroke="#F6FCFE"
                         strokeWidth="2"
                     />
                   </svg>
@@ -89,8 +89,8 @@ export default function IosAppDevelopmentPage() {
                   <svg width="104" height="54" viewBox="0 0 104 54" fill="none" className="mb-3">
                     <path
                         d="M51.985 1C38.4602 1.00799 25.492 6.42016 15.9314 16.0468C6.37067 25.6734 0.999998 38.7266 1 52.3367H103C103 38.7213 97.6252 25.6636 88.058 16.0361C78.4909 6.40863 65.5151 1 51.985 1Z"
-                        fill="#584EE5"
-                        stroke="#584EE5"
+                        fill="#F6FCFE"
+                        stroke="#2e536f"
                         strokeWidth="2"
                     />
                   </svg>
@@ -98,7 +98,7 @@ export default function IosAppDevelopmentPage() {
                   <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
                     <path
                         d="M51.985 1.66309C38.4602 1.67107 25.492 7.08325 15.9314 16.7099C6.37067 26.3365 0.999998 39.3897 1 52.9998H103C103 39.3844 97.6252 26.3268 88.058 16.6993C78.4909 7.07177 65.5151 1.66309 51.985 1.66309Z"
-                        stroke="#D6D6D6"
+                        stroke="#F6FCFE"
                         strokeWidth="2"
                     />
                   </svg>
@@ -218,7 +218,7 @@ export default function IosAppDevelopmentPage() {
               {/* IMAGE */}
               <div className="rounded-xl overflow-hidden shadow-md">
                 <img
-                    src="https://develux.com/wp-content/uploads/2023/05/1-30-768x520.jpeg"
+                    src="/icons/pages/ios-app-development/Hiring-amico.svg"
                     alt="iOS developers working"
                     className="w-full h-auto object-cover"
                 />
@@ -341,7 +341,7 @@ export default function IosAppDevelopmentPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
               {/* LEFT TEXT BLOCK */}
-              <div className="bg-white rounded-2xl p-10 shadow-sm">
+              <div className=" p-10 ">
                 <SectionTitle align='left'>
                   Why Deveteria?
                 </SectionTitle>
@@ -350,7 +350,7 @@ export default function IosAppDevelopmentPage() {
                   Outstanding developers
                 </p>
 
-                <p className="text-[--color-muted] leading-relaxed mb-6">
+                <p className="text-[--color-muted] leading-relaxed font-medium mb-6">
                   Hire iOS app developers through us, knowing they will have the necessary
                   tools to make an immediate impact on your project. Outsourced employees work
                   remotely on flexible schedules that we manage, while outstaffed employees
@@ -362,7 +362,7 @@ export default function IosAppDevelopmentPage() {
                   Full product development
                 </p>
 
-                <p className="text-[--color-muted] leading-relaxed">
+                <p className="text-[--color-muted] leading-relaxed font-medium">
                   As your dedicated iOS application development partner, we handle all facets
                   of mobile development — HR, design, marketing managers, and senior developers.
                   We create custom applications from scratch, maintain close communication, and
@@ -374,43 +374,43 @@ export default function IosAppDevelopmentPage() {
               <div className="flex flex-col lg:flex-row items-center gap-6">
 
                 {/* BLACK PANEL WITH SEMICIRCLES */}
-                <div className="bg-[#1E1E1E] rounded-xl flex items-center justify-center p-10 w-full lg:w-1/3">
-                  <div className="relative flex flex-col items-center gap-3">
+                {/*<div className="bg-[#1E1E1E] rounded-xl flex items-center justify-center p-10 w-full lg:w-1/3">*/}
+                {/*  <div className="relative flex flex-col items-center gap-3">*/}
 
-                    {/* top outline */}
-                    <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
-                      <path
-                          d="M51.985 1C38.4611 1.00533 25.4929 6.41532 15.932 16.0404C6.37099 25.6654 0.999999 38.7175 1 52.3267H103C103 45.5855 101.68 38.9104 99.1165 32.6825C96.5527 26.4546 92.7947 20.7959 88.0574 16.0297C83.3201 11.2634 77.6962 7.48296 71.5068 4.90414C65.3175 2.32533 58.684 0.998682 51.985 1Z"
-                          stroke="#D6D6D6"
-                          strokeWidth="2"
-                      />
-                    </svg>
+                {/*    /!* top outline *!/*/}
+                {/*    <svg width="104" height="54" viewBox="0 0 104 54" fill="none">*/}
+                {/*      <path*/}
+                {/*          d="M51.985 1C38.4611 1.00533 25.4929 6.41532 15.932 16.0404C6.37099 25.6654 0.999999 38.7175 1 52.3267H103C103 45.5855 101.68 38.9104 99.1165 32.6825C96.5527 26.4546 92.7947 20.7959 88.0574 16.0297C83.3201 11.2634 77.6962 7.48296 71.5068 4.90414C65.3175 2.32533 58.684 0.998682 51.985 1Z"*/}
+                {/*          stroke="#D6D6D6"*/}
+                {/*          strokeWidth="2"*/}
+                {/*      />*/}
+                {/*    </svg>*/}
 
-                    {/* middle filled */}
-                    <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
-                      <path
-                          d="M51.985 1C38.4602 1.00799 25.492 6.42016 15.9314 16.0468C6.37067 25.6734 0.999998 38.7266 1 52.3367H103C103 38.7213 97.6252 25.6636 88.058 16.0361C78.4909 6.40863 65.5151 1 51.985 1Z"
-                          fill="#584EE5"
-                          stroke="#584EE5"
-                          strokeWidth="2"
-                      />
-                    </svg>
+                {/*    /!* middle filled *!/*/}
+                {/*    <svg width="104" height="54" viewBox="0 0 104 54" fill="none">*/}
+                {/*      <path*/}
+                {/*          d="M51.985 1C38.4602 1.00799 25.492 6.42016 15.9314 16.0468C6.37067 25.6734 0.999998 38.7266 1 52.3367H103C103 38.7213 97.6252 25.6636 88.058 16.0361C78.4909 6.40863 65.5151 1 51.985 1Z"*/}
+                {/*          fill="#584EE5"*/}
+                {/*          stroke="#584EE5"*/}
+                {/*          strokeWidth="2"*/}
+                {/*      />*/}
+                {/*    </svg>*/}
 
-                    {/* bottom outline */}
-                    <svg width="104" height="54" viewBox="0 0 104 54" fill="none">
-                      <path
-                          d="M51.985 1.66309C38.4602 1.67107 25.492 7.08325 15.9314 16.7099C6.37067 26.3365 0.999998 39.3897 1 52.9998H103C103 39.3844 97.6252 26.3268 88.058 16.6993C78.4909 7.07177 65.5151 1.66309 51.985 1.66309Z"
-                          stroke="#D6D6D6"
-                          strokeWidth="2"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                {/*    /!* bottom outline *!/*/}
+                {/*    <svg width="104" height="54" viewBox="0 0 104 54" fill="none">*/}
+                {/*      <path*/}
+                {/*          d="M51.985 1.66309C38.4602 1.67107 25.492 7.08325 15.9314 16.7099C6.37067 26.3365 0.999998 39.3897 1 52.9998H103C103 39.3844 97.6252 26.3268 88.058 16.6993C78.4909 7.07177 65.5151 1.66309 51.985 1.66309Z"*/}
+                {/*          stroke="#D6D6D6"*/}
+                {/*          strokeWidth="2"*/}
+                {/*      />*/}
+                {/*    </svg>*/}
+                {/*  </div>*/}
+                {/*</div>*/}
 
                 {/* IMAGE */}
                 <div className="rounded-xl overflow-hidden flex-1 shadow-sm">
                   <img
-                      src="https://develux.com/wp-content/uploads/2023/05/1-28-768x512.jpeg"
+                      src="/icons/pages/ios-app-development/teamwork high five-bro.svg"
                       alt="team working"
                       className="w-full h-full object-cover"
                   />

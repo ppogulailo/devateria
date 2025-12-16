@@ -8,7 +8,6 @@ export const mobileDevelopmentPageData = {
         ctaLabel: "Let’s Cooperate",
         ctaHref: "#contact",
         image: "/icons/pages/mobile-development/App development-amico.svg",
-            // "https://develux.com/wp-content/uploads/2023/05/Custom-Mobile-Development.png",
     },
 
     buildAppIntro: {
@@ -22,17 +21,17 @@ export const mobileDevelopmentPageData = {
     buildAppFeatures: [
         {
             title: "iOS",
-            icon: "https://crystalogic.net/wp-content/uploads/2020/10/iOS-mobile-development-icon.svg" as const,
+            icon: "/icons/pages/home/services/ios-mobile-development.svg" as const,
             text: "Develop a custom mobile application using native iOS programming languages like Swift or Objective-C.",
         },
         {
             title: "Android",
-            icon: "https://crystalogic.net/wp-content/uploads/2020/10/android-mobile-app-development-icon.svg" as const,
+            icon: "/icons/pages/home/services/android-mobile-app-development-icon.svg" as const,
             text: "Fully utilize device capabilities with a high-performance Android app built in Kotlin.",
         },
         {
             title: "Cross-platform",
-            icon: "https://crystalogic.net/wp-content/uploads/2020/10/automated-icon.svg" as const,
+            icon: "/icons/pages/home/services/automated-icon.svg" as const,
             text: "Reach a wider audience using React Native or Flutter to build applications that run across multiple platforms.",
         },
     ],
@@ -129,57 +128,7 @@ export const mobileDevelopmentPageData = {
         title: "Tech stack",
         subtitle:
             "Expertise brings flexibility, which is why we assemble teams precisely for your project needs.",
-        stacks: [
-            {
-                title: "Frontend",
-                items: [
-                    {
-                        name: "Swift",
-                        default:
-                            "https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeSwift.svg",
-                        hover: "https://develux.com/wp-content/uploads/2023/04/Statehover-TypeSwift.svg",
-                    },
-                    {
-                        name: "Objective-C",
-                        default:
-                            "https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeObjective-C.svg",
-                        hover:
-                            "https://develux.com/wp-content/uploads/2023/04/Statehover-TypeObjective-C.svg",
-                    },
-                    {
-                        name: "Android",
-                        default:
-                            "https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeAndroid.svg",
-                        hover: "https://develux.com/wp-content/uploads/2023/04/Statehover-TypeAndroid.svg",
-                    },
-                    {
-                        name: "Kotlin",
-                        default:
-                            "https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeKotlin.svg",
-                        hover: "https://develux.com/wp-content/uploads/2023/04/Statehover-TypeKotlin.svg",
-                    },
-                ],
-            },
-            {
-                title: "Mobile",
-                items: [
-                    {
-                        name: "React Native",
-                        default:
-                            "https://develux.com/wp-content/uploads/2023/04/Statedefault-TypeReact-Native.svg",
-                        hover:
-                            "https://develux.com/wp-content/uploads/2023/04/Statehover-TypeReact-Native.svg",
-                    },
-                    {
-                        name: "Ionic",
-                        default: "https://develux.com/wp-content/uploads/2023/05/Ionic.svg",
-                        hover: "https://develux.com/wp-content/uploads/2023/05/Ionic2.svg",
-                    },
-                ],
-            },
-        ],
     },
-
     whyChoose: {
         title: "Why Choose Deveteria?",
         items: [

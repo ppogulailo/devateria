@@ -9,7 +9,7 @@ export const outstaffData = {
             "Take advantage of the opportunity to acquire a team with the right skills and experience to expand your development capabilities with IT outsourcing services.",
         ctaLabel: "Let’s Cooperate",
         ctaHref: "#id_footer_form",
-        image: "https://develux.com/wp-content/uploads/2023/05/Outstaff.png",
+        image: "/icons/pages/outstaff/Team work-bro.svg",
         imageAlt: "Outsourcing Team",
     },
     benefits: [

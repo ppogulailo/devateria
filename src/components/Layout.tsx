@@ -16,7 +16,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Header />
             <BreadcrumbsWrapper />
             {/*<AboutUsSection/>*/}
-            <main className="flex-1 [&_p]:text-black/70">
+            <main className="flex-1 [&_p]:text-black/70 font-medium">
                     {children}
             </main>
 

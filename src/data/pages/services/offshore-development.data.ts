@@ -8,7 +8,7 @@ export const offshoreOdcData = {
         ctaLabel: "Let’s Cooperate",
         ctaHref: "#contact",
         image:
-            "https://develux.com/wp-content/uploads/2023/05/process-of-development-2021-08-28-20-02-45-utc-1-1.jpg",
+            "/icons/pages/offshore-development/Coworking-amico.svg",
         imageAlt: "Offshore development team",
     },
 

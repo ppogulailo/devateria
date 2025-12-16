@@ -35,12 +35,12 @@ export const androidAppDevelopmentPageData = {
         ctaLabel: "Let’s talk",
         ctaHref: "#id_footer_form",
         image:
-            "https://develux.com/wp-content/uploads/2023/05/developer-connecting-smartphone-with-laptop-2022-11-29-19-17-57-utc-1-1-1.jpg",
+            "/icons/pages/android-app-development/Mobile development-amico.svg",
         imageAlt: "Android mobile development",
     },
 
     items: [
-        { label: "Custom mobile applications", icon: 'https://crystalogic.net/wp-content/uploads/2020/10/android-mobile-app-development-icon.svg' },
+        { label: "Custom mobile applications",  icon: "/icons/pages/home/services/black/android-mobile-app-development-icon.svg" as const, },
         { label: "Mobile Software Development Kits (SDKs)", icon: '/icons/pages/android-app-development/puzzle-piece-outline-svgrepo-com.svg' },
         { label: "Utilities development", icon: '/icons/pages/android-app-development/screwdriver-wrench-svgrepo-com.svg' },
     ],
