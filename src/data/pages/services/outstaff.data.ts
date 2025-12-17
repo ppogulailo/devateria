@@ -137,7 +137,7 @@ export const outstaffData = {
         { title: "Custom Mobile Development", href: "/service/custom-mobile-app-development" },
         { title: "IT Project Management", href: "/service/it-project-management" },
         { title: "IT Consulting Services", href: "/service/it-consulting" },
-        { title: "Custom CRM Development", href: "/service/custom-crm-development" },
+        // { title: "Custom CRM Development", href: "/service/custom-crm-development" },
     ],
 
     faqItems: [

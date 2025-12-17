@@ -46,6 +46,11 @@ const servicesMegaMenu = {
         ],
     } as Record<string, { label: string; href: string }[]>
 };
+const footerLinks = [
+    { label: "About Us", href: "/about-us" },
+    { label: "Technology", href: "/technologies" },
+    { label: "Contact Us", href: "/contact-us" },
+];
 
 export const Footer: React.FC = () => {
     return (
@@ -87,22 +92,22 @@ export const Footer: React.FC = () => {
                         </div>
 
                         {/* Social Icons */}
-                        <div>
-                            <div className="text-xs uppercase text-[var(--color-form-text)]">Our Social</div>
+                        {/*<div>*/}
+                        {/*    <div className="text-xs uppercase text-[var(--color-form-text)]">Our Social</div>*/}
 
-                            <ul className="flex gap-3 mt-3">
-                                {["IG", "FB", "in"].map((s) => (
-                                    <li key={s}>
-                                        <a
-                                            href="#"
-                                            className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--color-muted)]/40 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-                                        >
-                                            {s}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        {/*    <ul className="flex gap-3 mt-3">*/}
+                        {/*        {["IG", "FB", "in"].map((s) => (*/}
+                        {/*            <li key={s}>*/}
+                        {/*                <a*/}
+                        {/*                    href="#"*/}
+                        {/*                    className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--color-muted)]/40 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"*/}
+                        {/*                >*/}
+                        {/*                    {s}*/}
+                        {/*                </a>*/}
+                        {/*            </li>*/}
+                        {/*        ))}*/}
+                        {/*    </ul>*/}
+                        {/*</div>*/}
                     </div>
 
                     {/* MIDDLE: Services + Solutions */}
@@ -118,26 +123,22 @@ export const Footer: React.FC = () => {
                             variant="footer"
                             title="Solutions"
                             items={[
-                                { label: "Ecommerce Development", href: "/solutions/ecommerce-development-development" },
+                                { label: "Ecommerce Development", href: "/solutions/ecommerce-development" },
                                 { label: "Fintech", href: "/solutions/fintech" },
-                                { label: "Custom CRM Development", href: "/solutions/crm-systems" },
                             ]}
                         />
                     </div>
 
                     {/* RIGHT: static links */}
                     <div className="text-sm font-semibold space-y-4">
-                        {[
-                            "About Us",
-                            "Case Studies",
-                            "Blog",
-                            "Careers",
-                            "Technology",
-                            "Contact Us",
-                        ].map((t) => (
-                            <a key={t} href="#" className="block">
-                                {t}
-                            </a>
+                        {footerLinks.map(({ label, href }) => (
+                            <Link
+                                key={label}
+                                href={href}
+                                className="block hover:opacity-80 transition-opacity"
+                            >
+                                {label}
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -145,12 +146,12 @@ export const Footer: React.FC = () => {
                 {/* Bottom bar */}
                 <div className="mt-12 border-t border-[var(--color-muted)]/20 pt-4 text-xs text-[var(--color-muted)] flex flex-col md:flex-row justify-between items-center gap-3">
                     <div className="flex gap-2">
-                        <a href="#" className="rounded bg-white px-2 py-1 text-black text-[11px] font-semibold">
+                        <Link href="/privacy-policy" className="rounded bg-white px-2 py-1 text-black text-[11px] font-semibold">
                             Privacy Policy
-                        </a>
-                        <a href="#" className="rounded bg-white px-2 py-1 text-black text-[11px] font-semibold">
+                        </Link>
+                        <Link href="#" className="rounded bg-white px-2 py-1 text-black text-[11px] font-semibold">
                             Terms
-                        </a>
+                        </Link>
                     </div>
 
                     <p>© Copyright 2025 Deveteria. All Rights Reserved</p>
